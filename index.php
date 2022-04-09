@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 
-session_start();
+// session_start();
 ?>
 <head></head>
 <form method="POST"  action="" >
@@ -21,16 +21,17 @@ session_start();
                     
                         if ($uname != "" && $password != ""){
                     
-                            $sql_query = "select count(*) as cntUser
+                            $sql_query = "select * 
                             from user_profile 
                             where user_id = cast(".$uname." as int) and hashed_password = ".$password."";
                             $result = sqlsrv_query($conn,$sql_query);
                             if($result!=false){
-                                $row = sqlsrv_fetch_array($result);
+
+                                // $row = sqlsrv_fetch_array($result);
                     
-                                $count = $row['cntUser'];
+                                // $count = $row['cntUser'];
                         
-                                if($count > 0){
+                                // if($count > 0){
                                     $_SESSION['uname'] = $uname;
                                     header('Location: index1.php');
                                 }else{
@@ -38,7 +39,7 @@ session_start();
                             }
                           }
                     
-                        }
+                        
                     
                     }
 
@@ -49,16 +50,20 @@ session_start();
 
 
 
-                    <?php
+                   
 
+<p>
 
+<?php
+echo "works";
+?>
+</p>
                         
 
 
 
                 
 
-                    ?>
 
 
 
