@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<head></head>
-<form method="POST"  action="" >
-        <input type="number" placeholder="username"  name="username">
-        <input type="text" placeholder="password" name="password">
-        <input type="submit" value="Submit" name="userSub" id="userSub">
-    </form>
-    <?php    
+<?php    
             //Connect the database
             $connectionInfo = array("UID" => "User1", "pwd" => "Project1", "Database" => "gtfsdata", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
             $serverName = "lunar-rover.database.windows.net,1433";
@@ -24,7 +17,7 @@
                                 $count = $row['cntUser'];
                         
                                 if($count > 0){
-                                    header('Location: https://carbontriptracker.azurewebsites.net/index1.php');
+                                    header('Location: index1.php');
                                     die();
                                 }
                             }
@@ -32,9 +25,15 @@
                     
                         }
                     
-                    
-   
                     ?>
+<!DOCTYPE html>
+<head></head>
+<form method="POST"  action="" >
+        <input type="number" placeholder="username"  name="username">
+        <input type="text" placeholder="password" name="password">
+        <input type="submit" value="Submit" name="userSub" id="userSub">
+    </form>
+
           
 
     </html>
