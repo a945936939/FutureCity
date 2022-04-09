@@ -1,35 +1,74 @@
-<form method="get" name="form" action="">
-        <input type="text" placeholder="username"  name="username">
+<!DOCTYPE html>
+<?php
+
+session_start();
+?>
+<head></head>
+<form method="POST"  action="" >
+        <input type="number" placeholder="username"  name="username">
         <input type="text" placeholder="password" name="password">
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" name="userSub" id="userSub">
     </form>
     <?php    
-    $correctPassword = true;
-    $correctUsername = true;
+            //Connect the database
+            $connectionInfo = array("UID" => "User1", "pwd" => "Project1", "Database" => "gtfsdata", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+            $serverName = "lunar-rover.database.windows.net,1433";
+            $conn = sqlsrv_connect($serverName, $connectionInfo);
+                    if(isset($_POST['userSub'])){
 
-        $username = $_GET['username'];
-        $user_password = $_GET['password'];
+                        $uname = $_POST["username"];
+                        $password =$_POST["password"];
+                    
+                        if ($uname != "" && $password != ""){
+                    
+                            $sql_query = "select count(*) as cntUser
+                            from user_profile 
+                            where user_id = cast(".$uname." as int) and hashed_password = ".$password."";
+                            $result = sqlsrv_query($conn,$sql_query);
+                            if($result!=false){
+                                $row = sqlsrv_fetch_array($result);
+                    
+                                $count = $row['cntUser'];
+                        
+                                if($count > 0){
+                                    $_SESSION['uname'] = $uname;
+                                    header('Location: index1.php');
+                                }else{
+                                    header('Location: index.php');  
+                            }
+                          }
+                    
+                        }
+                    
+                    }
 
-    
-
-    
-    $connectionInfo = array("UID" => "User1", "pwd" => "Project1", "Database" => "gtfsdata", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-    $serverName = "lunar-rover.database.windows.net,1433";
-    $conn = sqlsrv_connect($serverName, $connectionInfo);
-    // if(isset($username)){
-    $sql="select hashed_password from user_profile where  user_id=CAST( ".$username."AS int)";
-    $password=sqlsrv_query(
-    $conn, $sql);
-    $row = sqlsrv_fetch_array($password, MYSQLI_ASSOC);
 
 
-    // foreach ($row as $value) {
-    //     echo "$value <br>";
-    //   }
+                    
+                    ?>
+
+
+
+                    <?php
+
+
+                        
+
+
+
+                
+
+                    ?>
+
+
+
+                
+
+    </html>
+
       
-    if($user_password==$row[0]){
-        header("Location:index1.php");
-    }else{
-        header("Location:index.php");
-    }
-    ?>
+
+    
+
+
+
