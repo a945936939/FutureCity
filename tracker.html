@@ -203,10 +203,26 @@
             drying our clothes, we can start making a big difference.<br /><br />
           </p>
           <p>Carbon emissions you reduced</p>
+          <p id="demo">0</p>
           <button id="start-tracking">Start tracking now</button>
           <button id="stop-tracking">Stop</button>
 
-          <p id="demo"></p>
+          <div id="vehicle-selection">
+            <input
+              type="radio"
+              id="Car"
+              name="vehicles"
+              value="Car"
+              checked="checked"
+            />
+            <label for="Car">Car</label>
+            <input type="radio" id="Bus" name="vehicles" value="Bus" />
+            <label for="Bus">Bus</label>
+            <input type="radio" id="Train" name="vehicles" value="Train" />
+            <label for="Train">Train</label>
+            <input type="radio" id="Tram" name="vehicles" value="Tram" />
+            <label for="Tram">Tram</label>
+          </div>
           <div id="map" style="width: 600px; height: 400px"></div>
 
           <script src="tracker.js"></script>

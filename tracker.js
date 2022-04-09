@@ -7,8 +7,12 @@ let distance;
 const buttonStartTrack = document.getElementById("start-tracking");
 
 const buttonStopTrack = document.getElementById("stop-tracking");
+const vehicleTypesContainer = document.getElementById("vehicle-selection");
+const vehicleTypes = document.querySelector(
+  'input[name="vehicles"]:checked'
+).value;
 
-function createMap(lat) {
+function createMap() {
   var map = L.map("map");
   L.tileLayer(
     "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -58,8 +62,7 @@ function calculateDistance() {
         lng4 = (lng2 * Math.PI) / 180;
         lat3 = (lat * Math.PI) / 180;
         lat4 = (lat2 * Math.PI) / 180;
-        // console.log(lat);
-        // console.log(lat2);
+
         // Haversine formula
         if (lat != 0 && lng != 0) {
           let dlon = lng4 - lng3;
@@ -95,11 +98,13 @@ function calculateDistance() {
   });
 
   if (keepTracking) {
+    console.log(distance);
     setTimeout(calculateDistance, 300);
   }
 }
 
 buttonStartTrack.addEventListener("click", () => {
   createMap();
+  vehicleTypesContainer.setAttribute("style", "display:hidden");
   calculateDistance();
 });
