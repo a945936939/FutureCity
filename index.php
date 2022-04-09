@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-// session_start();
-?>
 <head></head>
 <form method="POST"  action="" >
         <input type="number" placeholder="username"  name="username">
@@ -15,59 +11,31 @@
             $serverName = "lunar-rover.database.windows.net,1433";
             $conn = sqlsrv_connect($serverName, $connectionInfo);
                     if(isset($_POST['userSub'])){
-
                         $uname = $_POST["username"];
                         $password =$_POST["password"];
-                    
                         if ($uname != "" && $password != ""){
-                    
-                            $sql_query = "select * 
+                            $sql_query = "select count(*) as cntUser
                             from user_profile 
                             where user_id = cast(".$uname." as int) and hashed_password = ".$password."";
                             $result = sqlsrv_query($conn,$sql_query);
-                            if($result==null){
-
-                                // $row = sqlsrv_fetch_array($result);
+ 
+                                $row = sqlsrv_fetch_array($result);
                     
-                                // $count = $row['cntUser'];
+                                $count = $row['cntUser'];
                         
-                                // if($count > 0){
-                                    $_SESSION['uname'] = $uname;
-                                    header('Location: index1.php');
-                                }else{
-                                    header('Location: index.php');  
+                                if($count > 0){
+                                    header('Location: https://carbontriptracker.azurewebsites.net/index1.php');
+                                    die();
+                                }
                             }
-                          }
+                          
                     
-                        
+                        }
                     
-                    }
-
-
-
                     
+   
                     ?>
-
-
-
-                   
-
-<p>
-
-<?php
-echo "works";
-?>
-</p>
-                        
-
-
-
-                
-
-
-
-
-                
+          
 
     </html>
 
