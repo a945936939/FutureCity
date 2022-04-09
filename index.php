@@ -25,7 +25,7 @@
                             from user_profile 
                             where user_id = cast(".$uname." as int) and hashed_password = ".$password."";
                             $result = sqlsrv_query($conn,$sql_query);
-                            if($result!=false&&$result!=null){
+                            if($result==null){
 
                                 // $row = sqlsrv_fetch_array($result);
                     
