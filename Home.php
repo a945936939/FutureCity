@@ -43,10 +43,10 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
                 </div>
             </div>
             <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-                <div class="container"><a class="navbar-brand" href="Home.html">lunar rover</a>
+                <div class="container"><a class="navbar-brand" href="Home.php">lunar rover</a>
                     <div class="collapse navbar-collapse" id="navbarResponsive" style="height: 115px;margin: 25px;padding: 32px;">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="Home.html" style="padding: 10px 20px;margin: -1px;height: 38px;">HOME</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Home.php" style="padding: 10px 20px;margin: -1px;height: 38px;">HOME</a></li>
                             <li class="nav-item"></li>
                             <li class="nav-item"></li>
                             <li class="nav-item"></li>
