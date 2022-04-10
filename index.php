@@ -17,7 +17,7 @@
                                 $count = $row['cntUser'];
                         
                                 if($count > 0){
-                                    header('Location: index1.php');
+                                    header('Location: Home.php');
                                     die();
                                 }
                             }

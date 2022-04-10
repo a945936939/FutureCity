@@ -82,9 +82,9 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
         <div class="simple-slider">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;) center center / cover no-repeat;"></div>
-                    <div class="swiper-slide" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;) center center / cover no-repeat;"></div>
-                    <div class="swiper-slide" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;) center center / cover no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url('assets/img/6.png;') ;"></div>
+                    <div class="swiper-slide" style="background: url('assets/img/6.png;');"></div>
+                    <div class="swiper-slide" style="background: url('assets/img/6.png;');"></div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
