@@ -47,30 +47,16 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
                     <div class="collapse navbar-collapse" id="navbarResponsive" style="height: 115px;margin: 25px;padding: 32px;">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link" href="Home.php" style="padding: 10px 20px;margin: -1px;height: 38px;">HOME</a></li>
-                            <li class="nav-item"></li>
-                            <li class="nav-item"></li>
-                            <li class="nav-item"></li>
-                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" ariaz-expanded="false" data-bs-toggle="dropdown" href="#">Information
-                            <?php 
-                            // $sql="select hashed_password from user_profile where user_id ="";";
-                            
-                            // sqlsrv_query($conn, $sql);
-                               
-                            // 
 
-                            //     echo "Yes";
-                            // }else{
-                            //     echo"No";
-                            // }
-                            ?>
-                            </a>
-                                <div class="dropdown-menu"><a class="dropdown-item" href="#Contamination.html" style="font-weight: bold;font-size: 14px;">contamination</a><a class="dropdown-item" href="public%20transport.html" style="font-weight: bold;font-size: 14px;">city transport</a><a class="dropdown-item" href="#public transport.html"></a></div>
+                            <li class="nav-item"><a class="nav-link" href="publictransport.html" style="padding: 10px 20px;margin: -1px;height: 38px;">Information</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="tracker.html" style="padding: 10px 20px;margin: -1px;height: 38px;">Tracker</a></li>
+
+                          
+                            <li class="nav-item dropdown">
+                                <div class="dropdown-menu"><a class="dropdown-item" href="publictransport.html" style="font-size: 14px;font-weight: bold;">Information</a><a class="dropdown-item" href="tracker.html" style="font-size: 14px;font-weight: bold;">Tracker</a></div>
                             </li>
-                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">test</a>
-                                <div class="dropdown-menu"><a class="dropdown-item" href="#" style="font-size: 14px;font-weight: bold;">mini game</a><a class="dropdown-item" href="tracker.html" style="font-size: 14px;font-weight: bold;">Tracker</a><a class="dropdown-item" href="#"></a></div>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="#User blog.html">blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#about.html">about</a></li>
+       
                             <li class="nav-item"></li>
                         </ul>
                     </div><button data-bs-target="#navbarResponsive" data-bs-toggle="collapse" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
@@ -79,7 +65,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
         </div>
     </header>
     <div class="container">
-        <div class="simple-slider">
+        <!-- <div class="simple-slider">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background: url('assets/img/6.png;') ;"></div>
@@ -89,7 +75,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-            </div>
+            </div> -->
         </div>
         <section class="features-boxed">
             <div class="container">
@@ -100,36 +86,15 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
                             <p class="description">Experience our tracker. Know your carbon footprint and your living environment.</p><a class="learn-more" href="tracker.html">Learn more »</a>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-5 col-lg-4 item">
-                        <div class="box" style="height: 330.594px;"><i class="fa fa-clock-o icon" style="color: var(--bs-green);"></i>
-                            <h3 class="name">Entertainment</h3>
-                            <p class="description">Interact with our games and features for added fun.</p><a class="learn-more" href="#">Learn more »</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-5 col-lg-4 item">
-                        <div class="box" style="height: 330.094px;"><i class="fa fa-list-alt icon"></i>
-                            <h3 class="name">Blog</h3>
-                            <p class="description">Share your blog with other users</p><a class="learn-more" href="#">Learn more »</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-5 col-lg-4 item">
-                        <div class="box"><i class="fa fa-leaf icon" style="color: var(--bs-pink);"></i>
-                            <h3 class="name">Contamination</h3>
-                            <p class="description">Address pollution issues and use scientific conclusions and data to draw readers' attention to environmental issues.</p><a class="learn-more" href="#">Learn more »</a>
-                        </div>
-                    </div>
+
+
                     <div class="col-sm-6 col-md-5 col-lg-4 item">
                         <div class="box" style="height: 351.594px;"><i class="fa fa-plane icon" style="color: var(--bs-gray-900);"></i>
                             <h3 class="name">Public transport</h3>
-                            <p class="description">Introduce Melbourne's traffic situation and future plans</p><a class="learn-more" href="public%20transport.html">Learn more »</a>
+                            <p class="description">Introduce Melbourne's traffic situation and future plans</p><a class="learn-more" href="publictransport.html">Learn more »</a>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-5 col-lg-4 item">
-                        <div class="box"><i class="fa fa-phone icon"></i>
-                            <h3 class="name">About</h3>
-                            <p class="description">Introduce our organization. We are committed to the popularization of transportation business.</p><a class="learn-more" href="#">Learn more »</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>

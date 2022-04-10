@@ -12,6 +12,26 @@ const vehicleTypes = document.querySelector(
   'input[name="vehicles"]:checked'
 ).value;
 
+function carbonEmissions(dist, transportType) {
+  let emissions = 0;
+  switch (transportType) {
+    case "Train":
+      emissions = dist * 28.6;
+      break;
+
+    case "Tram":
+      emissions = dist * 20.2;
+      break;
+
+    case "Bus":
+      emissions = dist * 17.7;
+      break;
+
+    case "Car":
+      emissions = dist * 243.8;
+  }
+  return emissions;
+}
 function createMap() {
   var map = L.map("map");
   L.tileLayer(
@@ -81,7 +101,14 @@ function calculateDistance() {
             : (distance = c * r);
 
           if (typeof distance !== "undefined" && c * r > 0) {
-            document.getElementById("demo").innerHTML = distance;
+            let total_emissions = carbonEmissions(distance, vehicleTypes);
+            document.getElementById("demo").innerHTML =
+              "Distance travelled:" +
+              distance.toFixed(2) +
+              "Km. \n" +
+              "Emission for this trip is: " +
+              total_emissions.toFixed(2) +
+              " grams ";
           }
         }
         if (distance > 0) {
@@ -98,7 +125,6 @@ function calculateDistance() {
   });
 
   if (keepTracking) {
-    console.log(distance);
     setTimeout(calculateDistance, 300);
   }
 }
