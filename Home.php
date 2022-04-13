@@ -24,27 +24,27 @@
     <link rel="stylesheet" href="assets/css/Update1-Coming-Soon-Site.css">
 </head>
 
-<body style="height: 2480.38px;">
+<body >
 <?php
 $connectionInfo = array("UID" => "User1", "pwd" => "Project1", "Database" => "gtfsdata", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "lunar-rover.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
 
-    <header class="masthead" style="background-image:url('assets/img/home-bg.jpg');">
+    <header class="masthead" style="background-image:url('assets/img/Tram_Home.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-lg-8 mx-auto position-relative">
                     <div class="site-heading">
-                        <h1>Future City transport</h1><span class="subheading">help children to know the transport better
+                        <h1>Carbon Tracker</h1><span class="subheading">help children to know the transport better
 
                         </span>
                     </div>
                 </div>
             </div>
-            <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+            <nav class="navbar navbar-light navbar-expand-lg fixed-top"style="box-shadow:inset 0 0 0 2000px rgba(97, 97, 97, 0.64);" id="mainNav">
                 <div class="container"><a class="navbar-brand" href="Home.php">lunar rover</a>
-                    <div class="collapse navbar-collapse" id="navbarResponsive" style="height: 115px;margin: 25px;padding: 32px;">
+                    <div class="collapse navbar-collapse" id="navbarResponsive" style="height: 40px;margin: 25px;padding: 32px;">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link" href="Home.php" style="padding: 10px 20px;margin: -1px;height: 38px;">HOME</a></li>
 
@@ -65,17 +65,6 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
         </div>
     </header>
     <div class="container">
-        <!-- <div class="simple-slider">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background: url('assets/img/6.png;') ;"></div>
-                    <div class="swiper-slide" style="background: url('assets/img/6.png;');"></div>
-                    <div class="swiper-slide" style="background: url('assets/img/6.png;');"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div> -->
         </div>
         <section class="features-boxed">
             <div class="container">
@@ -83,18 +72,9 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
                     <div class="col-sm-6 col-md-5 col-lg-4 item">
                         <div class="box"><i class="fa fa-map-marker icon" style="--bs-body-color: var(--bs-red);color: var(--bs-red);"></i>
                             <h3 class="name">Tracker</h3>
-                            <p class="description">Experience our tracker. Know your carbon footprint and your living environment.</p><a class="learn-more" href="tracker.html">Learn more »</a>
+                            <p class="description">Experience our tracker. Know your carbon footprint and your living environment.</p><button class="btn btn-primary" onclick="location.href = 'tracker.html'">Start tracking</button>
                         </div>
                     </div>
-
-
-                    <div class="col-sm-6 col-md-5 col-lg-4 item">
-                        <div class="box" style="height: 351.594px;"><i class="fa fa-plane icon" style="color: var(--bs-gray-900);"></i>
-                            <h3 class="name">Public transport</h3>
-                            <p class="description">Introduce Melbourne's traffic situation and future plans</p><a class="learn-more" href="publictransport.html">Learn more »</a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>

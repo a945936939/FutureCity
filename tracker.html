@@ -68,45 +68,26 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="Home.php">lunar rover</a>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarResponsive"
-          style="height: 115px; margin: 25px; padding: 32px"
-        >
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="Home.php"
-                style="padding: 10px 20px; margin: -1px; height: 38px"
-                >HOME</a
->
-            </li>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top"style="box-shadow:inset 0 0 0 2000px rgba(97, 97, 97, 0.64);" id="mainNav">
+      <div class="container"><a class="navbar-brand" href="Home.php">lunar rover</a>
+          <div class="collapse navbar-collapse" id="navbarResponsive" style="height: 40px;margin: 25px;padding: 32px;">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="Home.php" style="padding: 10px 20px;margin: -1px;height: 38px;">HOME</a></li>
 
+                  <li class="nav-item"><a class="nav-link" href="publictransport.html" style="padding: 10px 20px;margin: -1px;height: 38px;">Information</a></li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="publictransport.html">Information</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tracker.html">Tracker</a>
-            </li>
-          </ul>
-        </div>
-        <button
-          data-bs-target="#navbarResponsive"
-          data-bs-toggle="collapse"
-          class="navbar-toggler"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa fa-bars"></i>
-        </button>
+                  <li class="nav-item"><a class="nav-link" href="tracker.html" style="padding: 10px 20px;margin: -1px;height: 38px;">Tracker</a></li>
+
+                
+                  <li class="nav-item dropdown">
+                      <div class="dropdown-menu"><a class="dropdown-item" href="publictransport.html" style="font-size: 14px;font-weight: bold;">Information</a><a class="dropdown-item" href="tracker.html" style="font-size: 14px;font-weight: bold;">Tracker</a></div>
+                  </li>
+
+                  <li class="nav-item"></li>
+              </ul>
+          </div><button data-bs-target="#navbarResponsive" data-bs-toggle="collapse" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
       </div>
-    </nav>
+  </nav>
     <header
       class="masthead"
       style="background-image: url('assets/img/10.png')"
@@ -122,7 +103,7 @@
                   height: 106px;
                   margin: 0px 0px 0px 0px;
                   padding: 5px;
-                  font-size: 80px;
+                  font-size: 40px;
                   overflow-wrap: normal;
                   text-align:center;
                   word-wrap: break-word;
@@ -137,7 +118,7 @@
                 height: 106px;
                 margin: 0px 0px 0px 0px;
                 padding: 5px;
-                font-size: 80px;
+                font-size: 40px;
                 overflow-wrap: normal;
                 text-align:center;
                 word-wrap: break-word;
@@ -149,7 +130,7 @@
               <span
                 class="subheading"
                 style="height: 31.3906px; margin:0px 0px 0px 0px; padding: px"
-                >We can provide the solution for your carbon footprint</span
+                >Track your carbon emissions</span
               >
             </div>
           </div>
@@ -160,11 +141,11 @@
       <div class="row">
         <div class="col-md-6 col-lg-6 mx-auto">
           <p style="font-size: 36px; font-weight: bold">
-            Tracker
+            Carbon Emission Tracker
           </p>
-          <p>-Track your carbon footprint!</p>
+          <p>Track your carbon footprint</p>
           <p>
-            <br />Use your location and the transport type and the website will calculate carbon emission for you!<br /><br />
+            <br />Use your location and the transport type and the website will calculate carbon emission for you<br /><br />
           </p>
         </div>
 
@@ -182,8 +163,8 @@
               <input type="radio" id="Tram" name="vehicles" value="Tram">
               <label for="Tram">Tram</label>
             </div>
-          <button id="start-tracking">Start tracking now</button>
-          <button id="stop-tracking">Stop</button>
+          <button class="btn btn-primary" id="start-tracking">Start tracking now</button>
+          <button class="btn btn-danger"id="stop-tracking">Stop</button>
 
           <p id="demo"></p>
           <div id="map" style="width:auto; height: 400px"></div>
@@ -198,7 +179,7 @@
               Why to use
             </p>
             <br>
-            <p>Choose the environment protection way to reduce your carbon footprint!</p>
+            <p>Choose the environment protection way to reduce your carbon footprint</p>
           </div>
           <div class="col-md-6 col-lg-6 mx-auto"> 
             <img src="/assets/img/12.png" style="height: 333px;width: 550.234px;margin: -27px;padding: -38px;"/>
@@ -207,24 +188,7 @@
           </div>
       </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-lg-6 mx-auto"> 
-      <img src="/assets/img/9.png" style="height: 333px;width: 390.234px;margin: -27px;padding: -38px;"/>
-      </p>
-      <br>
-    </div>
 
-    <div class="col-md-6 col-lg-6 mx-auto"> 
-      <p style="font-size: 36px; font-weight: bold">
-        Why to use
-      </p>
-      <br>
-      <p>Choose the environment protection way to reduce your carbon footprint!</p>
-    </div>
-
-
-</div>
 </div>
     <hr />
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
