@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
     <link rel="stylesheet" href="assets/css/Update1-Coming-Soon-Site.css">
+    <link rel="stylesheet" href="Home.css">
 </head>
 
 <body >

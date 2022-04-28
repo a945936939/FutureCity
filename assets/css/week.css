@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'simsun';
+  src: url("../fonts/simsun.ttf");
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: PingFang SC;
+}
+.week {
+  background-color: #f4f4f4;
+  padding-top: 20.73vw;
+  box-sizing: border-box;
+  height: auto;
+  position:relative;
+  top: 132px;
+}
+.week .title {
+  color: #F37532;
+  font-size: 9.6vw;
+  font-family: simsun;
+  margin-bottom: 8vw;
+  padding-left: 4.27vw;
+}
+.week .previous_week {
+  font-size: 3.73vw;
+  font-family: PingFang SC;
+  color: #222222;
+  margin-bottom: 9.33vw;
+  padding-left: 4.27vw;
+}
+.week .white_box {
+  height: 89.07vw;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16vw;
+}
+.week .white_box p {
+  margin-bottom: 3.73vw;
+}
+.week .white_box p:nth-of-type(odd) {
+  font-size: 5.33vw;
+  color: #222222;
+}
+.week .white_box p:nth-of-type(even) {
+  font-size: 6.93vw;
+  color: #517FD4;
+}
+.week .tip {
+  box-sizing: border-box;
+  font-size: 3.73vw;
+  color: #222222;
+  text-align: center;
+}
+.week .tip p {
+  margin-bottom: 9.87vw;
+  padding: 0 4.27vw 0 4.53vw;
+}
+.week .tip .pic {
+  width: 97.87vw;
+  height: 59.2vw;
+  object-fit: cover;
+  margin-bottom: 10.13vw;
+  background-image: url("../img/pic2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.week .distribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+.week .distribution .title {
+  font-family: SimSun;
+  padding: 16vw 10.67vw 10.67vw 10.93vw;
+  box-sizing: border-box;
+  font-size: 9.6vw;
+  color: #F37532;
+  text-align: center;
+}
+.week .distribution .pic {
+  width: 95.2vw;
+  height: 57.87vw;
+  object-fit: cover;
+  margin-bottom: 16vw;
+  background-image: url("../img/pic3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.week .distribution .text {
+  padding: 0 6.13vw 5.33vw 6.4vw;
+  box-sizing: border-box;
+  font-size: 3.73vw;
+  color: #222222;
+  text-align: center;
+}
+@media screen and (min-width: 769px) {
+  html,
+  body {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  html .week,
+  body .week {
+    width: 1200px !important;
+    height: auto !important;
+    padding-top: 80px !important;
+  }
+  html .week .title,
+  body .week .title {
+    font-size: 100px !important;
+    margin-bottom: 80px !important;
+  }
+  html .week .previous_week,
+  body .week .previous_week {
+    font-size: 40px !important;
+    margin-bottom: 80px !important;
+  }
+  html .week .white_box,
+  body .week .white_box {
+    height: 700px !important;
+    margin-bottom: 60px;
+  }
+  html .week .white_box p,
+  body .week .white_box p {
+    margin-bottom: 20px !important;
+  }
+  html .week .white_box p:nth-of-type(odd),
+  body .week .white_box p:nth-of-type(odd) {
+    font-size: 60px !important;
+  }
+  html .week .white_box p:nth-of-type(even),
+  body .week .white_box p:nth-of-type(even) {
+    font-size: 66px !important;
+  }
+  html .week .tip,
+  body .week .tip {
+    padding-top: 20px !important;
+    background-color: #f4f4f4 !important;
+    box-sizing: border-box;
+    font-size: 40px !important;
+    color: #222222;
+    text-align: center;
+  }
+  html .week .tip p,
+  body .week .tip p {
+    margin-bottom: 60px !important;
+    padding: 0 4.27vw 0 4.53vw;
+  }
+  html .week .tip .pic,
+  body .week .tip .pic {
+    width: 1200px !important;
+    height: 750px !important;
+    background-image: url("../img/pic4.png") !important;
+    background-size: 100% !important;
+    margin-bottom: 50px !important;
+  }
+  html .week .distribution,
+  body .week .distribution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+  }
+  html .week .distribution .title,
+  body .week .distribution .title {
+    font-family: SimSun;
+    padding: 50px 20px !important;
+    font-size: 100px !important;
+  }
+  html .week .distribution .pic,
+  body .week .distribution .pic {
+    width: 1200px !important;
+    height: 750px !important;
+    background-image: url("../img/pic5.png") !important;
+    background-size: 100% !important;
+    margin-bottom: 50px !important;
+  }
+  html .week .distribution .text,
+  body .week .distribution .text {
+    font-size: 35px !important;
+  }
+}
+/*# sourceMappingURL=week.css.map */

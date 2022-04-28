@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'simsun';
+  src: url("../fonts/simsun.ttf");
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: PingFang SC;
+}
+html .main_wrapper,
+body .main_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #925449;
+}
+html .main_wrapper .title,
+body .main_wrapper .title {
+  font-size: 9.6vw;
+  color: #FFFFFF;
+  margin-bottom: 10.67vw;
+  font-family: simsun;
+}
+html .main_wrapper .btns,
+body .main_wrapper .btns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+html .main_wrapper .btns .btn,
+body .main_wrapper .btns .btn {
+  width: 24.27vw;
+  height: 8.53vw;
+  border-radius: 1.6vw;
+  font-size: 4.27vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #FFFFFF;
+}
+html .main_wrapper .btns .btn a,
+body .main_wrapper .btns .btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #000;
+}
+html .main_wrapper .btns .btn:nth-of-type(1),
+body .main_wrapper .btns .btn:nth-of-type(1) {
+  margin-right: 23px;
+  background: #FFFFFF;
+}
+html .main_wrapper .btns .btn:nth-of-type(2),
+body .main_wrapper .btns .btn:nth-of-type(2) {
+  color: #fff;
+}
+html .main_wrapper .pic,
+body .main_wrapper .pic {
+  width: 91.47vw;
+  height: 64.8vw;
+  margin-top: 16vw;
+  background-image: url("../img/pic.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 769px) {
+  .main_wrapper .title {
+    font-size: 100px !important;
+    color: #FFFFFF;
+    margin-bottom: 80px !important;
+    font-family: simsun;
+  }
+  .main_wrapper .btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .main_wrapper .btns .btn {
+    width: 200px !important;
+    height: 70px !important;
+    border-radius: 10px!important;
+    font-size: 40px !important;
+    cursor: pointer;
+  }
+  .main_wrapper .btns .btn:nth-of-type(1) {
+    margin-right: 70px !important;
+    background: #FFFFFF;
+  }
+  .main_wrapper .btns .btn:nth-of-type(2) {
+    color: #fff;
+  }
+  .main_wrapper .pic {
+    width: 686px !important;
+    height: 486px !important;
+    margin-top: 20px !important;
+    object-fit: cover !important;
+  }
+}
+/*# sourceMappingURL=index.css.map */
