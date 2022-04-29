@@ -44,7 +44,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
                 </div>
             </div>
             <nav class="navbar navbar-light navbar-expand-lg fixed-top"style="box-shadow:inset 0 0 0 2000px rgba(97, 97, 97, 0.64);" id="mainNav">
-                <div class="container"><a class="navbar-brand" href="Home.php">lunar rover</a>
+                <div class="container"><a class="navbar-brand" href="Home.php">Lunar Rover</a>
                     <div class="collapse navbar-collapse" id="navbarResponsive" style="height: 40px;margin: 25px;padding: 32px;">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link" href="Home.php" style="padding: 10px 20px;margin: -1px;height: 38px;">HOME</a></li>
@@ -52,7 +52,9 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
                             <li class="nav-item"><a class="nav-link" href="publictransport.html" style="padding: 10px 20px;margin: -1px;height: 38px;">Information</a></li>
 
                             <li class="nav-item"><a class="nav-link" href="tracker.html" style="padding: 10px 20px;margin: -1px;height: 38px;">Tracker</a></li>
-
+                            <li class="nav-item">
+                    <a class="nav-link" href="Trailer.html">Report</a>
+                  </li>
                           
                             <li class="nav-item dropdown">
                                 <div class="dropdown-menu"><a class="dropdown-item" href="publictransport.html" style="font-size: 14px;font-weight: bold;">Information</a><a class="dropdown-item" href="tracker.html" style="font-size: 14px;font-weight: bold;">Tracker</a></div>

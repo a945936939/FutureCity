@@ -8,9 +8,6 @@ const buttonStartTrack = document.getElementById("start-tracking");
 
 const buttonStopTrack = document.getElementById("stop-tracking");
 const vehicleTypesContainer = document.getElementById("vehicle-selection");
-const vehicleTypes = document.querySelector(
-  'input[name="vehicles"]:checked'
-).value;
 
 function carbonEmissions(dist, transportType) {
   let emissions = 0;
@@ -122,6 +119,9 @@ function calculateDistance() {
     );
   buttonStopTrack.addEventListener("click", () => {
     keepTracking = false;
+    vehicleTypesContainer.style.display = "block";
+    document.getElementById("demo").innerHTML = "";
+    map = "";
   });
 
   if (keepTracking) {
@@ -130,7 +130,14 @@ function calculateDistance() {
 }
 
 buttonStartTrack.addEventListener("click", () => {
+  const vehicleTypes = document.querySelector(
+    'input[name="vehicles"]:checked'
+  ).value;
+  console.log(vehicleTypes);
+  vehicleTypesContainer.style.display = "none";
+
+  document.getElementById("demo").innerHTML = "Calculating... ";
   createMap();
-  vehicleTypesContainer.setAttribute("style", "display:hidden");
+
   calculateDistance();
 });
