@@ -47,142 +47,11 @@
   </head>
 
   <body>
-    <nav
-      class="navbar navbar-light navbar-expand-lg fixed-top"
-      id="mainNav"
-      style="box-shadow: inset 0 0 0 2000px rgba(97, 97, 97, 0.64)"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="Home.php">Lunar Rover</a>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarResponsive"
-          style="height: 40px; margin: 25px; padding: 32px"
-        >
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="Home.php"
-                style="padding: 10px 20px; margin: -1px; height: 38px"
-                >HOME</a
-              >
-            </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="publictransport.html">Information</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tracker.html">Tracker</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Trailer.html">Report</a>
-            </li>
-          </ul>
-        </div>
-        <button
-          data-bs-target="#navbarResponsive"
-          data-bs-toggle="collapse"
-          class="navbar-toggler"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa fa-bars"></i>
-        </button>
-      </div>
-    </nav>
-    <header
-      class="masthead"
-      style="background-image: url('assets/img/Tram_Home.jpg')"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10 col-lg-8 mx-auto position-relative">
-            <div class="site-heading">
-              <h1>Carbon Tracker</h1>
-              <span class="subheading"
-                >help children to know the transport better
-              </span>
-            </div>
-          </div>
-        </div>
-        <nav
-          class="navbar navbar-light navbar-expand-lg fixed-top"
-          style="box-shadow: inset 0 0 0 2000px rgba(97, 97, 97, 0.64)"
-          id="mainNav"
-        >
-          <div class="container">
-            <a class="navbar-brand" href="Home.php">Lunar Rover</a>
-            <div
-              class="collapse navbar-collapse"
-              id="navbarResponsive"
-              style="height: 40px; margin: 25px; padding: 32px"
-            >
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="Home.php"
-                    style="padding: 10px 20px; margin: -1px; height: 38px"
-                    >HOME</a
-                  >
-                </li>
+    <?php
+include "./header.html"
 
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="publictransport.html"
-                    style="padding: 10px 20px; margin: -1px; height: 38px"
-                    >Information</a
-                  >
-                </li>
-
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="tracker.html"
-                    style="padding: 10px 20px; margin: -1px; height: 38px"
-                    >Tracker</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Trailer.html">Report</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                  <div class="dropdown-menu">
-                    <a
-                      class="dropdown-item"
-                      href="publictransport.html"
-                      style="font-size: 14px; font-weight: bold"
-                      >Information</a
-                    ><a
-                      class="dropdown-item"
-                      href="tracker.html"
-                      style="font-size: 14px; font-weight: bold"
-                      >Tracker</a
-                    >
-                  </div>
-                </li>
-
-                <li class="nav-item"></li>
-              </ul>
-            </div>
-            <button
-              data-bs-target="#navbarResponsive"
-              data-bs-toggle="collapse"
-              class="navbar-toggler"
-              aria-controls="navbarResponsive"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i class="fa fa-bars"></i>
-            </button>
-          </div>
-        </nav>
-      </div>
-    </header>
+?>
     <h1 style="font-family: 'Comic Neue', serif; color: var(--bs-red)">
       <br /><br /><br /><br />
       <br />
@@ -316,7 +185,6 @@
         </div>
       </section>
     </article>
-    <button type="skip" id="top" onclick="Home.php">Home</button>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/clean-blog.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>

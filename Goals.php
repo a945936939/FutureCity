@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/untitled.css">
     <link rel="stylesheet" href="assets/css/Update1-Coming-Soon-Site.css">
     <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/loading-bar.min.css"/>
 </head>
 
 <body >
@@ -36,25 +37,52 @@ include "./header.html"
 
 ?>
 
-    <div class="container">
-        </div>
-        <section class="features-boxed">
-            <div class="container">
-                <div class="row justify-content-center features">
-                    <div class="col-sm-6 col-md-5 col-lg-4 item">
-                        <div class="box"><i class="fa fa-map-marker icon" style="--bs-body-color: var(--bs-red);color: var(--bs-red);"></i>
-                            <h3 class="name">Tracker</h3>
-                            <p class="description">Experience our tracker. Know your carbon footprint and your living environment.</p><button class="btn btn-primary" onclick="location.href = 'tracker.html'">Start tracking</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/clean-blog.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
-    <script src="assets/js/Simple-Slider.js"></script>
+<div class="ldBar"
+  style="width:100%;height:100px",
+  data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
+  data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
+  data-value="50"
+></div>
+
+<div
+  data-preset="fan"
+  class="ldBar label-center"
+  data-value="35"
+  style="margin-top:50px"
+></div>
+
+
+<div
+  data-preset="bubble"
+  class="ldBar label-center"
+  data-value="35"
+  style="margin-top:50px"
+></div>
+
+
+<div
+  data-type="fill"
+  data-path="M10 10L90 10L90 90L10 90Z"
+  class="ldBar"
+  data-fill="data:ldbar/res,
+  bubble(#248,#fff,50,1)"
+></div>
+
+<!-- <div
+  data-type="fill"
+  data-img="kirby-dance.svg"
+  style="margin-top:60px"
+></div> -->
+
+
+<!-- <div
+  data-type="fill"
+  data-path="M10 10L90 10L90 90L10 90Z"
+  class="ldBar"
+  data-fill="data:ldbar/res,
+  bubble(#248,#fff,50,1)"
+></div> -->
 </body>
+<script src="assets/js/loading-bar.min.js"></script>
 
 </html>
