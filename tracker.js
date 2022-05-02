@@ -4,6 +4,9 @@ var lat2 = 0;
 var lng2 = 0;
 var keepTracking = true;
 let distance;
+var start_time = "";
+var end_time = "";
+var transport_id = 0;
 const buttonStartTrack = document.getElementById("start-tracking");
 
 const buttonStopTrack = document.getElementById("stop-tracking");
@@ -118,26 +121,32 @@ function calculateDistance() {
       options
     );
   buttonStopTrack.addEventListener("click", () => {
+    end_time = new Date().toLocaleString();
+
+    document.getElementById("end_time").value = end_time;
+    console.log(end_time);
     keepTracking = false;
     vehicleTypesContainer.style.display = "block";
     document.getElementById("demo").innerHTML = "";
     map = "";
   });
-
   if (keepTracking) {
     setTimeout(calculateDistance, 300);
   }
 }
 
 buttonStartTrack.addEventListener("click", () => {
+  start_time = new Date().toLocaleString();
+
+  document.getElementById("start_time").value = start_time;
+
+  console.log(start_time);
   const vehicleTypes = document.querySelector(
     'input[name="vehicles"]:checked'
   ).value;
   console.log(vehicleTypes);
   vehicleTypesContainer.style.display = "none";
-
   document.getElementById("demo").innerHTML = "Calculating... ";
   createMap();
-
   calculateDistance();
 });

@@ -52,10 +52,7 @@
 include "./header.html"
 
 ?>
-    <h1 style="font-family: 'Comic Neue', serif; color: var(--bs-red)">
-      <br /><br /><br /><br />
-      <br />
-    </h1>
+
     <article>
       <div class="container-fluid">
         <div class="row">

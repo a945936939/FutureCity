@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php session_start();
-
+require_once("connection.php");
 ?>
 <head>
     <meta charset="utf-8">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
     <link rel="stylesheet" href="assets/css/Update1-Coming-Soon-Site.css">
-    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Goals.css">
     <link rel="stylesheet" type="text/css" href="assets/css/loading-bar.min.css"/>
 </head>
 
@@ -37,51 +37,80 @@ include "./header.html"
 
 ?>
 
+<div class="row">
+      <div class="col-md-10 col-lg-8 mx-auto position-relative">
+        <div class="site-heading">
+          <h1>Weekly Global Goals</h1>
+          <span class="subheading"
+            >This is the shared objectives that every user is participating
+          </span>
+        </div>
+      </div>
+    </div>
+<div class="border" >
 <div class="ldBar"
-  style="width:100%;height:100px",
+  style="width:100%;height:200px;margin-top:100px;margin-bottom:100px",
   data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
   data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
-  data-value="50"
-></div>
+  data-value="
+  
+  <?php 
+  $query="select sum(user_trip_length) as 'total_length'
+  from user_trip_2
+  where user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
+  
+  $result = sqlsrv_query($conn,$query);
+$row = sqlsrv_fetch_array($result);
+$travel_distance=$row["total_length"];
+  echo $travel_distance/1000;
+  ?>
+  "
+>Travel 100km in total</div>
+</div>
+<div class="border" >
+<div class="ldBar"
+  style="width:100%;height:200px; margin-top:100px;margin-bottom:100px",
+  data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
+  data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
+  data-value="
+  <?php 
+  $query="select sum(user_trip_emissions) as 'total_emissions'
+  from user_trip_2
+  where user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
+  
+  $result = sqlsrv_query($conn,$query);
+$row = sqlsrv_fetch_array($result);
+$total_emissions=$row["total_emissions"];
+  echo $total_emissions/100000;
+  ?>
+  "
+  <!-- data-unit="Kg" -->
+Carbon emission reduction in total 25000
+</div></div>
+<div class="border" >
+<div class="ldBar"
+  style="width:100%;height:200px; margin-top:100px;margin-bottom:100px",
+  data-stroke="data:ldbar/res,gradient(0,1,#7he,#7ld,#7e5,#ed5)",
+  data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
+  data-value="
+  <?php 
+  $query="select count(*) as 'long_travel'
+  from user_trip_2
+  where user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
+  and user_trip_length > 7000;
+  ";
+  
+  $result = sqlsrv_query($conn,$query);
+$row = sqlsrv_fetch_array($result);
+$counts=$row["long_travel"];
+  echo $counts;
+  ?>
+  "
+  
+>Long distance travel (more than 7 km) in public transport 20 times in total
+</div>
+</div>
 
-<div
-  data-preset="fan"
-  class="ldBar label-center"
-  data-value="35"
-  style="margin-top:50px"
-></div>
-
-
-<div
-  data-preset="bubble"
-  class="ldBar label-center"
-  data-value="35"
-  style="margin-top:50px"
-></div>
-
-
-<div
-  data-type="fill"
-  data-path="M10 10L90 10L90 90L10 90Z"
-  class="ldBar"
-  data-fill="data:ldbar/res,
-  bubble(#248,#fff,50,1)"
-></div>
-
-<!-- <div
-  data-type="fill"
-  data-img="kirby-dance.svg"
-  style="margin-top:60px"
-></div> -->
-
-
-<!-- <div
-  data-type="fill"
-  data-path="M10 10L90 10L90 90L10 90Z"
-  class="ldBar"
-  data-fill="data:ldbar/res,
-  bubble(#248,#fff,50,1)"
-></div> -->
 </body>
 <script src="assets/js/loading-bar.min.js"></script>
 

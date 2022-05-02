@@ -1,8 +1,8 @@
+
 <?php    
+session_start();
             //Connect the database
-            $connectionInfo = array("UID" => "User1", "pwd" => "Project1", "Database" => "gtfsdata", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-            $serverName = "lunar-rover.database.windows.net,1433";
-            $conn = sqlsrv_connect($serverName, $connectionInfo);
+require_once("connection.php");
                     if(isset($_POST['userSub'])){
                         $uname = $_POST["username"];
                         $password =$_POST["password"];
@@ -17,6 +17,8 @@
                                 $count = $row['cntUser'];
                         
                                 if($count > 0){
+                                    $_SESSION['username']=$uname;
+                                    $_SESSION['password']=$password;
                                     header('Location: Home.php');
                                     die();
                                 }

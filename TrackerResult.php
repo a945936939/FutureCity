@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-<?php session_start();
-
-?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -23,35 +20,65 @@
     <link rel="stylesheet" href="assets/css/untitled.css">
     <link rel="stylesheet" href="assets/css/Update1-Coming-Soon-Site.css">
     <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
 </head>
 
-<body >
-<?php
-require_once("connection.php");
+  <body>
 
+  <input type="hidden" id="start_time" name="start_time" value="" />
+  <input type="hidden" id="end_time" name="end_time" value="" />
+
+  <?php
 include "./header.html"
 
 ?>
-
     <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 mx-auto">
+          <p style="font-size: 36px; font-weight: bold">
+            Carbon Emission Tracker
+          </p>
+          <p>Track your carbon footprint</p>
+          <p>
+            <br />Use your location and the transport type and the website will calculate carbon emission for you<br /><br />
+          </p>
         </div>
-        <section class="features-boxed" style="background-color:#E9C46A">
-            <div class="container">
-                <div class="row justify-content-center features">
-                    <div class="col-sm-6 col-md-5 col-lg-4 item">
-                        <div class="box"><i class="fa fa-map-marker icon" style="--bs-body-color: var(--bs-red);color: var(--bs-red);"></i>
-                            <h3 class="name">Tracker</h3>
-                            <p class="description">Experience our tracker. Know your carbon footprint and your living environment.</p><button class="btn " style="color:#E76F51" onclick="location.href = 'tracker.html'">Start tracking</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+          <div class="col-md-6 col-lg-6 mx-auto">
+
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-6 mx-auto"> 
+            <p style="font-size: 36px; font-weight: bold">
+              Why to use
+            </p>
+            <br>
+            <p>Choose the environment protection way to reduce your carbon footprint
+
+
+            </p>
+
+          </div>
+          <div class="col-md-6 col-lg-6 mx-auto"> 
+            <img src="/assets/img/12.png" style="height: 333px;width: 550.234px;margin: -27px;padding: -38px;"/>
+            </p>
+            <br><br><br><br><br><br><br>
+          </div>
+      </div>
+</div>
+
+</div>
+    <hr />
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/clean-blog.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
-</body>
-
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>
+   <script src="tracker.js"></script>
+  </body>
 </html>
