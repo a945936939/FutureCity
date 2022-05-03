@@ -47,11 +47,14 @@
   </head>
 
   <body>
+  <header class="masthead" style="background-image: url('assets/img/test.jpg')">
 
     <?php
 include "./header.html"
 
 ?>
+
+</header>
 
     <article>
       <div class="container-fluid">

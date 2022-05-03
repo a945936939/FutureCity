@@ -27,15 +27,18 @@ require_once("connection.php");
 </head>
 
 <body >
+<header class="masthead" style="background-image: url('assets/img/Tram_Home.jpg')">
+
 <?php
 $connectionInfo = array("UID" => "User1", "pwd" => "Project1", "Database" => "gtfsdata", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "lunar-rover.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-?>
-<?php
+
 include "./header.html"
 
 ?>
+
+</header>
 
 <div class="row">
       <div class="col-md-10 col-lg-8 mx-auto position-relative">

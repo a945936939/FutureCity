@@ -28,6 +28,8 @@ require_once("connection.php");
 </head>
 
 <body >
+<header class="masthead" style="background-image: url('assets/img/test.jpg')">
+
 <?php
 $query="select t.transport_type, count(*) as 'number_of_trips'
 from user_trip_2 u join transport t on u.transport_id = t.transport_id
@@ -37,24 +39,13 @@ Order by t.transport_type;";
 
 $result = sqlsrv_query($conn,$query);
  
-// $transport=array(
-//     "Car"=>0,
-//     "Tram"=>0,
-//     "Train"=>0,
-//     "Bus"=>0
-
-// );
-
-                                // while($row = sqlsrv_fetch_array($result)){
-                                //     $transport[$row["transport_type"]]=$row["number_of_trips"];
-                                    
-                                // }
-
 
 
 include "./header.html"
 
 ?>
+  </header>
+
 <div class="row">
 
 
