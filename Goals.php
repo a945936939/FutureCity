@@ -27,7 +27,7 @@ require_once("connection.php");
 </head>
 
 <body >
-<header class="masthead" style="background-image: url('assets/img/Tram_Home.jpg')">
+<header class="masthead" style="background-image: url('assets/img/header5.jpg')">
 
 <?php
 $connectionInfo = array("UID" => "User1", "pwd" => "Project1", "Database" => "gtfsdata", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);

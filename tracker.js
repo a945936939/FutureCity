@@ -123,7 +123,7 @@ function calculateDistance() {
   buttonStopTrack.addEventListener("click", () => {
     end_time = new Date().toLocaleString();
 
-    document.getElementById("end_time").value = end_time;
+    // document.getElementById("end_time").value = end_time;
     console.log(end_time);
     keepTracking = false;
     vehicleTypesContainer.style.display = "block";
@@ -138,7 +138,7 @@ function calculateDistance() {
 buttonStartTrack.addEventListener("click", () => {
   start_time = new Date().toLocaleString();
 
-  document.getElementById("start_time").value = start_time;
+  // document.getElementById("start_time").value = start_time;
 
   console.log(start_time);
   const vehicleTypes = document.querySelector(

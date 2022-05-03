@@ -29,11 +29,14 @@
 
   <input type="hidden" id="start_time" name="start_time" value="" />
   <input type="hidden" id="end_time" name="end_time" value="" />
+  <header class="masthead" style="background-image: url('assets/img/header3.jpg')">
 
   <?php
 include "./header.html"
 
 ?>
+  </header>
+
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-lg-6 mx-auto">

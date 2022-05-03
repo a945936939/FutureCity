@@ -47,7 +47,7 @@
   </head>
 
   <body>
-  <header class="masthead" style="background-image: url('assets/img/test.jpg')">
+  <header class="masthead" style="background-image: url('assets/img/header6.jpg')">
 
     <?php
 include "./header.html"

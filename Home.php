@@ -26,7 +26,7 @@
 </head>
 
 <body >
-<header class="masthead" style="background-image: url('assets/img/test1.jpeg')">
+<header class="masthead" style="background-image: url('assets/img/header1.jpg')">
 <?php
 require_once("connection.php");
 
