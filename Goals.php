@@ -33,9 +33,7 @@ require_once("connection.php");
 $connectionInfo = array("UID" => "User1", "pwd" => "Project1", "Database" => "gtfsdata", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "lunar-rover.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-
 include "./header.html"
-
 ?>
 
 </header>
@@ -56,19 +54,19 @@ include "./header.html"
   data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
   data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
   data-value="
-  
   <?php 
   $query="select sum(user_trip_length) as 'total_length'
   from user_trip_2
-  where user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
-  
-  $result = sqlsrv_query($conn,$query);
+  where user_trip_start_time between DATEADD(day, -14, GETDATE()) AND GETDATE();";
+$result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
 $travel_distance=$row["total_length"];
-  echo $travel_distance/1000;
-  ?>
-  "
->Travel 100km in total</div>
+echo $travel_distance;
+?>
+"
+>Travel 100km in total<?php
+echo $row["total_length"];
+?></div>
 </div>
 <div class="border" >
 <div class="ldBar"
@@ -79,15 +77,13 @@ $travel_distance=$row["total_length"];
   <?php 
   $query="select sum(user_trip_emissions) as 'total_emissions'
   from user_trip_2
-  where user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
-  
+  where user_trip_start_time between DATEADD(day, -14, GETDATE()) AND GETDATE();";
   $result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
 $total_emissions=$row["total_emissions"];
-  echo $total_emissions/100000;
-  ?>
-  "
-  <!-- data-unit="Kg" -->
+echo $total_emissions/100000;
+  ?>"
+ >
 Carbon emission reduction in total 25000
 </div></div>
 <div class="border" >
@@ -99,22 +95,18 @@ Carbon emission reduction in total 25000
   <?php 
   $query="select count(*) as 'long_travel'
   from user_trip_2
-  where user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
+  where user_trip_start_time between DATEADD(day, -14, GETDATE()) AND GETDATE()
   and user_trip_length > 7000;
   ";
-  
-  $result = sqlsrv_query($conn,$query);
+$result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
 $counts=$row["long_travel"];
   echo $counts;
   ?>
   "
-  
 >Long distance travel (more than 7 km) in public transport 20 times in total
 </div>
 </div>
-
 </body>
 <script src="assets/js/loading-bar.min.js"></script>
-
 </html>

@@ -26,10 +26,8 @@
 </head>
 
   <body>
-<!-- 
-  <input type="hidden" id="start_time" name="start_time" value="" />
-  <input type="hidden" id="end_time" name="end_time" value="" /> -->
-  <header class="masthead" style="background-image: url('assets/img/header3.jpg')">
+
+  <header class="masthead" style="background-image: url('assets/img/header7.jpg')">
 
   <?php
 include "./header.html"
@@ -48,7 +46,6 @@ include "./header.html"
           </p>
         </div>
           <div class="col-md-6 col-lg-6 mx-auto">
-            <!-- <form action="TrackerResult.php" method="post"> -->
             <div id="vehicle-selection" style="margin-bottom: 30px;">
  
               <input type="radio"   id="Car" name="vehicles" value="Car"  checked=true>
@@ -72,7 +69,6 @@ include "./header.html"
           <div id="map" style="width: auto;height: 300px;"></div>
         </div>
           <script src="tracker.js"></script><br><br><br><br><br>
-        <!-- </form> -->
       </div>
       <div class="container">
         <div class="row">
@@ -85,7 +81,6 @@ include "./header.html"
 
 
             <?php
-            // echo $_POST['end_time'];
             ?>
             </p>
 
