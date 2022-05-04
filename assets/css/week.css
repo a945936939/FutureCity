@@ -3,7 +3,7 @@
   padding: 0;
 }
 @font-face {
-  font-family: 'simsun';
+  font-family: "simsun";
   src: url("../fonts/simsun.ttf");
 }
 html,
@@ -17,15 +17,15 @@ body {
   padding-top: 20.73vw;
   box-sizing: border-box;
   height: auto;
-  position:relative;
+  position: relative;
   top: 132px;
 }
 .week .title {
-  color: #F37532;
+  color: #f37532;
   font-size: 9.6vw;
   font-family: simsun;
   margin-bottom: 8vw;
-  padding-left: 4.27vw;
+  /* padding-left: 4.27vw; */
 }
 .week .previous_week {
   font-size: 3.73vw;
@@ -52,7 +52,7 @@ body {
 }
 .week .white_box p:nth-of-type(even) {
   font-size: 6.93vw;
-  color: #517FD4;
+  color: #517fd4;
 }
 .week .tip {
   box-sizing: border-box;
@@ -84,7 +84,7 @@ body {
   padding: 16vw 10.67vw 10.67vw 10.93vw;
   box-sizing: border-box;
   font-size: 9.6vw;
-  color: #F37532;
+  color: #f37532;
   text-align: center;
 }
 .week .distribution .pic {
@@ -103,7 +103,7 @@ body {
   color: #222222;
   text-align: center;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 3000px) {
   html,
   body {
     display: flex !important;

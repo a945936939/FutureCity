@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+       
   <?php session_start();
     require_once("connection.php");
 
-      include "./header.html";
+
 
       // // example query
       // $query="select t.transport_type, count(*) as 'number_of_trips'
@@ -160,7 +161,7 @@
 
   ?>
 
-    <meta charset="UTF-8" />
+<meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
@@ -205,13 +206,21 @@
     <link rel="stylesheet" href="./assets/css/week.css" />
     <title>Document</title>
   </head>
-  <body>
-    <header
+  <header
       class="masthead"
-      style="background-image: url('assets/img/header3.jpg')"
+      style="background-image: url('assets/img/header3.jpg') "
+    
     >
-      <include src="./header.html"></include>
+ <?php
+ include "./header.html";
+ 
+ ?>
+
     </header>
+ 
+  <body>
+ 
+
     <div class="week">
       <div class="title">Weekly Report</div>
       <div class="previous_week">Previous Week：<?php 
