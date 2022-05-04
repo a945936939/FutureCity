@@ -3,6 +3,8 @@
 <head>
 <?php session_start();
 require_once("connection.php");
+
+include "./header.html"
 ?>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -50,16 +52,13 @@ require_once("connection.php");
 <body>
 <header class="masthead" style="background-image: url('assets/img/header2.jpg')">
 
-<?php
-include "./header.html"
 
-?>
 </header>
 <div class="main_wrapper">
     <div class="title">REPORT</div>
     <div class="btns">
         <div class="btn">
-            <a href="Report.html">Week</a>
+            <a href="Report_week.php">Week</a>
         </div>
         <div class="btn">Month</div>
     </div>
