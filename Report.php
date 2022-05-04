@@ -4,7 +4,7 @@
 <?php session_start();
 require_once("connection.php");
 
-include "./header.html"
+
 ?>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -52,7 +52,12 @@ include "./header.html"
 <body>
 <header class="masthead" style="background-image: url('assets/img/header2.jpg')">
 
-
+<?php
+$connectionInfo = array("UID" => "User1", "pwd" => "Project1", "Database" => "gtfsdata", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "lunar-rover.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+include "./header.html"
+?>
 </header>
 <div class="main_wrapper">
     <div class="title">REPORT</div>
