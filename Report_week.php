@@ -143,21 +143,53 @@
       // // -- data ends at september so from september to december it will show 2020 stats rather than 2021
       // // -- show the relevent statistic -- compare the user's most commonly taken transport to 
       // // -- the correspoinding percentage
-      $query7 = "select Year, Month, Total, train_perc, tram_perc, bus_perc 
+      $query7 = "select max(Year) as 'year'
       from transport_stats
       where Month = month(GETDATE())
       order by Year desc;";
 
       $result7 = sqlsrv_query($conn,$query7);
 
-      $transport_stats = array(sqlsrv_fetch_array($result7));
+      $year = sqlsrv_fetch_array($result7)['year'];
 
-      // $end = false
-      // while (!is_null($end)){
+      $query8 = "select train_perc, bus_perc, tram_perc
+      from transport_stats
+      where Year = ".$year." and Month = month(GETDATE());";
 
-      // }
+      $stats = sqlsrv_fetch_array(sqlsrv_query($conn,$query8));
 
+      switch ($key){
+        case "Bus":
+          $stats = round($stats["bus_perc"],2);
+          break;
+        case "Train":
+          $stats = round($stats["train_perc"],2);
+          break;
+        case "Tram":
+          $stats = round($stats["tram_perc"],2);
+          break;
+        case null:
+          $stats = "Error";
+          break;
+      };
 
+      
+
+     
+
+      //  create an array of the transport stats informations
+      $end = False;
+      while ($end){
+          $temp  = sqlsrv_fetch_array($result7);
+          if (isnull($temp)){
+            echo $end;
+            $end = True;
+          } else {
+            $transport_stats[] = $temp;
+          }
+      }
+
+    
   ?>
 
     <meta charset="UTF-8" />
@@ -242,8 +274,13 @@
         <div class="title">DISTRIBUTION OF<br />PUBLIC TRANSPORT</div>
         <div class="pic"></div>
         <div class="text">
-            For the previous week: <?php echo $key?>
-            was your preferred type of public transport with <?php echo $value?> trips.
+            For the previous week: <?php echo $key;?>
+            was your preferred type of public transport with <?php echo $value;?> trips.
+
+            In Melbourne in the month of <?php echo (date('F')." ".$year.", ".$key); ?> accounted for <?php echo ($stats * 100); ?> % of public transport trips.
+
+            <?php $transport_stats ?>
+            
 
         </div>
       </div>
