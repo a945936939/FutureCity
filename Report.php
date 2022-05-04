@@ -48,51 +48,13 @@ require_once("connection.php");
     <title>Trailer</title>
 </head>
 <body>
-    <nav
-      class="navbar navbar-light navbar-expand-lg fixed-top"
-      id="mainNav"
-      style="box-shadow: inset 0 0 0 2000px rgba(97, 97, 97, 0.64)"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="Home.php">lunar rover</a>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarResponsive"
-          style="height: 40px; margin: 25px; padding: 32px"
-        >
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="Home.php"
-                style="padding: 10px 20px; margin: -1px; height: 38px"
-                >HOME</a
-              >
-            </li>
+<header class="masthead" style="background-image: url('assets/img/header2.jpg')">
 
-            <li class="nav-item">
-              <a class="nav-link" href="publictransport.html">Information</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tracker.html">Tracker</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Trailer.html">Report</a>
-            </li>
-          </ul>
-        </div>
-        <button
-          data-bs-target="#navbarResponsive"
-          data-bs-toggle="collapse"
-          class="navbar-toggler"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa fa-bars"></i>
-        </button>
-      </div>
-    </nav>
+<?php
+include "./header.html"
+
+?>
+</header>
 <div class="main_wrapper">
     <div class="title">REPORT</div>
     <div class="btns">

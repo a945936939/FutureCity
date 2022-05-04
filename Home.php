@@ -26,12 +26,14 @@
 </head>
 
 <body >
+<header class="masthead" style="background-image: url('assets/img/header1.jpg')">
 <?php
 require_once("connection.php");
 
 include "./header.html"
 
 ?>
+</header>
 
     <div class="container">
         </div>

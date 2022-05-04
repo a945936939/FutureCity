@@ -28,6 +28,8 @@ require_once("connection.php");
 </head>
 
 <body >
+<header class="masthead" style="background-image: url('assets/img/header4.jpg')">
+
 <?php
 $query="select t.transport_type, count(*) as 'number_of_trips'
 from user_trip_2 u join transport t on u.transport_id = t.transport_id
@@ -37,36 +39,35 @@ Order by t.transport_type;";
 
 $result = sqlsrv_query($conn,$query);
  
-// $transport=array(
-//     "Car"=>0,
-//     "Tram"=>0,
-//     "Train"=>0,
-//     "Bus"=>0
-
-// );
-
-                                // while($row = sqlsrv_fetch_array($result)){
-                                //     $transport[$row["transport_type"]]=$row["number_of_trips"];
-                                    
-                                // }
-
 
 
 include "./header.html"
 
 ?>
+  </header>
+
 <div class="row">
 
 
 
 <div class="col-sm-6 col-md-5 col-lg-4 "style="margin-bottom:12rem; padding-bottom:100px">
 <div class="card" style="width: 25rem;">
-  <img class="card-img-top" src="/assets/img/card1.jpeg" alt="Card image cap">
+  <!-- <img class="card-img-top" src="/assets/img/card1.jpg" alt="Card image cap">
+ -->
+
+ <div
+class="ldBar"
+  data-type="fill"
+  data-img="./assets/img/card1.jpg"
+  data-img-size="398,398"
+  data-value="50";
+  style="margin-bottom:10rem"
+></div>
   <div class="card-body">
     <h5 class="card-title"> Bus man Lv.1</h5>
     <p class="card-text">Catch Bus 10 times</p>
 </div>
-    <div class="ldBar"
+    <!-- <div class="ldBar"
   style="width:100%;height:10rem;",
   data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
   data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
@@ -75,9 +76,21 @@ include "./header.html"
 $row = sqlsrv_fetch_array($result);
 $bus_trips=$row["number_of_trips"];
   echo $bus_trips*10;
-  ?>
+  ?> 
   "
-></div>
+></div> -->
+
+<!-- <div class="ldBar"style="width:100%;height:10rem;"
+ data-value="
+ 
+ <?php 
+$row = sqlsrv_fetch_array($result);
+$bus_trips=$row["number_of_trips"];
+  echo $bus_trips*10;
+  ?>
+ ">
+</div> -->
+
   </div>
 </div>
 
@@ -86,7 +99,7 @@ $bus_trips=$row["number_of_trips"];
 
 <div class="col-sm-6 col-md-5 col-lg-4 "style="margin-bottom:12rem; padding-bottom:100px">
 <div class="card" style="width: 25rem;">
-  <img class="card-img-top" src="/assets/img/card1.jpeg" alt="Card image cap">
+  <img class="card-img-top" src="/assets/img/card2.jpg" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title"> Car man Lv.1</h5>
     <p class="card-text">Catch Car 10 times</p>
@@ -111,7 +124,7 @@ $bus_trips=$row["number_of_trips"];
 
 <div class="col-sm-6 col-md-5 col-lg-4 "style="margin-bottom:12rem; padding-bottom:100px">
 <div class="card" style="width: 25rem;">
-  <img class="card-img-top" src="/assets/img/card1.jpeg" alt="Card image cap">
+  <img class="card-img-top" src="/assets/img/card3.jpg" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title"> Train man Lv.1</h5>
     <p class="card-text">Catch Train 10 times</p>
@@ -134,7 +147,7 @@ $train_trips=$row["number_of_trips"];
 
 <div class="col-sm-6 col-md-5 col-lg-4 "style="margin-bottom:12rem; padding-bottom:100px">
 <div class="card" style="width: 25rem;">
-  <img class="card-img-top" src="/assets/img/card1.jpeg" alt="Card image cap">
+  <img class="card-img-top" src="/assets/img/card4.jpg" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title"> Tram man Lv.1</h5>
     <p class="card-text">Catch Train 10 times</p>
@@ -156,7 +169,7 @@ $tram_trips=$row["number_of_trips"];
 
 <div class="col-sm-6 col-md-5 col-lg-4 "style="margin-bottom:12rem; padding-bottom:100px">
 <div class="card" style="width: 25rem;">
-  <img class="card-img-top" src="/assets/img/card1.jpeg" alt="Card image cap">
+  <img class="card-img-top" src="/assets/img/card5.jpg" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title"> Travel King</h5>
     <p class="card-text">Travel 1000 km</p>
