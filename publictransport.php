@@ -57,98 +57,11 @@ include "./header.html"
 </header>
 
     <article>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 col-lg-6 mx-auto">
-            <h1
-              style="
-                font-size: 30px;
-                font-weight: bold;
-                font-family: Adamina, serif;
-              "
-            >
-              Transport
-            </h1>
-            <br />Transport is Australia’s third largest source of greenhouse
-            gas emissions (17% of total emissions)<br /><br /><br />
-          </div>
-          <div class="col-md-6 col-lg-6 mx-auto">
-            <img src="/assets/img/1.png" />
-          </div>
-        </div>
-
-        <div>
-          <h1 style="font-family: 'Comic Neue', serif; color: var(--bs-red)">
-            <br />
-          </h1>
-          <br /><br /><br /><br />
-        </div>
-        <div class="row">
-          <div
-            class="col-md-6 col-lg-6 mx-auto"
-            style="background-color: bisque; height: 400p; width: 700px"
-          >
-            <p>
-              <br /><br />AS AN EMPLOYEE, 66% OF THEM ARE TRAVELLING TO WORK BY
-              CAR AND ONLY 12% OF THEM ARE USING PUBLIC TRANSPORT.
-            </p>
-          </div>
-          <div
-            class="col-md-6 col-lg-6 mx-auto"
-            style="
-              height: 400px;
-              width: 700px;
-              background-image: url(/assets/img/5.png);
-              background-repeat: no-repeat;
-              background-size: cover;
-            "
-          >
-            <!-- <img src="/assets/img/5.png" style="max-height: 100%" /> -->
-          </div>
-        </div>
-        <br /><br />
-      </div>
-      <div class="container-fluid">
-        <div class="row">
-          <div
-            class="col-md-6 col-lg-6 mx-auto"
-            style="
-              height: 400px;
-              width: 600px;
-              background-image: url(/assets/img/4.png);
-              background-size: contain;
-            "
-          >
-            <!-- <img src="/assets/img/4.png" /> -->
-          </div>
-          <div
-            class="col-md-6 col-lg-6 mx-auto"
-            style="background-color: bisque; height: 400p; width: 600px"
-          >
-            <p>
-              <br /><br />COMPARING THE CARBON EMISSION OF DIFFERENT TRANSPORTS,
-              PUBLIC TRANSPORTS(TRAIN, TRAM AND BUS)ARE MUCHLESS THAN THE CARS.
-            </p>
-          </div>
-
-          <!--               style="width: 280px;transform: translateY(708px);
-                    <picture><img src="assets/img/transport-strategy-train-lines-400.jpg" style="width: 280px;transform: translateY(708px);"></picture> -->
-          <!-- <p class="description" style="font-size: 14px;">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p> -->
-        </div>
-      </div>
-      <div class="overlay"></div>
-      <br /><br /><br /><br />
       <p class="describtion" style="font-size: 10px"></p>
       <br /><br /><br />
       <section class="article-list">
         <div class="container">
-          <div class="intro">
-            <h2 class="text-center">PUBLIC TRANSPORT</h2>
-            <p class="text-center">
-              Make good use of public transport is a solution to reduce carbon
-              emission in Australia
-            </p>
-          </div>
+
           <div class="row articles">
             <div class="col-sm-6 col-md-4 item">
               <a href="#"><img class="img-fluid" src="/assets/img/6.png" /></a>
@@ -156,9 +69,7 @@ include "./header.html"
               <p class="description">
                 17.7 grams of Carbon Dioxide per person kilometer travelled
               </p>
-              <a class="action" href="#"
-                ><i class="fa fa-arrow-circle-right"></i
-              ></a>
+
             </div>
             <div class="col-sm-6 col-md-4 item">
               <a href="#"><img class="img-fluid" src="/assets/img/7.png" /></a>
@@ -167,9 +78,7 @@ include "./header.html"
                 As of 2019 Melbourne's trams are aupplied from 100% renreable
                 sources, making their emissions parctically zero in any case
               </p>
-              <a class="action" href="#"
-                ><i class="fa fa-arrow-circle-right"></i
-              ></a>
+
             </div>
             <div class="col-sm-6 col-md-4 item">
               <a href="#"><img class="img-fluid" src="/assets/img/8.png" /></a>
@@ -177,9 +86,34 @@ include "./header.html"
               <p class="description">
                 28.6 grams of Carbon Doixide per person kilometer travelled
               </p>
-              <a class="action" href="#"
-                ><i class="fa fa-arrow-circle-right"></i
-              ></a>
+
+            </div>
+          </div>
+          <div class="row articles">
+            <div class="col-sm-6 col-md-4 item">
+              <a href="#"><img class="img-fluid" src="/assets/img/13.jpg" /></a>
+              <h3 class="name">CAR</h3>
+              <p class="description">
+                17.7 grams of Carbon Dioxide per person kilometer travelled
+              </p>
+
+            </div>
+            <div class="col-sm-6 col-md-4 item">
+              <a href="#"><img class="img-fluid" src="/assets/img/14.png" /></a>
+              <h3 class="name">Bus Station</h3>
+              <p class="description">
+                As of 2019 Melbourne's trams are aupplied from 100% renreable
+                sources, making their emissions parctically zero in any case
+              </p>
+
+            </div>
+            <div class="col-sm-6 col-md-4 item">
+              <a href="#"><img class="img-fluid" src="/assets/img/6.png" /></a>
+              <h3 class="name">Bus routes</h3>
+              <p class="description">
+                28.6 grams of Carbon Doixide per person kilometer travelled
+              </p>
+
             </div>
           </div>
         </div>

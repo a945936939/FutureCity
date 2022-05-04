@@ -22,20 +22,20 @@ body {
 }
 .week .title {
   color: #f37532;
-  font-size: 9.6vw;
+  font-size: 4.8vw;
   font-family: simsun;
   margin-bottom: 8vw;
   /* padding-left: 4.27vw; */
 }
 .week .previous_week {
-  font-size: 3.73vw;
+  font-size: 1.6vw;
   font-family: PingFang SC;
   color: #222222;
   margin-bottom: 9.33vw;
-  padding-left: 4.27vw;
+  padding-left: 0.27vw;
 }
 .week .white_box {
-  height: 89.07vw;
+  height: 39.07vw;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -47,11 +47,11 @@ body {
   margin-bottom: 3.73vw;
 }
 .week .white_box p:nth-of-type(odd) {
-  font-size: 5.33vw;
+  font-size: 3.33vw;
   color: #222222;
 }
 .week .white_box p:nth-of-type(even) {
-  font-size: 6.93vw;
+  font-size: 32.93vw;
   color: #517fd4;
 }
 .week .tip {
@@ -83,7 +83,7 @@ body {
   font-family: SimSun;
   padding: 16vw 10.67vw 10.67vw 10.93vw;
   box-sizing: border-box;
-  font-size: 9.6vw;
+  font-size: 2.6vw;
   color: #f37532;
   text-align: center;
 }
@@ -118,7 +118,7 @@ body {
   html .week .title,
   body .week .title {
     font-size: 100px !important;
-    margin-bottom: 80px !important;
+    /* margin-bottom: 80px !important; */
   }
   html .week .previous_week,
   body .week .previous_week {
@@ -127,8 +127,8 @@ body {
   }
   html .week .white_box,
   body .week .white_box {
-    height: 700px !important;
-    margin-bottom: 60px;
+    height: 200px !important;
+    margin-bottom: 20px;
   }
   html .week .white_box p,
   body .week .white_box p {
@@ -136,11 +136,11 @@ body {
   }
   html .week .white_box p:nth-of-type(odd),
   body .week .white_box p:nth-of-type(odd) {
-    font-size: 60px !important;
+    font-size: 80px !important;
   }
   html .week .white_box p:nth-of-type(even),
   body .week .white_box p:nth-of-type(even) {
-    font-size: 66px !important;
+    font-size: 86px !important;
   }
   html .week .tip,
   body .week .tip {

@@ -260,6 +260,7 @@
           $enddate=strtotime("-1 week", $startdate);
           echo date("M/d/y", $startdate)."-".date("M/d/y", $enddate);?></div>
       <div class="white_box">
+        <p>
       For the previous week you spent <?php echo $hours." hours and ".$minutes." minutes"; ?> on travelling 
       and <?php echo $emissions; ?> grams of carbon were emitted.
       This is equivalent to <?php echo $trees; ?>. <br>
@@ -268,7 +269,7 @@
       You have travelled <?php echo $pt_dist?> Km on public transport and <?php echo $car_distance?> Km by car.
       The distance travelled for each type is <?php echo $train_distance?> Km by train,
       <?php echo $tram_distance ?> Km by tram and <?php echo $bus_distance?> Km by bus.
-
+    </p>
 
       </div>
       <div class="tip">
@@ -280,7 +281,7 @@
         <div class="pic"></div>
       </div>
       <div class="distribution">
-        <div class="title">DISTRIBUTION OF<br />PUBLIC TRANSPORT</div>
+        <div class="title">DISTRIBUTION OF PUBLIC TRANSPORT</div>
         <div class="pic"></div>
         <div class="text">
             For the previous week: <?php echo $key;?>
