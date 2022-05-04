@@ -202,3 +202,4 @@ $total_distance=$row["distance_travelled"];
 <script src="assets/js/loading-bar.min.js"></script>
 
 </html>
+

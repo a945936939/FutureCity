@@ -1,12 +1,15 @@
-var lat = 0;
-var lng = 0;
-var lat2 = 0;
-var lng2 = 0;
-var keepTracking = true;
-let distance;
-var start_time = "";
-var end_time = "";
-var transport_id = 0;
+let lat = 0;
+let lng = 0;
+let lat2 = 0;
+let lng2 = 0;
+let keepTracking = true;
+let distance = 0;
+let start_time = "";
+let end_time = "";
+let transport_id = 1;
+let total_emissions = 0;
+let user_id = 1234;
+
 const buttonStartTrack = document.getElementById("start-tracking");
 
 const buttonStopTrack = document.getElementById("stop-tracking");
@@ -18,6 +21,7 @@ function carbonEmissions(dist, transportType) {
   switch (transportType) {
     case "Train":
       transport_id = 1;
+      // 1000x times larger dont forget to change it back (28.6)
       emissions = dist * 28.6;
       break;
 
@@ -34,6 +38,7 @@ function carbonEmissions(dist, transportType) {
     case "Car":
       transport_id = 4;
       emissions = dist * 243.8;
+      break;
   }
   return emissions;
 }
@@ -72,7 +77,7 @@ function createMap() {
 
 // createMap(coords);
 
-function calculateDistance() {
+function calculateDistance(vehicleTypes) {
   var options = {
     enableHighAccuracy: true,
   };
@@ -104,7 +109,7 @@ function calculateDistance() {
             : (distance = c * r);
 
           if (typeof distance !== "undefined" && c * r > 0) {
-            let total_emissions = carbonEmissions(distance, vehicleTypes);
+            total_emissions = carbonEmissions(distance, vehicleTypes);
             document.getElementById("demo").innerHTML =
               "Distance travelled:" +
               distance.toFixed(2) +
@@ -115,7 +120,10 @@ function calculateDistance() {
           }
         }
         if (distance > 0) {
-          console.log(distance);
+          console.log("distance:" + distance);
+        }
+        if (total_emissions > 0) {
+          console.log("total emissions:" + total_emissions);
         }
       },
       function () {
@@ -127,17 +135,28 @@ function calculateDistance() {
 }
 
 function stopTracking() {
-  console.log(12345);
   end_time = new Date().toLocaleString();
+  //use XHR to insert the data with php
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "TrackerInsert.php", true);
-  xhr.onload = () =>
-    function () {
-      console.log(this.responseText);
-    };
+  tripInfo =
+    "?user_id=" +
+    user_id +
+    "&user_trip_start_time=" +
+    start_time +
+    "&user_trip_end_time=" +
+    end_time +
+    "&transport_id=" +
+    transport_id +
+    "&user_trip_length=" +
+    distance +
+    "&user_trip_emissions=" +
+    total_emissions;
+  xhr.open("GET", "TrackerInsert.php" + tripInfo, true);
+  xhr.onload = function () {
+    console.log("xhr:" + this.responseText);
+  };
   xhr.send();
-  console.log("xhr:" + xhr.responseText);
-  console.log(end_time);
+
   keepTracking = false;
   vehicleTypesContainer.style.display = "block";
   document.getElementById("demo").innerHTML = "";
@@ -147,16 +166,14 @@ function stopTracking() {
 
 buttonStartTrack.addEventListener("click", () => {
   start_time = new Date().toLocaleString();
-
   console.log(start_time);
   const vehicleTypes = document.querySelector(
     'input[name="vehicles"]:checked'
   ).value;
-  console.log(vehicleTypes);
   vehicleTypesContainer.style.display = "none";
   document.getElementById("demo").innerHTML = "Calculating... ";
   createMap();
   intervalID = setInterval(() => {
-    calculateDistance();
+    calculateDistance(vehicleTypes);
   }, "300");
 });

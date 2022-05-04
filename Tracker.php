@@ -30,6 +30,8 @@
   <header class="masthead" style="background-image: url('assets/img/header7.jpg')">
 
   <?php
+  session_start();
+
 include "./header.html"
 
 ?>

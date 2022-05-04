@@ -43,7 +43,7 @@ include "./header.html"
                     <div class="col-sm-6 col-md-5 col-lg-4 item">
                         <div class="box"><i class="fa fa-map-marker icon" style="--bs-body-color: var(--bs-red);color: var(--bs-red);"></i>
                             <h3 class="name">Tracker</h3>
-                            <p class="description">Experience our tracker. Know your carbon footprint and your living environment.</p><button class="btn " style="color:#E76F51" onclick="location.href = 'tracker.html'">Start tracking</button>
+                            <p class="description">Experience our tracker. Know your carbon footprint and your living environment.</p><button class="btn " style="color:#E76F51" onclick="location.href = 'Tracker.php' ">Start tracking</button>
                         </div>
                     </div>
                 </div>
