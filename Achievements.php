@@ -35,7 +35,52 @@ require_once("connection.php");
  
 
 
-include "./header.html"
+include "./header.html";
+// Achievement TRAINING complete  
+$query_Training_complete="select count(*) as 'number_of_trips' from user_trip_2 where user_id = 1234 and transport_id = 1;";
+$result = sqlsrv_query($conn,$query_Training_complete);
+$row = sqlsrv_fetch_array($result);
+$train_achievement=$row["number_of_trips"];
+  
+  
+// Achievement BUSted 
+$query="select count(*) as 'number_of_trips'
+from user_trip_2
+where user_id = 1234 and transport_id = 3;";
+$result = sqlsrv_query($conn,$query);
+$row = sqlsrv_fetch_array($result);
+$bus_achievement=$row["number_of_trips"];
+
+// Achievement The Trolley Problem 
+
+$query="select count(*) as 'number_of_trips'
+from user_trip_2
+where user_id = 1234 and transport_id = 2;";
+$result = sqlsrv_query($conn,$query);
+$row = sqlsrv_fetch_array($result);
+$tram_achievement=$row["number_of_trips"];
+
+// Achievement Greenhouse Gasses are CARcinogenic :p lv.1 
+$query="select t.transport_type, sum(user_trip_length) as 'total_length'
+from user_trip_2 u join transport t on u.transport_id = t.transport_id
+where user_id = 1234
+group by t.transport_type
+order by t.transport_type;";
+$result = sqlsrv_query($conn,$query);
+$bus = sqlsrv_fetch_array($result)['total_length'];
+$train = sqlsrv_fetch_array($result)['total_length'];
+$tram = sqlsrv_fetch_array($result)['total_length'];
+$total_distance=($bus+$train+$tram);
+$car_emissions=$total_distance*243.8;
+$public_emissions=($train*28.6+$bus*20.2+$tram*17.7);
+$emission_achievement=(($car_emissions-$public_emissions)/2500);
+// Achievement Sisterhood of the Travelling App 
+$query="select sum(user_trip_length) as 'distance travelled'
+from user_trip_2
+where user_id = 1234;";
+$result = sqlsrv_query($conn,$query);
+$row = sqlsrv_fetch_array($result);
+$travel_achievement=$row["distance travelled"];
 
 ?>
   </header>
@@ -51,20 +96,14 @@ class="ldBar"
   data-img="./assets/img/card1.jpg"
   data-img-size="398,398"
   data-value="
-  <?php 
-$query="select count(*) as 'number_of_trips'
-from user_trip_2
-where user_id = 1234 and transport_id = 1;";
-$result = sqlsrv_query($conn,$query);
-$row = sqlsrv_fetch_array($result);
-$array=$row["number_of_trips"];
-  echo $array*10;
-  ?>
+<?php 
+echo $train_achievement*10;
+?>
   ";
   style="margin-bottom:10rem"
 ></div>
   <div class="card-body">
-    <h5 class="card-title"> TRAining Complete
+    <h5 class="card-title"> TRAINing Complete
 </h5>
     <p class="card-text">You caught 10 trains good job </p>
 </div>
@@ -76,20 +115,7 @@ $array=$row["number_of_trips"];
 <div class="card" style="width: 25rem;">
  <div
 class="ldBar"
-  data-type="fill"
-  data-img="./assets/img/card2.jpg"
-  data-img-size="398,398"
-  data-value="
-  <?php 
-$query="select count(*) as 'number_of_trips'
-from user_trip_2
-where user_id = 1234 and transport_id = 3;";
-$result = sqlsrv_query($conn,$query);
-$row = sqlsrv_fetch_array($result);
-$array=$row["number_of_trips"];
-  echo $array*10;
-  ?>  
-  ";
+data-value="90";
   style="margin-bottom:10rem"
 ></div>
   <div class="card-body">
@@ -111,13 +137,7 @@ class="ldBar"
   data-img-size="398,398"
   data-value="
   <?php 
-$query="select count(*) as 'number_of_trips'
-from user_trip_2
-where user_id = 1234 and transport_id = 2;";
-$result = sqlsrv_query($conn,$query);
-$row = sqlsrv_fetch_array($result);
-$bus_trips=$row["number_of_trips"];
-  echo $bus_trips*10;
+  echo $tram_achievement*10;
   ?>
   ";
   style="margin-bottom:10rem"
@@ -141,19 +161,8 @@ class="ldBar"
   data-img-size="398,398"
   data-value="
 <?php 
-$query="select t.transport_type, sum(user_trip_length) as 'total_length'
-from user_trip_2 u join transport t on u.transport_id = t.transport_id
-where user_id = 1234
-group by t.transport_type
-order by t.transport_type;";
-$result = sqlsrv_query($conn,$query);
-$bus = sqlsrv_fetch_array($result)['total_length'];
-$train = sqlsrv_fetch_array($result)['total_length'];
-$tram = sqlsrv_fetch_array($result)['total_length'];
-$total_distance=($bus+$train+$tram);
-$car_emissions=$total_distance*243.8;
-$public_emissions=($train*28.6+$bus*20.2+$tram*17.7);
-echo (($car_emissions-$public_emissions)/2500);
+
+echo $emission_achievement;
 ?>
   
   ";
@@ -182,13 +191,7 @@ class="ldBar"
   data-img="./assets/img/card5.jpg"
   data-img-size="398,398"
   data-value="<?php 
-$query="select sum(user_trip_length) as 'distance travelled'
-from user_trip_2
-where user_id = 1234;";
-$result = sqlsrv_query($conn,$query);
-$row = sqlsrv_fetch_array($result);
-$array=$row["distance travelled"];
-  echo $array/10;
+  echo $travel_achievement/10;
   ?>";
   style="margin-bottom:10rem"
 ></div>
@@ -208,6 +211,10 @@ $array=$row["distance travelled"];
 
 </body>
 <script src="assets/js/loading-bar.min.js"></script>
+<?php
+
+
+?>
 
 </html>
 
