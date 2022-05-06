@@ -4,13 +4,13 @@
        
   <?php session_start();
     require_once("connection.php");
-
+    $username=$_SESSION["username"];
 
 
       // // example query
       // $query="select t.transport_type, count(*) as 'number_of_trips'
       // from user_trip_2 u join transport t on u.transport_id = t.transport_id
-      // where user_id = 1234
+      // where user_id = CAST(".strval($username)." AS int)
       // group by t.transport_type
       // Order by t.transport_type;";
 
@@ -21,14 +21,14 @@
       // echo $bus_trips*10;
 
       // Queries for the report
-      //Still need to change 'user_id' from 1234 to the current user's id
+      //Still need to change 'user_id' from CAST(".strval($username)." AS int) to the current user's id
       // -- report sql functions
 
       // -- 1 hours spent on public transport
 
       $query1 = "select sum(datediff(minute,user_trip_start_time, user_trip_end_time)) as 'trip_time'
       from user_trip_2
-      where user_id = 1234 
+      where user_id = CAST(".strval($username)." AS int) 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
       $result1 = sqlsrv_query($conn,$query1);
@@ -44,7 +44,7 @@
 
       $query2 = "select sum(user_trip_emissions) as 'emissions'
       from user_trip_2
-      where user_id = 1234 
+      where user_id = CAST(".strval($username)." AS int) 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
       $result2 = sqlsrv_query($conn,$query2);
@@ -64,19 +64,19 @@
       
       // // --1.5 total trip length for each type of transport
 
-      $query3 = "select t.transport_type, sum(user_trip_length) as 'distance travelled'
+      $query3 = "select t.transport_type, sum(user_trip_length) as 'distance_travelled'
       from user_trip_2 u join transport t on u.transport_id = t.transport_id
-      where user_id = 1234 
+      where user_id = CAST(".strval($username)." AS int) 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
       group by t.transport_type
       order by t.transport_type;";
 
       $result3 = sqlsrv_query($conn,$query3);
 
-      $bus_distance = sqlsrv_fetch_array($result3)["distance travelled"];
-      $car_distance = sqlsrv_fetch_array($result3)["distance travelled"];
-      $train_distance = sqlsrv_fetch_array($result3)["distance travelled"];
-      $tram_distance = sqlsrv_fetch_array($result3)["distance travelled"];
+      $bus_distance = sqlsrv_fetch_array($result3)["distance_travelled"];
+      $car_distance = sqlsrv_fetch_array($result3)["distance_travelled"];
+      $train_distance = sqlsrv_fetch_array($result3)["distance_travelled"];
+      $tram_distance = sqlsrv_fetch_array($result3)["distance_travelled"];
 
       $pt_dist = $bus_distance + $train_distance + $tram_distance;
 
@@ -84,7 +84,7 @@
 // -- 3 minutes spent on transport and minutes spent in car
       $query4 = "select sum(datediff(minute,user_trip_start_time, user_trip_end_time)) as 'pt_trip_time'
       from user_trip_2
-      where user_id = 1234 and transport_id between 1 and 3
+      where user_id = CAST(".strval($username)." AS int) and transport_id between 1 and 3
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
       $pt_travel_time= sqlsrv_fetch_array(sqlsrv_query($conn,$query4))["pt_trip_time"];
@@ -93,7 +93,7 @@
 //-- 4 car trip time
       $query42 = "select sum(datediff(minute,user_trip_start_time, user_trip_end_time)) as 'car_trip_time'
       from user_trip_2
-      where user_id = 1234 and transport_id = 4
+      where user_id = CAST(".strval($username)." AS int) and transport_id = 4
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
       $car_travel_time= sqlsrv_fetch_array(sqlsrv_query($conn,$query42))["car_trip_time"];
@@ -101,10 +101,10 @@
 
       // // -- 5 percentage public transport and percentage car
       // $query5 = "select t.transport_type, count(*)/
-      // (select count(*) from user_trip_2 where user_id = 1234 
+      // (select count(*) from user_trip_2 where user_id = CAST(".strval($username)." AS int) 
       // and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()) as 'percentage_trips'
       // from user_trip_2 u join transport t on u.transport_id = t.transport_id
-      // where user_id = 1234 
+      // where user_id = CAST(".strval($username)." AS int) 
       // and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
       // group by t.transport_type;";
 
@@ -115,7 +115,7 @@
       // // -- 6 counts for each type of transport
       $query6 = "select t.transport_type, count(*) as 'number_of_trips'
       from user_trip_2 u join transport t on u.transport_id = t.transport_id
-      where user_id = 1234 
+      where user_id = CAST(".strval($username)." AS int) 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
       group by t.transport_type
       order by t.transport_type;";
@@ -286,8 +286,8 @@
         <div class="text">
             For the previous week: <?php echo $key;?>
             was your preferred type of public transport with <?php echo $value;?> trips.
-
-            In Melbourne in the month of <?php echo (date('F')." ".$year.", ".$key); ?> accounted for <?php echo ($stats * 100); ?> % of public transport trips.
+          <br>
+            In the month of <?php echo (date('F')." ".$year.", ".$key); ?> accounted for <?php echo ($stats * 100); ?> % of all public transport trips in Melbourne.
 
             <?php $transport_stats ?>
             

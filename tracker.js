@@ -43,36 +43,38 @@ function carbonEmissions(dist, transportType) {
   return emissions;
 }
 function createMap() {
-  var map = L.map("map");
-  L.tileLayer(
-    "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
-    {
-      attribution:
-        'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
-      id: "mapbox/streets-v11",
-      tileSize: 512,
-      zoomOffset: -1,
-      accessToken:
-        "pk.eyJ1IjoiamFja3NvbmphY2tzb25qYWNrc29uIiwiYSI6ImNsMHQ3MHBuOTBodzczY3JwOW91NTk5djEifQ.hfwu_tJVcukZMyLU-IcvbA",
-    }
-  ).addTo(map);
-  navigator.geolocation.getCurrentPosition((position) => {
-    const {
-      coords: { latitude, longitude },
-    } = position;
+  if (!map) {
+    var map = L.map("map");
+    L.tileLayer(
+      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
+      {
+        attribution:
+          'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: "mapbox/streets-v11",
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken:
+          "pk.eyJ1IjoiamFja3NvbmphY2tzb25qYWNrc29uIiwiYSI6ImNsMHQ3MHBuOTBodzczY3JwOW91NTk5djEifQ.hfwu_tJVcukZMyLU-IcvbA",
+      }
+    ).addTo(map);
+    navigator.geolocation.getCurrentPosition((position) => {
+      const {
+        coords: { latitude, longitude },
+      } = position;
 
-    map.setView([latitude, longitude], 13).locate();
-  });
-  navigator.geolocation.getCurrentPosition((position) => {
-    const {
-      coords: { latitude, longitude },
-    } = position;
-    var marker = new L.marker([latitude, longitude], {
-      draggable: true,
-      autoPan: true,
-    }).addTo(map);
-  });
+      map.setView([latitude, longitude], 13).locate();
+    });
+    navigator.geolocation.getCurrentPosition((position) => {
+      const {
+        coords: { latitude, longitude },
+      } = position;
+      var marker = new L.marker([latitude, longitude], {
+        draggable: true,
+        autoPan: true,
+      }).addTo(map);
+    });
+  }
 }
 
 // createMap(coords);
@@ -135,7 +137,9 @@ function calculateDistance(vehicleTypes) {
 }
 
 function stopTracking() {
+  clearInterval(intervalID);
   end_time = new Date().toLocaleString();
+
   //use XHR to insert the data with php
   var xhr = new XMLHttpRequest();
   tripInfo =
@@ -159,9 +163,11 @@ function stopTracking() {
 
   keepTracking = false;
   vehicleTypesContainer.style.display = "block";
-  document.getElementById("demo").innerHTML = "";
+  document.getElementById("demo").innerHTML =
+    "Trip complete! " +
+    total_emissions +
+    " grams of carbon emissions generated in this trip!";
   delete map;
-  clearInterval(intervalID);
 }
 
 buttonStartTrack.addEventListener("click", () => {

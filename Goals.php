@@ -64,9 +64,7 @@ $travel_distance=$row["total_length"];
 echo $travel_distance;
 ?>
 "
->Travel 100km in total<?php
-echo $row["total_length"];
-?></div>
+>Travel 100km in total</div>
 </div>
 <div class="border" >
 <div class="ldBar"
@@ -84,7 +82,7 @@ $total_emissions=$row["total_emissions"];
 echo $total_emissions/100000;
   ?>"
  >
-Carbon emission reduction in total 25000
+Carbon emission reduction in total 25000 grams
 </div></div>
 <div class="border" >
 <div class="ldBar"
