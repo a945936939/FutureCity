@@ -1,13 +1,15 @@
 <?php
 // connect to the database
-function connect($host=DB_HOST,$user=DB_USER,$pwd=DB_PASSWORD,$base=DB_DATABASE){
-	$link = @sqlsrv_connect($host,array("UID"=>$user,"PWD"=>$pwd,"Database"=>$base));
 
-	if($link == false ){ 
-		exit(sqlsrv_errors()); 
-	}
-	return $link;
-}
+
+// function connect($host=DB_HOST,$user=DB_USER,$pwd=DB_PASSWORD,$base=DB_DATABASE){
+// 	$link = @sqlsrv_connect($host,array("UID"=>$user,"PWD"=>$pwd,"Database"=>$base));
+
+// 	if($link == false ){ 
+// 		exit(sqlsrv_errors()); 
+// 	}
+// 	return $link;
+// }
 
 // execute SQl sentences
 function execute($link,$query){
@@ -23,3 +25,4 @@ function escape($data){
     $data = str_replace("'","\\'",$data);
     return str_replace("\"","\\\"",$data);
 }
+?>

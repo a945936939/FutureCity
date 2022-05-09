@@ -1,10 +1,11 @@
 <?php
-require_once "inc/config.php";
-require_once "inc/mysql.php";
+// require_once "config.php";
+require_once "mysql.php";
+require_once "connection.php";
 
 if(isset($_POST['submit'])){
     // Connect to the database
-    $link = connect();
+    $link = $conn;
 
     // Get username and password
     $username = trim($_POST['username']);
@@ -16,27 +17,27 @@ if(isset($_POST['submit'])){
         echo "<script>alert('Please type in letters and numbers');location.href='register.php';</script>";
     }else if(strlen($password) < 4){
         header("Location:register.php");
-    }
+    };
 
     
     $username = escape($username);
     // encrypt the password
     $password = hash("sha256",$password);
 
-    $query = "select user_id from user_profile where username='{$username}'";
+    $query = "select user_id from user_profile where user_id={$username}";
     $res = execute($link,$query);
-    if(sqlsrv_num_rows($res) !== 0){
-        echo "<script>alert('The account is existed');location.href='register.php';</script>";
+    if(!is_null(sqlsrv_fetch_array($res))){
+        echo "<script>alert('That account already exists');location.href='register.php';</script>";
         die;
-    }
+    };
 
 
     // create the account
-    $query = "insert into user_profile (username,hashed_password) values('{$username}','{$password}') ";
+    $query = "insert into user_profile (user_id, date_registered, hashed_password) values({$username}, CURRENT_TIMESTAMP,'{$password}')";
     $res = execute($link,$query);
     if(sqlsrv_num_rows($res) !== 0){
-        echo "<script>alert('Your account is created');location.href='login.php';</script>";
-    }
+        echo "<script>alert('Your account is created');location.href='index.php';</script>";
+    };
 }
 ?>
 <!DOCTYPE html>
@@ -46,7 +47,7 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
@@ -57,7 +58,7 @@ if(isset($_POST['submit'])){
             <input type="password" placeholder="password" id="password" name="password"/>
             <input type="password" placeholder="confirm the password" id="password_confirm" name="password_confirm"/>
             <button id="create" name="submit" type="submit">Register</button>
-            <p class="message">Already have an account?<a href="/login.php">Login</a></p>
+            <p class="message">Already have an account?<a href="index.php">Login</a></p>
         </form>
     </div>
 </div>
