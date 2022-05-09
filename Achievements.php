@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <?php session_start();
+
+$username = $_SESSION['username'];
+
 require_once("connection.php");
 ?>
 <head>
@@ -54,7 +57,7 @@ class="ldBar"
   <?php 
 $query="select count(*) as 'number_of_trips'
 from user_trip_2
-where user_id = 1234 and transport_id = 1;";
+where user_id = ".$username." and transport_id = 1;";
 $result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
 $array=$row["number_of_trips"];
@@ -83,7 +86,7 @@ class="ldBar"
   <?php 
 $query="select count(*) as 'number_of_trips'
 from user_trip_2
-where user_id = 1234 and transport_id = 3;";
+where user_id = ".$username." and transport_id = 3;";
 $result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
 $array=$row["number_of_trips"];
@@ -113,7 +116,7 @@ class="ldBar"
   <?php 
 $query="select count(*) as 'number_of_trips'
 from user_trip_2
-where user_id = 1234 and transport_id = 2;";
+where user_id = ".$username." and transport_id = 2;";
 $result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
 $bus_trips=$row["number_of_trips"];
@@ -143,7 +146,7 @@ class="ldBar"
 <?php 
 $query="select t.transport_type, sum(user_trip_length) as 'total_length'
 from user_trip_2 u join transport t on u.transport_id = t.transport_id
-where user_id = 1234
+where user_id = ".$username."
 group by t.transport_type
 order by t.transport_type;";
 $result = sqlsrv_query($conn,$query);
@@ -184,7 +187,7 @@ class="ldBar"
   data-value="<?php 
 $query="select sum(user_trip_length) as 'distance travelled'
 from user_trip_2
-where user_id = 1234;";
+where user_id = ".$username.";";
 $result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
 $array=$row["distance travelled"];

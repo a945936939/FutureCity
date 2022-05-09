@@ -1,28 +1,29 @@
 <?php
-require_once "inc/config.php";
-require_once "inc/mysql.php";
+// require_once "inc/config.php"; 
+require_once "mysql.php";
+require_once "connection.php";
 
 if(isset($_POST['submit'])){
     // connect to the database
-    $link = connect();
+    $link = $conn;
 
     // get the user input
     $username = escape(trim($_POST['username']));
     $OldPassword = hash("sha256",trim($_POST['OldPassword']));
     $NewPassword = hash("sha256",trim($_POST['NewPassword']));
 
-    $query = "select * from user_profile where username='{$username}' and hashed_password='{$OldPassword}'";
+    $query = "select user_id, hashed_password from user_profile where user_id={$username} and hashed_password='{$OldPassword}'";
     $res = execute($link,$query);
 
-    if(sqlsrv_num_rows($res) === 0){
-        echo "<script>alert('Account is not existed');location.href='change.php';</script>";
+    if(is_null(sqlsrv_fetch_array($res))){
+        echo "<script>alert('Account does not exist');location.href='change.php';</script>";
         die;
     }
 
-    $query = "update user_profile set hashed_password='{$NewPassword}' where username='{$username}'";
+    $query = "update user_profile set hashed_password='{$NewPassword}' where user_id={$username}";
     $res = execute($link,$query);
     if(sqlsrv_num_rows($res) !== 0){
-        echo "<script>alert('Your password is changed');location.href='login.php';</script>";
+        echo "<script>alert('Your password is changed');location.href='index.php';</script>";
         die;
     }
 }
@@ -34,7 +35,7 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
