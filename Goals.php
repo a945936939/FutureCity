@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <?php session_start();
-if(!isset($_SESSION['username'])){
-  header("Location: index.php");
-}
 require_once("connection.php");
 ?>
 <head>
@@ -59,7 +56,7 @@ include "./header.html"
   data-value="
   <?php 
   $query="select sum(user_trip_length) as 'total_length'
-  from user_trip_2
+  from user_trip
   where user_trip_start_time between DATEADD(day, -14, GETDATE()) AND GETDATE();";
 $result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
@@ -67,7 +64,9 @@ $travel_distance=$row["total_length"];
 echo $travel_distance;
 ?>
 "
->Travel 100km in total</div>
+>Travel 100km in total<?php
+echo $row["total_length"];
+?></div>
 </div>
 <div class="border" >
 <div class="ldBar"
@@ -77,7 +76,7 @@ echo $travel_distance;
   data-value="
   <?php 
   $query="select sum(user_trip_emissions) as 'total_emissions'
-  from user_trip_2
+  from user_trip
   where user_trip_start_time between DATEADD(day, -14, GETDATE()) AND GETDATE();";
   $result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
@@ -85,7 +84,7 @@ $total_emissions=$row["total_emissions"];
 echo $total_emissions/100000;
   ?>"
  >
-Carbon emission reduction in total 25000 grams
+Carbon emission reduction in total 25000
 </div></div>
 <div class="border" >
 <div class="ldBar"
@@ -95,7 +94,7 @@ Carbon emission reduction in total 25000 grams
   data-value="
   <?php 
   $query="select count(*) as 'long_travel'
-  from user_trip_2
+  from user_trip
   where user_trip_start_time between DATEADD(day, -14, GETDATE()) AND GETDATE()
   and user_trip_length > 7000;
   ";
