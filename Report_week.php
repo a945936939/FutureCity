@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-       
-  <?php session_start();
-    require_once("connection.php");
-    $username=$_SESSION["username"];
+<?php 
+  session_start();  
+  require_once("connection.php");
 
+  $username = $_SESSION['username'];
 
       // // example query
       // $query="select t.transport_type, count(*) as 'number_of_trips'
@@ -24,16 +21,32 @@
       //Still need to change 'user_id' from CAST(".strval($username)." AS int) to the current user's id
       // -- report sql functions
 
+      // check for trips
+      
+      $query0 = "select count(*) as 'count' from user_trip_2 where user_id = {$username};";
+
+      $result0 = sqlsrv_query($conn,$query0);
+
+      $count = sqlsrv_fetch_array($result0)['count'];
+
+      // if there are no trips redirect the user to the tracker page
+      if($count==0){
+         echo "<script>alert('You need to take a trip first');location.href='Tracker.php';</script>";
+      }
+
+      
       // -- 1 hours spent on public transport
 
       $query1 = "select sum(datediff(minute,user_trip_start_time, user_trip_end_time)) as 'trip_time'
       from user_trip_2
-      where user_id = CAST(".strval($username)." AS int) 
+      where user_id ={$username} 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
       $result1 = sqlsrv_query($conn,$query1);
 
       $time = sqlsrv_fetch_array($result1);
+
+      
 
       // time spent on public transport in minutes and hours
       $hours = floor($time["trip_time"]/60);
@@ -44,7 +57,7 @@
 
       $query2 = "select sum(user_trip_emissions) as 'emissions'
       from user_trip_2
-      where user_id = CAST(".strval($username)." AS int) 
+      where user_id = ".$username." 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
       $result2 = sqlsrv_query($conn,$query2);
@@ -66,7 +79,7 @@
 
       $query3 = "select t.transport_type, sum(user_trip_length) as 'distance_travelled'
       from user_trip_2 u join transport t on u.transport_id = t.transport_id
-      where user_id = CAST(".strval($username)." AS int) 
+      where user_id = ".$username." 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
       group by t.transport_type
       order by t.transport_type;";
@@ -84,7 +97,7 @@
 // -- 3 minutes spent on transport and minutes spent in car
       $query4 = "select sum(datediff(minute,user_trip_start_time, user_trip_end_time)) as 'pt_trip_time'
       from user_trip_2
-      where user_id = CAST(".strval($username)." AS int) and transport_id between 1 and 3
+      where user_id = ".$username."  and transport_id between 1 and 3
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
       $pt_travel_time= sqlsrv_fetch_array(sqlsrv_query($conn,$query4))["pt_trip_time"];
@@ -93,7 +106,7 @@
 //-- 4 car trip time
       $query42 = "select sum(datediff(minute,user_trip_start_time, user_trip_end_time)) as 'car_trip_time'
       from user_trip_2
-      where user_id = CAST(".strval($username)." AS int) and transport_id = 4
+      where user_id = ".$username."  and transport_id = 4
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
       $car_travel_time= sqlsrv_fetch_array(sqlsrv_query($conn,$query42))["car_trip_time"];
@@ -115,7 +128,7 @@
       // // -- 6 counts for each type of transport
       $query6 = "select t.transport_type, count(*) as 'number_of_trips'
       from user_trip_2 u join transport t on u.transport_id = t.transport_id
-      where user_id = CAST(".strval($username)." AS int) 
+      where user_id = ".$username." 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
       group by t.transport_type
       order by t.transport_type;";
@@ -193,6 +206,11 @@
     
   ?>
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       
+  
 <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -258,7 +276,7 @@
       <div class="previous_week">Previous Week：<?php 
           $startdate=strtotime("Today");
           $enddate=strtotime("-1 week", $startdate);
-          echo date("M/d/y", $startdate)."-".date("M/d/y", $enddate);?></div>
+          echo date("M/d/y", $enddate)."-".date("M/d/y", $startdate);?></div>
       <div class="white_box">
         <p>
       For the previous week you spent <?php echo $hours." hours and ".$minutes." minutes"; ?> on travelling 
