@@ -1,3 +1,9 @@
+<?php
+include "./header.html";
+if(!isset($_SESSION['username'])){
+  header("Location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -49,10 +55,7 @@
   <body>
   <header class="masthead" style="background-image: url('assets/img/header6.jpg')">
 
-    <?php
-include "./header.html"
 
-?>
 
 </header>
 

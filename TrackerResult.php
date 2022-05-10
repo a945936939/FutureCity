@@ -32,8 +32,10 @@
   <header class="masthead" style="background-image: url('assets/img/header3.jpg')">
 
   <?php
-include "./header.html"
-
+include "./header.html";
+if(!isset($_SESSION['username'])){
+  header("Location: index.php");
+}
 ?>
   </header>
 

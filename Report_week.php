@@ -1,7 +1,9 @@
 <?php 
   session_start();  
   require_once("connection.php");
-
+  if(!isset($_SESSION['username'])){
+    header("Location: index.php");
+  }
   $username = $_SESSION['username'];
 
       // // example query
@@ -270,7 +272,9 @@
  
   <body>
  
-
+      <div class="row">
+<div class="col-md-6">
+      
     <div class="week">
       <div class="title">Weekly Report</div>
       <div class="previous_week">Previous Week：<?php 
@@ -312,6 +316,8 @@
 
         </div>
       </div>
+    </div>
+    </div>
     </div>
   </body>
 </html>
