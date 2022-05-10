@@ -1,0 +1,9 @@
+.box-container {
+  border: 1px solid;
+  /* margin: 30px; */
+  padding: 10px;
+  box-shadow: 5px 10px 8px 10px #888888;
+  height: 500px;
+  width: 100%;
+  background-color: #d9ed92;
+}
