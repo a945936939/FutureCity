@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" href="assets/css/box-container.css">
     <link rel="stylesheet" href="assets/css/Update1-Coming-Soon-Site.css">
     <link rel="stylesheet" href="Home.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
@@ -38,18 +39,22 @@ include "./header.html"
 
 ?>
 </header>
+<div class="box-container">
     <div class="container">
+    
       <div class="row">
-        <div class="col-md-6 col-lg-6 mx-auto">
-          <p style="font-size: 36px; font-weight: bold">
+        <div class="col-md-12 col-lg-12 mx-auto">
+          
+          <p style="font-size: 36px; font-weight: bold ;color:white;">
             Carbon Emission Tracker
           </p>
-          <p>Track your carbon footprint</p>
+          <h4>Track your carbon footprint</h4>
           <p>
             <br />Use your location and the transport type and the website will calculate carbon emission for you<br /><br />
           </p>
-        </div>
-          <div class="col-md-6 col-lg-6 mx-auto">
+        
+</div>
+          <div class="col-md-12 col-lg-12 mx-auto">
             <div id="vehicle-selection" style="margin-bottom: 30px;">
  
               <input type="radio"   id="Car" name="vehicles" value="Car"  checked=true>
@@ -73,7 +78,10 @@ include "./header.html"
           <div id="map" style="width: auto;height: 300px;"></div>
         </div>
           <script src="tracker.js"></script><br><br><br><br><br>
-      </div>
+          </div>
+</div>
+</div>
+</div>
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-6 mx-auto"> 
@@ -82,22 +90,19 @@ include "./header.html"
             </p>
             <br>
             <p>Choose the environment protection way to reduce your carbon footprint
-
-
-            <?php
-            ?>
             </p>
 
           </div>
           <div class="col-md-6 col-lg-6 mx-auto"> 
-            <img src="/assets/img/12.png" style="height: 333px;width: 550.234px;margin: -27px;padding: -38px;"/>
+            <img src="/assets/img/12.png" style="height: 333px;width: 550.234px;"/>
+            <!-- margin: -27px;padding: -38px;  for above line-->
             </p>
             <br><br><br><br><br><br><br>
           </div>
       </div>
 </div>
+       
 
-</div>
     <hr />
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/clean-blog.js"></script>
