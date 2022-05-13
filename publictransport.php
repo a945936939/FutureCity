@@ -1,5 +1,5 @@
 <?php
-include "./header.html";
+
 session_start();  
 if(!isset($_SESSION['username'])){
   header("Location: index.php");
@@ -56,7 +56,12 @@ if(!isset($_SESSION['username'])){
   <body>
   <header class="masthead" style="background-image: url('assets/img/header6.jpg')">
 
+  <?php
+require_once("connection.php");
 
+include "./header.html"
+
+?>
 
 </header>
 

@@ -48,7 +48,7 @@ include "./header.html"
           <p style="font-size: 36px; font-weight: bold ;color:white;">
             Carbon Emission Tracker
           </p>
-          <h4>Track your carbon footprint</h4>
+          <h4>Track your carbon footprint, protect the environment</h4>
           <p>
             <br />Use your location and the transport type and the website will calculate carbon emission for you<br /><br />
           </p>
