@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <?php session_start();
+$username = $_SESSION['username'];
+
 require_once("connection.php");
 ?>
 <head>
@@ -44,6 +46,39 @@ $end_date = strtotime('+59 minutes', $end_date);
 $end_date = date('Y-m-d H:i:s',strtotime('+59 seconds', $end_date));
 
 
+//  user contribution 
+
+$query="select sum(user_trip_length) as 'total_length'
+from user_trip
+where user_trip_start_time between '{$start_date}' and '{$end_date}'
+and user_id = {$username};";
+$result = sqlsrv_query($conn,$query);
+$row = sqlsrv_fetch_array($result);
+$user_travel_distance=$row["total_length"];
+
+
+  $query="select sum(user_trip_emissions) as 'total_emissions'
+  from user_trip
+  where user_trip_start_time between '{$start_date}' and '{$end_date}'
+  and user_id = {$username};";
+  $result = sqlsrv_query($conn,$query);
+$row = sqlsrv_fetch_array($result);
+$user_total_emissions=$row["total_emissions"];
+
+  
+
+
+
+$query="select count(*) as 'long_travel'
+  from user_trip
+  where user_trip_start_time between '{$start_date}' and '{$end_date}'
+  and user_trip_length > 7000
+  and user_id = {$username};";
+
+$result = sqlsrv_query($conn,$query);
+$row = sqlsrv_fetch_array($result);
+$user_counts = $row['long_travel'];
+
 
 ?>
 
@@ -77,6 +112,9 @@ echo $travel_distance;
 "
 >Travel 100km in total</div>
 </div>
+
+<p><?php echo $user_travel_distance;?></p>
+
 <div class="border" >
 <div class="ldBar"
   style="width:100%;height:200px; margin-top:100px;margin-bottom:100px",
@@ -95,6 +133,10 @@ echo $total_emissions/100000;
  >
 Carbon emission reduction in total 25000
 </div></div>
+
+<p><?php echo $user_total_emissions;?></p>
+
+
 <div class="border" >
 <div class="ldBar"
   style="width:100%;height:200px; margin-top:100px;margin-bottom:100px",
@@ -116,6 +158,8 @@ $counts=$row["long_travel"];
 >Long distance travel (more than 7 km) in public transport 20 times in total
 </div>
 </div>
+
+<p><?php echo $user_counts;?></p>
 </body>
 <script src="assets/js/loading-bar.min.js"></script>
 </html>
