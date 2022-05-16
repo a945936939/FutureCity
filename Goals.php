@@ -33,7 +33,18 @@ require_once("connection.php");
 $connectionInfo = array("UID" => "User1", "pwd" => "Project1", "Database" => "gtfsdata", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "lunar-rover.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-include "./header.html"
+include "./header.html";
+
+$start_date = date('Y-m-d H:i:s', strtotime('last monday'));
+
+
+$end_date = strtotime('next sunday');
+$end_date = strtotime('+23 hours', $end_date);
+$end_date = strtotime('+59 minutes', $end_date);
+$end_date = date('Y-m-d H:i:s',strtotime('+59 seconds', $end_date));
+
+
+
 ?>
 
 </header>
@@ -57,16 +68,14 @@ include "./header.html"
   <?php 
   $query="select sum(user_trip_length) as 'total_length'
   from user_trip
-  where user_trip_start_time between DATEADD(day, -14, GETDATE()) AND GETDATE();";
+  where user_trip_start_time between '{$start_date}' and '{$end_date}';";
 $result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
 $travel_distance=$row["total_length"];
 echo $travel_distance;
 ?>
 "
->Travel 100km in total<?php
-echo $row["total_length"];
-?></div>
+>Travel 100km in total</div>
 </div>
 <div class="border" >
 <div class="ldBar"
@@ -77,7 +86,7 @@ echo $row["total_length"];
   <?php 
   $query="select sum(user_trip_emissions) as 'total_emissions'
   from user_trip
-  where user_trip_start_time between DATEADD(day, -14, GETDATE()) AND GETDATE();";
+  where user_trip_start_time between '{$start_date}' and '{$end_date}';";
   $result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
 $total_emissions=$row["total_emissions"];
@@ -95,7 +104,7 @@ Carbon emission reduction in total 25000
   <?php 
   $query="select count(*) as 'long_travel'
   from user_trip
-  where user_trip_start_time between DATEADD(day, -14, GETDATE()) AND GETDATE()
+  where user_trip_start_time between '{$start_date}' and '{$end_date}'
   and user_trip_length > 7000;
   ";
 $result = sqlsrv_query($conn,$query);
