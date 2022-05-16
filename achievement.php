@@ -85,7 +85,7 @@ $result1 = sqlsrv_query($conn, $query);
 <div class="contain-box">
 <div class="list-item" key="1">
 
-        <img class="item-bg1" src="./images/home/introductions/introduction-bg1.png" alt="">
+        <img class="item-bg1" src="./images/achievement/goals-bp.jpeg" alt="">
         
         <div class="row" id = "row1" >
    
