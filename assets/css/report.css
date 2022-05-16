@@ -1,7 +1,7 @@
 .banner {
     background-image: url("../img/report-bg.jpeg");
     width: 100%;
-    height: 216px;
+    height: 600px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
