@@ -1,0 +1,123 @@
+.banner {
+    background-image: url("../images/achievement/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 283px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 72px;
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.banner .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    z-index: 10;
+}
+
+.contain-box {
+    width: 100%;
+    height: 100%
+}
+
+.contain-box .list-item {
+    width: 100%;
+    height: 100%;
+}
+
+.contain-box .list-item .row {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 10;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+}
+
+.contain-box .list-item .item-bg1 {
+    position: absolute;
+    left: 175px;
+}
+
+.contain-box .list-item .item-bg2 {
+    position: absolute;
+    right: 175px;
+}
+
+.contain-box .list-item .item-bg3 {
+    position: absolute;
+    left: 175px;
+}
+
+.contain-box .list-item .item-bg4 {
+    position: absolute;
+    right: 175px;
+}
+
+.contain-box .list-item .item-bg5 {
+    position: absolute;
+    left: 175px;
+}
+
+.contain-box .list-item .row .card .ldBar {
+    height: 100%;
+    width: 100%;
+}
+
+.contain-box .list-item .row .card {
+    width: 11rem;
+}
+
+#row1 {
+    background-color: #ffffff;
+}
+
+#row2 {
+    background-color: #70d0df;
+}
+
+#row3 {
+    background-color: #a75a37;
+}
+
+#row4 {
+    background-color: #ced9eb;
+}
+
+#row5 {
+    background-color: #ffffff;
+}
+
+
+/* .contain-box .list-item:nth-child(2) {
+    background-color: #a75a37;
+    color: #612206;
+}
+
+.contain-box .list-item:nth-child(3) {
+    background-color: #ced9eb;
+    color: #01307c;
+} */
+
+
+/*# sourceMappingURL=achievement.css.map */
