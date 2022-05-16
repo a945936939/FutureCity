@@ -187,18 +187,24 @@ if($emissions > 1000){
 </head>
 
 <body>
-    <div id="app">
+    
         <div class="nav">
             <header>
                 <div class="header-item">Menu</div>
             </header>
         </div>
         <div class="banner">
-            Report
-            <div class="subtitle">
-        Review your previous week and find out carbon you've saved
+            <div class="contain-box reactive">
+                <div class="title" data-aos="fade-down">
+                    Report
+                </div>
+                <div class="sub-title" data-aos="fade-up">
+                Review your previous week<br> Find out the carbon emissions you've saved
+                </div>
+            </div>
         </div>
-        </div>
+    
+        
         
       
 
