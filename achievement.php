@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <?php session_start();
 
-$username = $_SESSION[$username];
+
+if(isset($_GET['login'])){
+    echo "<script>alert('Please login');location.href='login.php';</script>";
+};
+
+$username = $_SESSION['username'];
 
 require_once("./connection.php");
 ?>
@@ -17,8 +22,8 @@ require_once("./connection.php");
     <!-- <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/achievement.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/achievement.css">
 
     <title>Achievement</title>
 
@@ -44,7 +49,7 @@ require_once("./connection.php");
     <link rel="stylesheet" href="./assets/css/Update1-Coming-Soon-Site.css">
     <link rel="stylesheet" href="./goals.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/loading-bar.min.css" />
-    <link rel="stylesheet" type="text/css" href="./loading-bar.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/loading-bar.css" />
 
 </head>
 
@@ -85,7 +90,7 @@ $result1 = sqlsrv_query($conn, $query);
 <div class="contain-box">
 <div class="list-item" key="1">
 
-        <img class="item-bg1" src="./images/achievement/goals-bp.jpeg" alt="">
+        <img class="item-bg1" src="./images/achievement/goals_banner.jpeg" alt="">
         
         <div class="row" id = "row1" >
    

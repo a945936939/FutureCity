@@ -2,10 +2,16 @@
 <html lang="en">
 <?php
 require_once 'connection.php';
+
+
+if(isset($_GET['login'])){
+    echo "<script>alert('Please login');location.href='login.php';</script>";
+};
+
 session_start();
 
 $username = $_SESSION['username'];
-$username = 1234;
+
 ?>
 <head>
     <meta charset="UTF-8">

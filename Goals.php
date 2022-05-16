@@ -2,6 +2,12 @@
 <html lang="en">
 <?php session_start();
 require_once("connection.php");
+
+
+if(isset($_GET['login'])){
+  echo "<script>alert('Please login');location.href='login.php';</script>";
+};
+
 $username = $_SESSION['username'];
 // include "./header.html";
 
@@ -177,6 +183,6 @@ $counts=$row["long_travel"];
         })
     </script>
 </body>
-<script src="assets/js/loading-bar.min.js"></script>
+<script src="./assets/js/loading-bar.min.js"></script>
 
 </html>

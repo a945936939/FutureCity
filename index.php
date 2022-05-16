@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
         // if the pwd is correct, start session
         $_SESSION['username'] = $username;
         // jump to the homepage
-        header("Location: Home.php");
+        header("Location: Home.html");
     };
 }
 ?>
@@ -41,7 +41,7 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
 </head>
 
 <body>
