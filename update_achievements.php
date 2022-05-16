@@ -5,6 +5,8 @@ session_start();
 $username = 1234;
 
 // $username = $_SESSION["username"];
+
+
 // generic insert into achievement_record statement
 include "connection.php";
 
@@ -80,7 +82,7 @@ for($i=1;$i<=5;$i++){
 $query = "select sum(user_trip_length) as 'trip_length',
  sum(user_trip_emissions) as 'total_emissions',
  sum(DATEDIFF(minute, user_trip_start_time, user_trip_end_time )) as 'total_time'
-from user_trip where user_id={$username} and transport_id = 1;";
+from user_trip where user_id={$username} and transport_id = 2;";
 
 $result = sqlsrv_query($conn,$query);
 
