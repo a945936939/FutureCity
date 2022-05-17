@@ -1,0 +1,74 @@
+.banner {
+    background-image: url("../images/report/banner.png");
+    width: 100%;
+    height: 216px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    color: #ffffff;
+}
+.blocks {
+    padding: 178px;
+    .block-item {
+        height: 300px;
+        margin-bottom: 73px;
+        display: flex;
+        font-size: 50px;
+        font-family: Source Han Sans CN;
+        font-weight: 400;
+        color: #ffffff;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .item-left {
+            margin-right: 81px;
+            width: 714px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 30px;
+        }
+        .item-right {
+            width: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &:nth-child(1) {
+            .item-left {
+                background-color: #434e57;
+            }
+            .item-right {
+                background-color: #8e9397;
+            }
+        }
+        &:nth-child(2) {
+            .item-left {
+                background-color: #b8373e;
+            }
+            .item-right {
+                background-color: #8e9397;
+            }
+        }
+        &:nth-child(3) {
+            .item-left {
+                background-color: #c77942;
+            }
+            .item-right {
+                background-color: #a36954;
+            }
+        }
+        &:nth-child(4) {
+            .item-left {
+                background-color: #968486;
+            }
+            .item-right {
+                background-color: #6e7b86;
+            }
+        }
+    }
+}

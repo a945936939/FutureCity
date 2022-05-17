@@ -1,0 +1,71 @@
+.banner {
+    width: 100%;
+    background-image: url("../images/information/banner.png");
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    text-align: center;
+
+    .title {
+        font-size: 77px;
+        font-family: YouSheBiaoTiHei;
+        font-weight: 400;
+        padding-top: 178px;
+        color: #ffffff;
+        text-shadow: 0px 6px 0px #08648b;
+    }
+    .sub-title {
+        font-size: 60px;
+        font-family: YouSheBiaoTiHei;
+        font-weight: 400;
+        color: #ffffff;
+        text-shadow: 0px 6px 0px #08648b;
+    }
+
+    img {
+        position: absolute;
+        width: 466px;
+        height: 611px;
+        right: 0;
+        bottom: -100px;
+        display: block;
+    }
+}
+.info {
+    background-repeat: no-repeat;
+    padding: 260px;
+
+    .title {
+        font-size: 36px;
+        font-family: Source Han Sans CN;
+        font-weight: 500;
+        color: #151515;
+        line-height: 18px;
+        margin-bottom: 30px;
+    }
+    .context {
+        display: flex;
+        .context-item {
+            flex: 1;
+            font-size: 36px;
+            font-family: YouSheBiaoTiHei;
+            font-weight: 400;
+            color: #096777;
+        }
+    }
+}
+
+.info1 {
+    background-image: url("../images/information/star.png");
+    background-color: #DBF8FF;
+}
+
+.info2 {
+    .title {
+        text-align: right;
+    }
+}
+
+.info3 {
+    background-color: #DBF8FF;
+}

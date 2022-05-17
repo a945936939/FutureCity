@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-width: 1200px;
+  }
+  
+  .contain-box {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  .reactive {
+    position: relative;
+  }
+  
+  @font-face {
+    font-family: YouSheBiaoTiHei;
+    src: url("../fonts/YouSheBiaoTiHei.ttf");
+  }
+
+
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    height: 100px;
+    background: linear-gradient(0deg, #3EBDDD 0%, #00D5F3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .header-item {
+      font-size: 36px;
+      font-family: YouSheBiaoTiHei;
+      font-weight: 400;
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .nav{
+    padding-bottom: 100px;
+  }
