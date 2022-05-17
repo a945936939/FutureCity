@@ -2,14 +2,9 @@
 <?php
 session_start();
 
+$username = 1234;
 
-if(isset($_GET['login'])){
-  echo "<script>alert('Please login');location.href='login.php';</script>";
-};
-
-
-
-$username = $_SESSION["username"];
+// $username = $_SESSION["username"];
 
 
 // generic insert into achievement_record statement
