@@ -1,167 +1,157 @@
 .banner {
-  width: 100%;
-  background-image: url("../images/home/banner/banner.png");
-  background-size: cover;
-  height: 600px;
-  position: relative;
+    width: 100%;
+    background-image: url("../images/home/banner/banner.png");
+    background-size: cover;
+    height: 600px;
+    position: relative;
 }
 
 .banner .title {
-  width: 1000px;
-  font-size: 95px;
-  font-family: YouSheBiaoTiHei;
-  font-weight: 400;
-  padding-top: 15px;
-  padding-right: 20px;
-  color: #ffffff;
-  text-shadow: 0px 6px 0px #08648b;
+    width: 800px;
+    font-size: 95px;
+    font-family: YouSheBiaoTiHei;
+    font-weight: 400;
+    padding-top: 178px;
+    color: #ffffff;
+    text-shadow: 0px 6px 0px #08648b;
 }
 
 .banner img {
-  position: absolute;
-  width: 348px;
-  height: 459px;
-  right: 10px;
-  bottom: -100px;
-  display: block;
-  size-adjust: 10%;
+    position: absolute;
+    width: 466px;
+    height: 611px;
+    right: 0;
+    bottom: -100px;
+    display: block;
 }
 
 .buttons {
-  position: relative;
+    position: relative;
 }
 
 .buttons .sun {
-  position: absolute;
-  z-index: 0;
-  right: 51px;
-  top: 177px;
+    position: absolute;
+    z-index: 0;
+    right: 51px;
+    top: 177px;
 }
 
 .buttons .plane {
-  position: absolute;
-  z-index: 0;
-  bottom: 152px;
-  left: 0;
+    position: absolute;
+    z-index: 0;
+    bottom: 152px;
+    left: 0;
 }
 
 .buttons .contain-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  padding: 239px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 239px 0;
 }
 
 .buttons .contain-box .button-item {
-  text-align: center;
-  z-index: 10;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    text-align: center;
+    z-index: 10;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .buttons .contain-box .button-item .item-area {
-  background-image: url("../images/home/buttons/button-bg.png");
-  width: 350px;
-  height: 240px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+    background-image: url("../images/home/buttons/button-bg.png");
+    width: 350px;
+    height: 240px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .buttons .contain-box .button-item .item-label {
-  margin-top: 47px;
-  font-size: 48px;
-  font-family: CWRCKA;
-  font-weight: 400;
-  color: #151515;
+    margin-top: 47px;
+    font-size: 48px;
+    font-family: CWRCKA;
+    font-weight: 400;
+    color: #151515;
 }
 
 .introductions .introduction-list .list-item:nth-child(1) {
-  background-color: #70d0df;
-  color: #096777;
+    background-color: #70d0df;
+    color: #096777;
 }
 
 .introductions .introduction-list .list-item:nth-child(2) {
-  background-color: #a75a37;
-  color: #612206;
+    background-color: #a75a37;
+    color: #612206;
 }
 
 .introductions .introduction-list .list-item:nth-child(3) {
-  background-color: #ced9eb;
-  color: #01307c;
+    background-color: #ced9eb;
+    color: #01307c;
 }
 
 .introductions .introduction-list .list-item {
-  height: 600px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
+    height: 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
 }
 
 .introductions .introduction-list .list-item .item-bg {
-  position: absolute;
-  bottom: 0;
-  z-index: 0;
-  left: 175px;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    left: 175px;
 }
 
 .introductions .introduction-list .list-item .contain-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .introductions .introduction-list .list-item .contain-box .item-text {
-  margin-top: 60px;
-  width: 500px;
-  font-family: YouSheBiaoTiHei;
-  z-index: 10;
+    margin-top: 60px;
+    width: 500px;
+    font-family: YouSheBiaoTiHei;
+    z-index: 10;
 }
 
-.introductions
-  .introduction-list
-  .list-item
-  .contain-box
-  .item-text
-  .text-title {
-  font-size: 56px;
+.introductions .introduction-list .list-item .contain-box .item-text .text-title {
+    font-size: 56px;
 }
 
-.introductions
-  .introduction-list
-  .list-item
-  .contain-box
-  .item-text
-  .text-content {
-  font-size: 27px;
+.introductions .introduction-list .list-item .contain-box .item-text .text-content {
+    font-size: 27px;
 }
 
 .introductions .introduction-list .list-item .contain-box .item-img {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin-top: 60px;
-  z-index: 10;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-top: 60px;
+    z-index: 10;
 }
 
 .introductions .introduction-list .list-item .contain-box .item-img img {
-  width: 100%;
+    width: 100%;
 }
 
 .cars img {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }
+
+
 /*# sourceMappingURL=home.css.map */
