@@ -1,61 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <?php session_start();
 if(!isset($_SESSION['username'])){
     header("Location: index.php");
   }
 ?>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arizonia&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Article-List.css">
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
-    <link rel="stylesheet" href="assets/css/untitled.css">
-    <link rel="stylesheet" href="assets/css/Update1-Coming-Soon-Site.css">
-    <link rel="stylesheet" href="Home.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <title>home</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 
-<body >
-<header class="masthead" style="background-image: url('assets/img/header1.jpg')">
-<?php
+<body>
+    <div id="app">
+        <div class="nav">
+            <header>
+            <?php
 require_once("connection.php");
 
 include "./header.html"
 
 ?>
-</header>
-
-    <div class="container">
+            </header>
         </div>
-        <section class="features-boxed" style="background-color:#E9C46A">
-            <div class="container">
-                <div class="row justify-content-center features">
-                    <div class="col-sm-6 col-md-5 col-lg-4 item">
-                        <div class="box"><i class="fa fa-map-marker icon" style="--bs-body-color: var(--bs-red);color: var(--bs-red);"></i>
-                            <h3 class="name">Tracker</h3>
-                            <p class="description">Experience our tracker. Know your carbon footprint and your living environment.</p><button class="btn " style="color:#E76F51" onclick="location.href = 'Tracker.php' ">Start tracking</button>
+        <div class="banner">
+            <div class="contain-box reactive">
+                <div class="title" data-aos="fade-up">
+                    Transport
+                    <br> Go Public
+                </div>
+                <!-- <img src="./images/home/banner/banner-element.png" alt=""> -->
+                <div class="sub_title" data-aos="fade-up">
+                    Track your carbon emissions
+                </div>
+                <form method="get" action="Tracker_old.php">
+                    <button class="T_button" action="Tracker_old.html" style="vertical-align:middle"><span>Tracker</span></button>
+                </form>
+            </div>
+        </div>
+        <div class="buttons">
+            <img class="sun" src="../../images/home/buttons/sun.png" alt="">
+            <img class="plane" src="../../images/home/buttons/plane.png" alt="">
+            <div class="contain-box">
+                <div class="button-item" v-for="(item,index) in buttons" :key="index">
+                    <div class="item-area">
+                        <img :src="item.icon" alt="">
+                    </div>
+                    <div class="item-label">
+                        {{ item.label }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="introductions">
+            <div class="introduction-list">
+                <div class="list-item" v-for="(item,index) in introductionsList" :key="index">
+                    <!-- <img class="item-bg" src="./images/home/introductions/introduction-bg.png" alt=""> -->
+                    <div class="contain-box">
+                        <div class="item-text">
+                            <div class="text-title" data-aos="fade-down">{{ item.title }}</div>
+                            <div class="text-content" data-aos="fade-up">{{ item.content }}</div>
+                        </div>
+                        <div class="item-img">
+                            <img :src="item.img" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <!-- <div class="cars">
+            <img src="./images/home/cars/cars.png" alt="">
+          </div> -->
     </div>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/clean-blog.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
-    <script src="assets/js/Simple-Slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            mounted() {
+                AOS.init()
+            },
+            data: {
+                buttons: [{
+                    label: "Report",
+                    path: '/Report.php',
+                    icon: '../../images/home/buttons/button1.png'
+                }, {
+                    label: "Tracker",
+                    path: '/Tracker.php',
+                    icon: '../../images/home/buttons/button2.png'
+                }, {
+                    label: "Goal",
+                    path: '/Goals.php',
+                    icon: '../../images/home/buttons/button3.png'
+                }, ],
+                introductionsList: [{
+                    title: 'Future City',
+                    content: 'Melbourne, the key for Victoria in economics, society and culture, makes her the centre of the state’s transport network. By 2036, the daily population is estimated to grow to approximately 1.4 million. To become a green city, public transport, walking and cycling should be increased to 70 percent of all trips by 2030.',
+                    img: '../../images/home/introductions/introduction1.jpg'
+                }, {
+                    title: 'Zero-emissions Transport',
+                    content: 'By 2050, transport in the municipality will be emissions-free. All vehicles with internal combustion engines should be phased out and replaced by zero-emissions engines, while all public transport is using 100 percent of clean energy.',
+                    img: '../../images/home/introductions/introduction2.jpg'
+                }, {
+                    title: 'Build a Habit',
+                    content: 'As a citizen, we can build a habit to take public transport so that we can contribute to the plan of our future city. Using our carbon emission tracker, you can observe the difference in carbon emission between taking public transport and your own car while you are encouraged to choose the one which helps the environment.',
+                    img: '../../images/home/introductions/introduction3.jpg'
+                }, ]
+            }
+        })
+    </script>
 </body>
 
 </html>

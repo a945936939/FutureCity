@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php session_start();
+if(!isset($_SESSION['username'])){
+    header("Location: index.php");
+  }
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +21,12 @@
     <div id="app">
         <div class="nav">
             <header>
-                <div class="header-item">Menu</div>
+            <?php
+require_once("connection.php");
+
+include "./header.html"
+
+?>
             </header>
         </div>
         <div class="banner">
