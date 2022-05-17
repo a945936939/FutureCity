@@ -3,6 +3,12 @@
 session_start();
 
 
+if(isset($_GET['login'])){
+  echo "<script>alert('Please login');location.href='login.php';</script>";
+};
+
+
+
 $username = $_SESSION["username"];
 
 
