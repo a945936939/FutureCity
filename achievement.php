@@ -57,12 +57,8 @@ require_once("./connection.php");
     <div id="app">
         <div class="nav">
             <header>
-            <?php
-require_once("connection.php");
-
-include "./header.html"
-
-?>            </header>
+                <div class="header-item">Menu</div>
+            </header>
         </div>
         <div class="banner">
             <div class="box reactive">
