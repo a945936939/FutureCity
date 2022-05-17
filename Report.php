@@ -483,10 +483,7 @@ if($emissions > 1000){
         option3 && myChart3.setOption(option3);
 
     </script>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0" nonce="j6vvNAcG"></script>
 
-    <div class="fb-share-button" data-href="https://www.emission-tracker.live/Home.php" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.emission-tracker.live%2FHome.php&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
 </body>
 
 </html>
