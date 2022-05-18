@@ -13,13 +13,10 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 72px;
-    font-family: Source Han Sans CN;
-    font-weight: bold;
     color: #ffffff;
 }
 
-.banner .title {
+.banner .box .title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -31,6 +28,13 @@
     align-items: center;
     height: 100%;
     z-index: 10;
+    font-family: YouSheBiaoTiHei;
+    font-weight: 400;
+    font-size: 72px;
+    padding-top: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 6px 0px #343839;
 }
 
 .contain-box {
