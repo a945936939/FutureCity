@@ -6,7 +6,7 @@
 
       // // example query
       // $query="select t.transport_type, count(*) as 'number_of_trips'
-      // from user_trip u join transport t on u.transport_id = t.transport_id
+      // from user_trip_2 u join transport t on u.transport_id = t.transport_id
       // where user_id = 1234
       // group by t.transport_type
       // Order by t.transport_type;";
@@ -23,7 +23,7 @@
 
       // check for trips
       
-      $query0 = "select count(*) as 'count' from user_trip where user_id = {$username};";
+      $query0 = "select count(*) as 'count' from user_trip_2 where user_id = {$username};";
 
       $result0 = sqlsrv_query($conn,$query0);
 
@@ -38,7 +38,7 @@
       // -- 1 hours spent on public transport
 
       $query1 = "select sum(datediff(minute,user_trip_start_time, user_trip_end_time)) as 'trip_time'
-      from user_trip
+      from user_trip_2
       where user_id ={$username} 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
@@ -56,7 +56,7 @@
       // // -- 2 grams of carbon emitted
 
       $query2 = "select sum(user_trip_emissions) as 'emissions'
-      from user_trip
+      from user_trip_2
       where user_id = ".$username." 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
@@ -78,7 +78,7 @@
       // // --1.5 total trip length for each type of transport
 
       $query3 = "select t.transport_type, sum(user_trip_length) as 'distance travelled'
-      from user_trip u join transport t on u.transport_id = t.transport_id
+      from user_trip_2 u join transport t on u.transport_id = t.transport_id
       where user_id = ".$username." 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
       group by t.transport_type
@@ -96,7 +96,7 @@
       
 // -- 3 minutes spent on transport and minutes spent in car
       $query4 = "select sum(datediff(minute,user_trip_start_time, user_trip_end_time)) as 'pt_trip_time'
-      from user_trip
+      from user_trip_2
       where user_id = ".$username."  and transport_id between 1 and 3
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
@@ -105,7 +105,7 @@
 
 //-- 4 car trip time
       $query42 = "select sum(datediff(minute,user_trip_start_time, user_trip_end_time)) as 'car_trip_time'
-      from user_trip
+      from user_trip_2
       where user_id = ".$username."  and transport_id = 4
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
@@ -116,7 +116,7 @@
       // $query5 = "select t.transport_type, count(*)/
       // (select count(*) from user_trip_2 where user_id = 1234 
       // and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()) as 'percentage_trips'
-      // from user_trip u join transport t on u.transport_id = t.transport_id
+      // from user_trip_2 u join transport t on u.transport_id = t.transport_id
       // where user_id = 1234 
       // and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
       // group by t.transport_type;";
@@ -127,7 +127,7 @@
 
       // // -- 6 counts for each type of transport
       $query6 = "select t.transport_type, count(*) as 'number_of_trips'
-      from user_trip u join transport t on u.transport_id = t.transport_id
+      from user_trip_2 u join transport t on u.transport_id = t.transport_id
       where user_id = ".$username." 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
       group by t.transport_type

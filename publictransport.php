@@ -1,10 +1,3 @@
-<?php
-
-session_start();  
-if(!isset($_SESSION['username'])){
-  header("Location: index.php");
-}
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -56,9 +49,7 @@ if(!isset($_SESSION['username'])){
   <body>
   <header class="masthead" style="background-image: url('assets/img/header6.jpg')">
 
-  <?php
-require_once("connection.php");
-
+    <?php
 include "./header.html"
 
 ?>
@@ -100,26 +91,27 @@ include "./header.html"
           </div>
           <div class="row articles">
             <div class="col-sm-6 col-md-4 item">
-              <a href="#"><img class="img-fluid" src="/assets/img/15.jpg" /></a>
-              <h3 class="name">Electric vehicle</h3>
+              <a href="#"><img class="img-fluid" src="/assets/img/13.jpg" /></a>
+              <h3 class="name">CAR</h3>
               <p class="description">
-                209.1 grams of Carbon Dioxide per person kilometer travelled
+                17.7 grams of Carbon Dioxide per person kilometer travelled
               </p>
 
             </div>
             <div class="col-sm-6 col-md-4 item">
-              <a href="#"><img class="img-fluid" src="/assets/img/16.jpg" /></a>
-              <h3 class="name">Petrol vehicle</h3>
+              <a href="#"><img class="img-fluid" src="/assets/img/14.png" /></a>
+              <h3 class="name">Bus Station</h3>
               <p class="description">
-              243.8 grams of Carbon Dioxide per person kilometer travelled
+                As of 2019 Melbourne's trams are aupplied from 100% renreable
+                sources, making their emissions parctically zero in any case
               </p>
 
             </div>
             <div class="col-sm-6 col-md-4 item">
-              <a href="#"><img class="img-fluid" src="/assets/img/17.jpg" /></a>
-              <h3 class="name">Motorcycle</h3>
+              <a href="#"><img class="img-fluid" src="/assets/img/6.png" /></a>
+              <h3 class="name">Bus routes</h3>
               <p class="description">
-                119.6 grams of Carbon Doixide per person kilometer travelled
+                28.6 grams of Carbon Doixide per person kilometer travelled
               </p>
 
             </div>

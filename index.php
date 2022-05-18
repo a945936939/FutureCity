@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
         // if the pwd is correct, start session
         $_SESSION['username'] = $username;
         // jump to the homepage
-        header("Location: Home.html");
+        header("Location: home.php");
     };
 }
 ?>

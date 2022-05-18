@@ -1,116 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<?php session_start();
+require_once("connection.php");
+?>
+<script >let username = <?php echo $_SESSION['username']; ?>;</script>
+
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arizonia&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Article-List.css">
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
-    <link rel="stylesheet" href="assets/css/untitled.css">
-    <link rel="stylesheet" href="assets/css/box-container.css">
-    <link rel="stylesheet" href="assets/css/Update1-Coming-Soon-Site.css">
-    <link rel="stylesheet" href="Home.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-   crossorigin=""/>
+<script src="jquery-2.1.1.min.js"></script> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+
+    <link rel="stylesheet" href="./assets/css/tracker.css">
+    <title>tracker</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
-  <body>
+<body>
+    <div id="app">
+        <div class="nav">
+            <header>
+            <?php
 
-  <header class="masthead" style="background-image: url('assets/img/header7.jpg')">
 
-  <?php
-  session_start();
-  if(!isset($_SESSION['username'])){
-    header("Location: index.php");
-  }
-include "./header.html"
+include "./header.html";
 
 ?>
-</header>
-<div class="box-container">
-    <div class="container">
-    
-      <div class="row">
-        <div class="col-md-12 col-lg-12 mx-auto">
-          
-          <p style="font-size: 36px; font-weight: bold ;color:white;">
-            Carbon Emission Tracker
-          </p>
-          <h4>Track your carbon footprint, protect the environment</h4>
-          <p>
-            <br />Use your location and the transport type and the website will calculate carbon emission for you<br /><br />
-          </p>
-        
-</div>
-          <div class="col-md-12 col-lg-12 mx-auto">
-            <div id="vehicle-selection" style="margin-bottom: 30px;">
- 
-              <input type="radio"   id="Car" name="vehicles" value="Car"  checked=true>
-              <label class="btn btn-primary " for="Car" >Car</label>
-
-            <di>
-              <input type="radio"  id="Bus" name="vehicles" value="Bus">
-              <label class="btn btn-primary "  for="Bus" >Bus    </label>
-            </di>
-
-              <input type="radio"  id="Train" name="vehicles" value="Train">
-              <label class="btn btn-primary "  for="Train" >Train    </label>
-
-              <input type="radio" id="Tram" name="vehicles" value="Tram">
-              <label class="btn btn-primary "  for="Tram" >Tram   </label>
-            </div>
-          <button class="btn btn-success btn-lg" id="start-tracking">Start tracking now</button>
-          <button  class="btn btn-danger btn-lg"id="stop-tracking">Stop</button>
-          <div id="map-content"  style="margin-top: 30px;">
-          <p id="demo"></p>
-          <div id="map" style="width: auto;height: 300px;"></div>
+            </header>
         </div>
-          <script src="tracker.js"></script><br><br><br><br><br>
-          </div>
-</div>
-</div>
-</div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-6 mx-auto"> 
-            <p style="font-size: 36px; font-weight: bold">
-              Why to use
-            </p>
-            <br>
-            <p>Choose the environment protection way to reduce your carbon footprint
-            </p>
+        <div class="banner">
+            <div class="contain-box reactive">
+                <div class="title">
+                   Welcome, 
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="contain-box">
+              <div class="how-why">
+                <div class="how-why-item" data-aos="fade-right">
+                  How to use?
+                </div>
+                <div class="how-why-item" data-aos="fade-left">
+                  Why to use?
+                </div>
+              </div>              
 
-          </div>
-          <div class="col-md-6 col-lg-6 mx-auto"> 
-            <img src="/assets/img/12.png" style="height: 333px;width: 550.234px;"/>
-            <!-- margin: -27px;padding: -38px;  for above line-->
-            </p>
-            <br><br><br><br><br><br><br>
-          </div>
-      </div>
-</div>
-       
+              <div class="map">
+              <div id="includedContent" style="margin-top:40px; height:600px; width:80%;">
+               <script> 
+               $(function(){
+                //  console.log("1234313");
+               $("#includedContent").load("map.php"); 
+               });
+               </script> 
+               
+               </div>
+               </div>
+               <div class="vehicle">
+                 <div>
+                <div class="vehicle-item" id="public-transport" data-aos="fade-right">
+                  <div class="vehicle-img" 
+                 >
+                    <img src="./images/tracker/buttons/bus.png" alt="">
+                  </div>
+                  <div class="vehicle-button" >
+                    
+                    <span id="public-transport-text">Public Transport</span>
+                  </div>
+                </div>
+                 </div>
+                <div class="vehicle-item"id="personal-transport"data-aos="fade-left">
+                  <div class="vehicle-img" >
+                    <img src="./images/tracker/buttons/car.png" id="personal-transport"alt="">
+                  </div>
+                  <div class="vehicle-button">
+                  
+                      <span id="personal-transport-text">Personal vehicle</span>
+                  
+                  </div>
+                </div>
+              </div>
+              <div class="start-stop">
+                <div class="start-stop-item" id="finish-button"data-aos="fade-right" >TRACK</div>
+              </div>
 
-    <hr />
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/clean-blog.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
-    <script src="assets/js/Simple-Slider.js"></script>
-    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-   crossorigin=""></script>
-   <script src="tracker.js"></script>
-  </body>
+            </div>
+          </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script defer src="tracker.js"></script>
+
+    <script>
+      
+        var app = new Vue({
+            el: '#app',
+            mounted(){
+                AOS.init()
+            },
+            data: {
+
+            }
+        })
+
+
+
+    </script>
+</body>
+
 </html>

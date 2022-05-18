@@ -2,6 +2,7 @@
 <html lang="en">
 <?php session_start();
 require_once("connection.php");
+// include 'header.html';
 
 
 if(isset($_GET['login'])){
@@ -71,15 +72,15 @@ $user_counts = $row['long_travel'];
 
 <body>
 
-        <div class="nav">
-            <header>
+        <!-- <div class="nav"> -->
+            <!-- <header> -->
             <?php
 
-// include "./header.html"
+include "header.html";
 
 ?>
-            </header>
-        </div>
+            <!-- </header> -->
+        <!-- </div>  -->
 
          
           <div class="banner">
@@ -115,9 +116,7 @@ echo round($travel_distance/10,2);
 ?>
 "
 > <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Travel 1000km in total</p>
-<?php
-// echo $row["total_length"];
-?>
+
 </div>
 <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Your Contribution: <?php echo round($user_travel_distance,2)." Km"; ?></p>
 

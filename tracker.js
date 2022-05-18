@@ -1,158 +1,30 @@
-let lat = 0;
-let lng = 0;
-let lat2 = 0;
-let lng2 = 0;
-let keepTracking = true;
-let distance = 0;
-let start_time = "";
-let end_time = "";
-let transport_id = 1;
-let total_emissions = 0;
-let user_id = 1234;
-
-const buttonStartTrack = document.getElementById("start-tracking");
-
-const buttonStopTrack = document.getElementById("stop-tracking");
-const vehicleTypesContainer = document.getElementById("vehicle-selection");
-const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-
-function carbonEmissions(dist, transportType) {
-  let emissions = 0;
-  switch (transportType) {
-    case "Train":
-      transport_id = 1;
-      // 1000x times larger dont forget to change it back (28.6)
-      emissions = dist * 28.6;
-      break;
-
-    case "Tram":
-      transport_id = 2;
-      emissions = dist * 20.2;
-      break;
-
-    case "Bus":
-      transport_id = 3;
-      emissions = dist * 17.7;
-      break;
-
-    case "Car":
-      transport_id = 4;
-      emissions = dist * 243.8;
-      break;
+let transportId = 0;
+let end_time;
+let start_time;
+const finishButton = document.getElementById("finish-button");
+finishButton.addEventListener("click", () => {
+  if (transportId == 2) {
+    userDistance = tripDistance[0];
+    userDuration = tripDuration[0];
+  } else if (transportId == 4) {
+    userDistance = tripDistance[1];
+    userDuration = tripDuration[1];
   }
-  return emissions;
-}
-function createMap() {
-  if (!map) {
-    var map = L.map("map");
-    L.tileLayer(
-      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
-      {
-        attribution:
-          'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: "mapbox/streets-v11",
-        tileSize: 512,
-        zoomOffset: -1,
-        accessToken:
-          "pk.eyJ1IjoiamFja3NvbmphY2tzb25qYWNrc29uIiwiYSI6ImNsMHQ3MHBuOTBodzczY3JwOW91NTk5djEifQ.hfwu_tJVcukZMyLU-IcvbA",
-      }
-    ).addTo(map);
-    navigator.geolocation.getCurrentPosition((position) => {
-      const {
-        coords: { latitude, longitude },
-      } = position;
+  total_emissions = carbonEmissions(userDistance, transportId);
+  // console.log(tripDistance[1]);
+  // console.log(tripDuration[1]);
 
-      map.setView([latitude, longitude], 13).locate();
-    });
-    navigator.geolocation.getCurrentPosition((position) => {
-      const {
-        coords: { latitude, longitude },
-      } = position;
-      var marker = new L.marker([latitude, longitude], {
-        draggable: true,
-        autoPan: true,
-      }).addTo(map);
-    });
-  }
-}
-
-// createMap(coords);
-
-function calculateDistance(vehicleTypes) {
-  var options = {
-    enableHighAccuracy: true,
-  };
-  if (navigator.geolocation)
-    navigator.geolocation.getCurrentPosition(
-      //calculate the distance now
-      function (position) {
-        lat = lat2;
-        lng = lng2;
-        lat2 = position.coords.latitude;
-        lng2 = position.coords.longitude;
-
-        lng3 = (lng * Math.PI) / 180;
-        lng4 = (lng2 * Math.PI) / 180;
-        lat3 = (lat * Math.PI) / 180;
-        lat4 = (lat2 * Math.PI) / 180;
-        if (lat != 0 && lng != 0) {
-          let dlon = lng4 - lng3;
-          let dlat = lat4 - lat3;
-          let a =
-            Math.pow(Math.sin(dlat / 2), 2) +
-            Math.cos(lat3) * Math.cos(lat4) * Math.pow(Math.sin(dlon / 2), 2);
-
-          let c = Math.asin(Math.sqrt(a));
-          let r = 6371;
-
-          typeof distance !== "undefined"
-            ? (distance += c * r)
-            : (distance = c * r);
-
-          if (typeof distance !== "undefined" && c * r > 0) {
-            total_emissions = carbonEmissions(distance, vehicleTypes);
-            document.getElementById("demo").innerHTML =
-              "Distance travelled:" +
-              distance.toFixed(2) +
-              "Km. \n" +
-              "Emission for this trip is: " +
-              total_emissions.toFixed(2) +
-              " grams ";
-          }
-        }
-        if (distance > 0) {
-          console.log("distance:" + distance);
-        }
-        if (total_emissions > 0) {
-          console.log("total emissions:" + total_emissions);
-        }
-      },
-      function () {
-        alert("Could not get it");
-      },
-      options
-    );
-  buttonStopTrack.addEventListener("click", stopTracking);
-}
-
-function stopTracking() {
-  clearInterval(intervalID);
-  end_time = new Date().toLocaleString();
-
-  //use XHR to insert the data with php
+  // console.log(total_emissions);
   var xhr = new XMLHttpRequest();
   tripInfo =
     "?user_id=" +
-    user_id +
-    "&user_trip_start_time=" +
-    start_time +
-    "&user_trip_end_time=" +
-    end_time +
+    username +
     "&transport_id=" +
-    transport_id +
+    transportId +
     "&user_trip_length=" +
-    distance +
+    userDistance +
+    "&duration=" +
+    userDuration +
     "&user_trip_emissions=" +
     total_emissions;
   xhr.open("GET", "TrackerInsert.php" + tripInfo, true);
@@ -160,26 +32,66 @@ function stopTracking() {
     console.log("xhr:" + this.responseText);
   };
   xhr.send();
+  alert("Trip is added to your record!");
+  document.getElementById("public-transport-text").innerHTML =
+    "Public Transport";
+  document.getElementById("personal-transport-text").innerHTML =
+    "Personal vehicle";
 
-  keepTracking = false;
-  vehicleTypesContainer.style.display = "block";
-  document.getElementById("demo").innerHTML =
-    "Trip complete! " +
-    total_emissions +
-    " grams of carbon emissions generated in this trip!";
-  delete map;
-}
+  //update_achievement
 
-buttonStartTrack.addEventListener("click", () => {
-  start_time = new Date().toLocaleString();
-  console.log(start_time);
-  const vehicleTypes = document.querySelector(
-    'input[name="vehicles"]:checked'
-  ).value;
-  vehicleTypesContainer.style.display = "none";
-  document.getElementById("demo").innerHTML = "Calculating... ";
-  createMap();
-  intervalID = setInterval(() => {
-    calculateDistance(vehicleTypes);
-  }, "300");
+  var xhttp = new XMLHttpRequest();
+  xhttp.onload = function () {
+    console.log("xhttp:" + this.responseText);
+  };
+
+  xhttp.open("GET", "update_achievements.php", true);
+  xhttp.send();
 });
+const personalTransport = document.getElementById("personal-transport");
+personalTransport.addEventListener("click", () => {
+  transportId = 4;
+  document.getElementById("public-transport-text").innerHTML =
+    "Public Transport";
+  document.getElementById("personal-transport-text").innerHTML =
+    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004";
+  // document.getElementById("personal-transport-text").setAttribute('style','font-size:50px;padding-left:30%;') = "&#10004";
+});
+const publicTransport = document.getElementById("public-transport");
+publicTransport.addEventListener("click", () => {
+  transportId = 2;
+  document.getElementById("personal-transport-text").innerHTML =
+    "Personal vehicle";
+  document.getElementById("public-transport-text").innerHTML =
+    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004";
+  // document.getElementById("public-transport-text").setAttribute('style','font-size:50px;padding-left:30%;') = "&#10004";
+});
+
+//insert into user_trip values (.....,CURRENT_TIMESTAMP, DATEADD(second,  {$seconds},CURRENT_TIMESTAMP),,.....)
+
+function carbonEmissions(dist, transportType) {
+  let emissions = 0;
+  switch (transportType) {
+    case 1:
+      // transport_id = 1;
+      // 1000x times larger dont forget to change it back (28.6)
+      emissions = dist * 28.6;
+      break;
+
+    case 2:
+      // transport_id = 2;
+      emissions = dist * 20.2;
+      break;
+
+    case 3:
+      // transport_id = 3;
+      emissions = dist * 17.7;
+      break;
+
+    case 4:
+      // transport_id = 4;
+      emissions = dist * 243.8;
+      break;
+  }
+  return emissions;
+}

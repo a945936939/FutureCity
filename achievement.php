@@ -47,19 +47,21 @@ require_once("./connection.php");
     <link rel="stylesheet" href="./assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="./assets/css/untitled.css">
     <link rel="stylesheet" href="./assets/css/Update1-Coming-Soon-Site.css">
-    <link rel="stylesheet" href="./goals.css">
+    <!-- <link rel="stylesheet" href="./goals.css"> -->
     <link rel="stylesheet" type="text/css" href="./assets/css/loading-bar.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/loading-bar.css" />
 
 </head>
 
 <body>
-    <div id="app">
-        <div class="nav">
-            <header>
-                <div class="header-item">Menu</div>
-            </header>
-        </div>
+    <!-- <div id="app">
+        <div class="nav"> -->
+            
+                <!-- <div class="header-item"> -->
+                    <?php include 'header.html';?>
+                <!-- </div> -->
+            
+        <!-- </div> -->
         <div class="banner">
             <div class="box reactive">
                 <div class="title" data-aos="fade-up">
@@ -68,13 +70,13 @@ require_once("./connection.php");
             </div>
         </div>
 
-    </div>
+    <!-- </div> -->
 
 
 <!--  achievement info for the first five achievements -->
 <?php
 
-$username = 1234;
+
 // $username = $_SESSION['username'];
 
 // achievements progress
