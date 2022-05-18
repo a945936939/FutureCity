@@ -17,17 +17,17 @@ require_once("connection.php");
     <title>tracker</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+ 
 </head>
 
 <body>
+
     <div id="app">
         <div class="nav">
             <header>
             <?php
-
-
 include "./header.html";
-
 ?>
             </header>
         </div>
@@ -41,11 +41,24 @@ include "./header.html";
         <div class="buttons">
             <div class="contain-box">
               <div class="how-why">
-                <div class="how-why-item" data-aos="fade-right">
-                  How to use?
-                </div>
-                <div class="how-why-item" data-aos="fade-left">
-                  Why to use?
+                <div class="how-why-item" id="guide-1" data-aos="fade-right">
+
+              
+                <h1 class="ml7">
+  <span class="text-wrapper">
+    <span class="letters">How to use</span>
+  </span>
+</h1>
+</div>
+                  
+                
+                <div class="how-why-item" id="guide-2"data-aos="fade-right">
+                <h1 class="ml8">
+  <span class="text-wrapper">
+    <span class="letters">why to use</span>
+  </span>
+</h1>
+                  
                 </div>
               </div>              
 
@@ -110,6 +123,10 @@ include "./header.html";
 
 
     </script>
+      <div id="bla"style="position:fixed; left: 50%;
+top: 50%;">
+  <p style="font-size:50px">blahsadhlsakdh</p>
+</div>
 </body>
 
 </html>

@@ -233,8 +233,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach21.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>" ></div>
+<img src="./assets/img/cards/ach21.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -248,8 +255,36 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach22.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach22.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
+                <div class="card-body">
+                    <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
+                    </h5>
+                    <p class="card-text"><?php echo $ach_info['achievement_description'];?></p>
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-2">
+            <div class="card"    data-aos="fade-up" data-aos-delay="500">
+                <?php 
+                // load the achievement information
+                $ach_info = sqlsrv_fetch_array($result1);?>
+<img src="./assets/img/cards/ach23.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -263,8 +298,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach23.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach24.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -278,23 +320,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach24.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
-                <div class="card-body">
-                    <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
-                    </h5>
-                    <p class="card-text"><?php echo $ach_info['achievement_description'];?></p>
-                </div>
-            </div>
-            </div>
-            <div class="col-sm-2">
-            <div class="card"    data-aos="fade-up" data-aos-delay="500">
-                <?php 
-                // load the achievement information
-                $ach_info = sqlsrv_fetch_array($result1);?>
-
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach25.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach25.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -321,8 +355,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach31.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach31.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -336,8 +377,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach32.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach32.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -351,8 +399,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach33.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach33.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -366,8 +421,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach34.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach34.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -381,8 +443,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach35.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach35.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -408,8 +477,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach41.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach41.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -423,8 +499,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach42.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach42.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -438,8 +521,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach43.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach43.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -453,8 +543,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach44.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach44.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -468,8 +565,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach45.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach45.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -497,8 +601,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach51.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach51.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -512,8 +623,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach52.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach52.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -527,8 +645,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach53.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach53.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -542,8 +667,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach54.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach54.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
@@ -557,8 +689,15 @@ $result1 = sqlsrv_query($conn, $query);
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
 
-                <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach55.jpg" data-img-size="150,150"
-                    data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
+<img src="./assets/img/cards/ach55.jpg">
+<div
+      class="ldBar"
+      style="margin-bottom:50px; width:100%"
+      data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-stroke-trail-width="20"
+      data-stroke-width="20"
+      
+      data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
                     </h5>
