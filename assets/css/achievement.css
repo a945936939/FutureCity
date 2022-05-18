@@ -58,6 +58,13 @@
     padding-left: 10rem;
 }
 
+.contain-box .list-item .row .row-title {
+    font-family: YouSheBiaoTiHei;
+    font-weight: 300;
+    font-size: 50px;
+    z-index: 10;
+}
+
 .contain-box .list-item .item-bg1 {
     position: absolute;
     left: 175px;
@@ -88,8 +95,18 @@
     width: 100%;
 }
 
+.contain-box .list-item .row .card .ldBar-label {
+    font-family: YouSheBiaoTiHei;
+    font-size: 70%;
+}
+
 .contain-box .list-item .row .card {
     width: 11rem;
+}
+
+.contain-box .list-item .row .card .card-title {
+    padding-top: 1rem;
+    font-family: YouSheBiaoTiHei;
 }
 
 #row1 {
