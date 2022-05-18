@@ -97,6 +97,7 @@ $result1 = sqlsrv_query($conn, $query);
         <img class="item-bg1" src="./images/achievement/goals_banner.jpeg" alt="">
         
         <div class="row" id = "row1" >
+            <div class="row-title">Tracker</div>
    
             <div class="col-sm-2">
             <div class="card"    data-aos="fade-up" data-aos-delay="500">
@@ -106,8 +107,9 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach11.jpg">
   <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-path="M -40 10 L 140 10"
       data-stroke-width="20"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"
@@ -130,8 +132,9 @@ $result1 = sqlsrv_query($conn, $query);
                     <img src="./assets/img/cards/ach12.jpg">
   <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
+      data-path="M -40 10 L 140 10"
       data-stroke-width="20"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"
@@ -153,9 +156,10 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach13.jpg">
   <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"
     ></div>
@@ -176,9 +180,10 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach14.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"
 ></div>
@@ -200,10 +205,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach15.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -226,7 +232,7 @@ $result1 = sqlsrv_query($conn, $query);
 
         
         <div class="row" id = "row2" >
-   
+        <div class="row-title">Emissions</div>
             <div class="col-sm-2">
             <div class="card"    data-aos="fade-up" data-aos-delay="500">
                 <?php 
@@ -236,10 +242,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach21.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -258,10 +265,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach22.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -279,10 +287,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach23.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -301,10 +310,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach24.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -323,10 +333,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach25.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -348,6 +359,7 @@ $result1 = sqlsrv_query($conn, $query);
         <img class="item-bg3" src="./images/home/introductions/introduction-bg.png" alt="">
         
         <div class="row"   id = "row3"  >
+        <div class="row-title">Distance</div>
    
             <div class="col-sm-2">
             <div class="card"    data-aos="fade-up" data-aos-delay="500">
@@ -358,10 +370,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach31.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -380,10 +393,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach32.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -402,10 +416,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach33.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -424,10 +439,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach34.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -446,10 +462,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach35.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -470,6 +487,7 @@ $result1 = sqlsrv_query($conn, $query);
     
 <img class="item-bg4" src="./images/home/introductions/introduction-bg.png" alt="">
         <div class="row"  id = "row4"   >
+        <div class="row-title">Time</div>
    
             <div class="col-sm-2">
             <div class="card"    data-aos="fade-up" data-aos-delay="500">
@@ -480,10 +498,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach41.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="margin-bottom:20px; width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -502,10 +521,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach42.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -524,10 +544,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach43.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -546,10 +567,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach44.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -568,10 +590,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach45.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -594,6 +617,7 @@ $result1 = sqlsrv_query($conn, $query);
         <img class="item-bg5" src="./images/home/introductions/introduction-bg.png" alt="">
 
         <div class="row" id = "row5" >
+        <div class="row-title">Streak</div>
    
             <div class="col-sm-2">
             <div class="card"    data-aos="fade-up" data-aos-delay="500">
@@ -604,10 +628,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach51.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -626,10 +651,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach52.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -648,10 +674,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach53.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -670,10 +697,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach54.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="  width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
@@ -692,10 +720,11 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach55.jpg">
 <div
       class="ldBar"
-      style="margin-bottom:50px; width:100%"
+      style="width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-trail-width="20"
       data-stroke-width="20"
+      data-path="M -40 10 L 140 10"
       
       data-value="  <?php echo  $ach_info['record_progress'];?>"></div>
                 <div class="card-body">
