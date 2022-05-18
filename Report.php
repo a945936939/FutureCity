@@ -196,8 +196,13 @@ if($emissions > 1000){
     
         <div class="nav">
             <header>
-                <div class="header-item">Menu</div>
-            </header>
+            <header>
+            <?php
+require_once("connection.php");
+
+include "./header.html"
+
+?>            </header>
         </div>
         <div class="banner">
             <div class="contain-box reactive">

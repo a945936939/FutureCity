@@ -72,15 +72,15 @@ $user_counts = $row['long_travel'];
 
 <body>
 
-        <!-- <div class="nav"> -->
-            <!-- <header> -->
+        <div class="nav">
+            <header>
             <?php
 
 include "header.html";
 
 ?>
-            <!-- </header> -->
-        <!-- </div>  -->
+            </header> 
+         </div> 
 
          
           <div class="banner">

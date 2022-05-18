@@ -32,14 +32,14 @@ require_once("./connection.php");
     <script src="./js/echarts.min.js"></script>
 
 
-    <!-- <link rel="stylesheet"
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arizonia&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap"> -->
-    <!-- <link rel="stylesheet" href="./assets/fonts/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap"> 
+     <link rel="stylesheet" href="./assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/Article-List.css">
     <link rel="stylesheet" href="./assets/css/Features-Boxed.css">
     <link rel="stylesheet" href="./assets/css/Highlight-Phone.css">
@@ -54,14 +54,16 @@ require_once("./connection.php");
 </head>
 
 <body>
-    <!-- <div id="app">
-        <div class="nav"> -->
-            
-                <!-- <div class="header-item"> -->
-                    <?php include 'header.html';?>
-                <!-- </div> -->
-            
-        <!-- </div> -->
+    <div id="app">
+        <div class="nav">
+        <header>
+                    <?php 
+require_once("connection.php");
+include 'header.html';
+?>
+                        </header>
+
+        </div>
         <div class="banner">
             <div class="box reactive">
                 <div class="title" data-aos="fade-up">
@@ -70,7 +72,6 @@ require_once("./connection.php");
             </div>
         </div>
 
-    <!-- </div> -->
 
 
 <!--  achievement info for the first five achievements -->

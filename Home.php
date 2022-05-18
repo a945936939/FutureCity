@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-include 'header.html';
+<?php session_start();
+if(!isset($_SESSION['username'])){
+    header("Location: index.php");
+  }
 ?>
 
 <head>
@@ -17,11 +19,12 @@ include 'header.html';
 
 <body>
     <div id="app">
-        <!-- <div class="nav">
+        <div class="nav">
             <header>
-                 <div class="header-item">Menu</div> 
-            </header>
-        </div> -->
+            <?php
+include 'header.html';
+?>            </header>
+        </div>
         <div class="banner">
             <div class="contain-box reactive">
                 <div class="title" data-aos="fade-up">
