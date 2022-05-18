@@ -96,9 +96,10 @@ $result1 = sqlsrv_query($conn, $query);
         <img class="item-bg1" src="./images/achievement/goals_banner.jpeg" alt="">
         
         <div class="row" id = "row1" >
+            <div class ="row-title">Tracker</div>
    
             <div class="col-sm-2">
-            <div class="card"    data-aos="fade-up" data-aos-delay="500">
+            <div class="card" data-aos="fade-up" data-aos-delay="500">
                 <?php 
                 // load the achievement information
                 $ach_info = sqlsrv_fetch_array($result1);?>
@@ -106,8 +107,7 @@ $result1 = sqlsrv_query($conn, $query);
                 <div class="ldBar" data-type="fill" data-img="./assets/img/cards/ach11.jpg" data-img-size="150,150"
                     data-value="<?php echo  $ach_info['record_progress'];?>"  ></div>
                 <div class="card-body">
-                    <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?>
-                    </h5>
+                    <h5 class="card-title"> <?php echo $ach_info['achievement_name'];?></h5>
                     <p class="card-text"><?php echo $ach_info['achievement_description'];?></p>
                 </div>
             </div>
@@ -185,6 +185,7 @@ $result1 = sqlsrv_query($conn, $query);
 
         
         <div class="row" id = "row2" >
+        <div class ="row-title">Carbon Emissions</div>
    
             <div class="col-sm-2">
             <div class="card"    data-aos="fade-up" data-aos-delay="500">
@@ -273,6 +274,7 @@ $result1 = sqlsrv_query($conn, $query);
         <img class="item-bg3" src="./images/home/introductions/introduction-bg.png" alt="">
         
         <div class="row"   id = "row3"  >
+        <div class ="row-title">Distance</div>
    
             <div class="col-sm-2">
             <div class="card"    data-aos="fade-up" data-aos-delay="500">
@@ -360,6 +362,7 @@ $result1 = sqlsrv_query($conn, $query);
     
 <img class="item-bg4" src="./images/home/introductions/introduction-bg.png" alt="">
         <div class="row"  id = "row4"   >
+        <div class ="row-title">Time</div>
    
             <div class="col-sm-2">
             <div class="card"    data-aos="fade-up" data-aos-delay="500">
@@ -449,6 +452,7 @@ $result1 = sqlsrv_query($conn, $query);
         <img class="item-bg5" src="./images/home/introductions/introduction-bg.png" alt="">
 
         <div class="row" id = "row5" >
+        <div class ="row-title">Streak</div>
    
             <div class="col-sm-2">
             <div class="card"    data-aos="fade-up" data-aos-delay="500">
