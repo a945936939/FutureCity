@@ -37,7 +37,7 @@
 
 .flip_card_left {
   background-color: transparent;
-  width: 500px;
+  width: 600px;
   height: 300px;
   perspective: 1000px;
 }
@@ -78,7 +78,7 @@
 
 .flip_card {
   background-color: transparent;
-  width: 500px;
+  width: 600px;
   height: 300px;
   perspective: 1000px;
 }
@@ -127,8 +127,8 @@
   width: 100%;
   padding-bottom: 35px;
   padding-top: 35px;
-  padding-left: 178px;
-  padding-right: 178px;
+  padding-left: 18px;
+  padding-right: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
