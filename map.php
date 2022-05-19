@@ -59,6 +59,7 @@ require_once("connection.php");
         height: 98px;
         margin-top: 8px;
         padding: 0 16px;
+        background-color: aliceblue;
       }
 
       .commutes-initial-state svg {
@@ -204,6 +205,7 @@ require_once("connection.php");
       }
 
       .commutes-destinations .destination {
+        background-color: aliceblue;
         border-radius: 0px;
         box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
           0 1px 3px 1px rgba(60, 64, 67, 0.15);
@@ -219,6 +221,7 @@ require_once("connection.php");
         overflow: hidden;
         padding: 12px;
         position: relative;
+
       }
 
       .commutes-destinations .active:after {

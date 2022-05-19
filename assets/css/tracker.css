@@ -24,8 +24,8 @@
 }
 
 .buttons {
-  height: 2082px;
-  background-image: url("../../images/tracker/buttons/bg.png");
+  height: 1702px;
+  background-image: url("../../assets/img/trackerBG.jpg");
   padding: 80px 0;
 }
 
@@ -40,7 +40,7 @@
 .buttons div.contain-box div.how-why div.how-why-item {
   width: 420px;
   height: 420px;
-  background: #0ec6d3;
+  background: #338fb8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,6 +194,7 @@
 .ml1 .letter {
   display: inline-block;
   line-height: 1em;
+  font-size: 50px;
 }
 
 .ml1 .text-wrapper {
@@ -226,6 +227,7 @@
   font-weight: 900;
   font-size: 30px;
   transition: all 0.2s ease-in-out;
+  color: #0c264b;
 }
 .ml7 .text-wrapper {
   position: relative;
@@ -240,12 +242,15 @@
   display: inline-block;
   line-height: 1.3em;
   text-align: left;
+  font-size: 70px;
+  color: #0c264b;
 }
 
 .ml8 {
   position: relative;
   font-weight: 900;
   font-size: 30px;
+  color: #0c264b;
 }
 
 .ml8 .text-wrapper {
@@ -260,6 +265,8 @@
   transform-origin: 0 100%;
   display: inline-block;
   line-height: 1em;
+  font-size: 70px;
+  color: #0c264b;
 }
 
 /* This container is needed to position the front and back side */
@@ -318,7 +325,7 @@
 
 .back-lettters {
   text-align: left;
-  color: black;
+
   font-weight: 900;
   font-size: 0px;
   font-family: YouSheBiaoTiHei;

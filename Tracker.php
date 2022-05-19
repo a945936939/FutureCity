@@ -66,11 +66,10 @@ include "./header.html";
     <span class="text-wrapper">
     
       <span class="back-letters">
-1. Click the “start” button<br>
-2. Input your destination in the map<br>
-3. Compare the routes of “Car” and “Public Transport”<br>
-4. Choose the one you decide to take by clicking on corresponding button under the cartoon picture<br>
-5. Confirm your decision.
+1. Input your destination in the map<br>
+2. Compare the routes and carbon emission of “Personal Vehicle” and “Public Transport”<br>
+3. Choose the transport type<br>
+4. Click “Track” 
 </span>
     </span>
   </h1>
@@ -119,7 +118,7 @@ Each time you decide your trip, you would understand the consequence by comparin
                 </div>
 
               <div class="map">
-              <div id="includedContent" style="margin-top:40px; height:600px; width:80%;">
+              <div id="includedContent" style="margin-top:40px; height:600px; width:92%;">
                <script> 
                      HTMLElement.prototype.scrollIntoView = function() {};
 
@@ -137,7 +136,7 @@ Each time you decide your trip, you would understand the consequence by comparin
                
                </div>
                </div>
-               <div class="vehicle">
+               <!-- <div class="vehicle">
                  <div>
                 <div class="vehicle-item" id="public-transport" data-aos="fade-right">
                   <div class="vehicle-img" 
@@ -160,7 +159,7 @@ Each time you decide your trip, you would understand the consequence by comparin
                   
                   </div>
                 </div>
-              </div>
+              </div> -->
               <div class="start-stop">
                 <div class="start-stop-item" id="finish-button"data-aos="fade-right" >TRACK</div>
               </div>
@@ -191,5 +190,5 @@ Each time you decide your trip, you would understand the consequence by comparin
 
     
 </body>
-
+<?php include 'footer.html'; ?>
 </html>

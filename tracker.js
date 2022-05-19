@@ -151,14 +151,14 @@ anime
     translateX: ["0.55em", 0],
     translateZ: 0,
     rotateZ: [180, 0],
-    duration: 1050,
+    duration: 1550,
     easing: "easeOutExpo",
     delay: (el, i) => 50 * i,
   })
   .add({
     targets: ".ml7",
     opacity: 0,
-    duration: 1500,
+    duration: 4000,
     easing: "easeOutExpo",
     delay: 30000,
   });
@@ -178,16 +178,16 @@ anime
     translateX: ["0.55em", 0],
     translateZ: 0,
     rotateZ: [180, 0],
-    duration: 1050,
+    duration: 4000,
     easing: "easeOutExpo",
     delay: (el, i) => 50 * i,
   })
   .add({
     targets: ".ml8",
     opacity: 0,
-    duration: 1500,
+    duration: 2200,
     easing: "easeOutExpo",
-    delay: 30000,
+    delay: 30000000,
   });
 
 document.getElementById("guide-1").addEventListener("click", () => {
