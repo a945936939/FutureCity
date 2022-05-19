@@ -196,14 +196,14 @@ if($emissions > 1000){
     
         <div class="nav">
             <header>
-            <header>
-            <?php
-require_once("connection.php");
+                <?php require_once("connection.php");
 
-include "./header.html"
+                        include "./header.html"
 
-?>            </header>
+                ?>
+            </header>
         </div>
+        
         <div class="banner">
             <div class="contain-box reactive">
                 <div class="title" data-aos="fade-down">
@@ -218,20 +218,23 @@ include "./header.html"
         
         
       
+        <div class="contain-box" id ="content">
+            <div class="blocks">
+            
+                <div class="block-item" id ="block1">
 
-        <div class="blocks">
-            <div class="contain-box">
-                <div class="block-item">
                     <div class="item-left" data-aos="fade-right">
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
                                 <div class="flip_card_front_left">
-                                    <h>How much CO2 have you saved this week?</h>
+                                    <div class="flip_card_1">
+                                        <h>How much CO2 have you saved this week?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back_left">
-                                    <h><?php echo $emissions." ".$units;?></h>
-
-
+                                    <div class="flip_card_3">
+                                        <h><?php echo $emissions." ".$units;?></h>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -241,30 +244,33 @@ include "./header.html"
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <h>
-                                        How many trees is that?
-                                    </h>
+                                    <div class="flip_card_3">
+                                        <h>How many trees is that?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back">
-                                    <h><?php echo $trees;?></h>
-
-
+                                    <div class="flip_card_1">
+                                        <h><?php echo $trees;?></h>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="block-item">
+
+                <div class="block-item" id ="block2">
                     <div class="item-left" data-aos="fade-right">
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
                                 <div class="flip_card_front_left">
-                                    <h>How much time did you spend on Public Transport?</h>
+                                    <div class="flip_card_2">
+                                        <h>How much time did you spend on Public Transport?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back_left">
-                                    <h><?php echo $hours." hours and ".$minutes." minutes"?></h>
-
-
+                                    <div class="flip_card_3">
+                                        <h><?php echo $hours." hours and ".$minutes." minutes"?></h>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -273,30 +279,31 @@ include "./header.html"
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <h>Break it down:</h>
+                                    <div class="flip_card_3">
+                                        <h>Break it down:</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back">
                                     <div id = "pie1" style="width:100%; height: 100%"></div>
-
-
                                 </div>
                             </div>
                         </div>
                         <!-- <img src="./images/report/tree.png" alt=""> -->
                     </div>
                 </div>
-                <div class="block-item">
+                <div class="block-item" id ="block3">
                     <div class="item-left" data-aos="fade-right">
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
                                 <div class="flip_card_front_left">
-                                    <h>How far did you travel this week?</h>
+                                    <div class="flip_card_1">
+                                        <h>How far did you travel this week?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back_left">
-                                    <h><?php echo "Public Transport: ".round($pt_distance,2)." Km \n Car: ".round($car_distance,2)." Km"; ?>
-                                       </h>
-
-
+                                    <div class="flip_card_1">
+                                        <h><?php echo "Public Transport: ".round($pt_distance,2)." Km \n Car: ".round($car_distance,2)." Km"; ?></h>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -305,29 +312,30 @@ include "./header.html"
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <h>Let's take a closer look</h>
+                                    <div class="flip_card_3">
+                                        <h>Let's take a closer look</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back">
-                                    <div id = "pie2" style="width:100%; height: 100%"></div>
-                                    
-
-
+                                    <div id = "pie2" style="width:100%; height: 100%"></div>                              
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="block-item">
+                <div class="block-item" id ="block4">
                     <div class="item-left" data-aos="fade-right">
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
                                 <div class="flip_card_front_left">
-                                    <h>What type of transport was your favourite?</h>
+                                    <div class="flip_card_1">
+                                        <h>What type of transport was your favourite?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back_left">
-                                    <h><?php echo $key;?></h>
-
-
+                                    <div class="flip_card_3">
+                                        <h><?php echo $key;?></h>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -336,7 +344,9 @@ include "./header.html"
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <h>How does that compare to Melbourne in <?php echo date('M')." ".$year;?>?</h>
+                                    <div class="flip_card_2">
+                                        <h>How does that compare to Melbourne in <?php echo date('M')." ".$year;?>?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back">
                                     <div id="pie3" style="width:100%; height: 100%"></div>
@@ -344,16 +354,11 @@ include "./header.html"
                                 </div>
                             </div>
                         </div>
-                    
-         
-               
                     </div>
-                   
+                </div>
             </div>
         </div>
-    </div>
-    </div>
-    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script>
         var app = new Vue({

@@ -1,5 +1,5 @@
 .banner {
-    background-image: url("../img/report_banner.jpg");
+    background-image: url("../img/report.png");
     width: 100%;
     height: 600px;
     display: -webkit-box;
@@ -22,7 +22,7 @@
     font-weight: 400;
     padding-top: 178px;
     color: #ffffff;
-    text-shadow: 0px 6px 0px #08648b;
+    text-shadow: 0px 6px 0px #343839;
     text-align: center;
 }
 
@@ -31,7 +31,7 @@
     font-family: YouSheBiaoTiHei;
     font-weight: 400;
     color: #ffffff;
-    text-shadow: 0px 6px 0px #08648b;
+    text-shadow: 0px 6px 0px #343839;
     text-align: center;
 }
 
@@ -49,7 +49,7 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 23px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip_card_left:hover .flip_card_inner_left {
@@ -66,19 +66,19 @@
 }
 
 .flip_card_front_left {
-    background-color: rgb(255, 255, 255);
-    color: black;
+    background-color: #f4bab6;
+    color: rgb(6, 33, 71);
 }
 
 .flip_card_back_left {
-    background-color: #ffffff;
-    color: rgb(162, 26, 26);
+    background-color: rgb(174, 247, 247);
+    color: rgb(8, 41, 54);
     transform: rotateY(180deg);
 }
 
 .flip_card {
     background-color: transparent;
-    width: 300px;
+    width: 600px;
     height: 300px;
     perspective: 1000px;
 }
@@ -90,7 +90,7 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 23px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip_card:hover .flip_card_inner {
@@ -107,30 +107,34 @@
 }
 
 .flip_card_front {
-    background-color: #bbb;
-    color: black;
+    background-color: rgb(247, 229, 151);
+    color: rgb(75, 59, 10);
 }
 
 .flip_card_back {
-    background-color: #2980b9;
-    color: white;
+    background-color: #ffffff;
+    color:#000000;
+    /* color: #441e1e; */
     transform: rotateY(180deg);
 }
 
 .blocks {
-    padding: 178px;
+    width: 100%;
 }
 
 .blocks .block-item {
     height: 300px;
-    margin-bottom: 73px;
+    width: 100%;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    padding-left: 178px;
+    padding-right: 178px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-family: YouSheBiaoTiHei;
     font-size: 50px;
-    font-family: Source Han Sans CN;
-    font-weight: 400;
-    color: #ffffff;
+    color: #ffffff;  
 }
 
 .blocks .block-item .item-left {
@@ -147,11 +151,10 @@
     align-items: center;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 30px;
+    padding-left: 30px;
 }
 
 .blocks .block-item .item-right {
-    width: 450px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -161,20 +164,51 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    padding-right: 50px;
 }
 
-.blocks .block-item:nth-child(1) .item-right {
-    background-color: #ffffff;
+#content {
+    background-color: #441e1e;
+    height: 100%;
+    width: 100%;
 }
 
-.blocks .block-item:nth-child(2) .item-right {
-    background-color: #ffffff;
+.contain-box {
+    width: 100%;
 }
 
-.blocks .block-item:nth-child(3) .item-right {
-    background-color: #ffffff;
+#block1 {
+    background-color: #c1dafe;
+    height: 100%;
+    width: 100%;
 }
 
-.blocks .block-item:nth-child(4) .item-right {
-    background-color: #ffffff;
+#block2 {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+}
+
+#block3 {
+    background-color: #c1dafe;
+    height: 100%;
+    width: 100%;
+}
+
+#block4 {
+    background-color: #a8caf9;
+    height: 100%;
+    width: 100%;
+}
+
+.flip_card_1 {
+    padding-top: 70px;
+}
+
+.flip_card_2 {
+    padding-top: 30px;
+}
+
+.flip_card_3 {
+    padding-top: 100px;
 }

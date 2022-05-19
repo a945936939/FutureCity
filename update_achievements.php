@@ -95,7 +95,9 @@ $row = sqlsrv_fetch_array($result);
 
 
 $length = $row['trip_length']; // distanxce travelled on public transport
-$emissions = $row['total_emissions']/1000; // total emissions from public transport
+$pt_emissions = $row['total_emissions']/1000; // total emissions from public transport
+$car_emissions = $length * 243.8;         // emissions from car travel over the same distance
+$emissions = $car_emissions - $pt_emissions; // diff between car emissions and pt_emissions = emissions saved
 $total_time = $row['total_time']/60; // total time on public transport
 
 // check user progress
@@ -154,15 +156,13 @@ for($i=6;$i<=25;$i++){
 
   #set the value of progress made (depending on achievement)
   if($i < 11){
-    $update_val = round($emissions/$ach_max * 100,2);
-  }elseif (11<=$i && $i<15){
-    $update_val = round($length/$ach_max * 100,2);
-  } elseif(15<=$i && $i<20) {
-    $update_val = round($total_time/$ach_max * 100,2);
-  } elseif(20<=$i && $i<26){
-    echo $consecutive_days;
+    $update_val = round($emissions/$ach_max * 100,0);
+  }elseif (11<=$i && $i<16){
+    $update_val = round($length/$ach_max * 100,0);
+  } elseif(16<=$i && $i<21) {
+    $update_val = round($total_time/$ach_max * 100,0);
+  } elseif(21<=$i && $i<26){
     $update_val = $consecutive_days/$ach_max * 100;
-    echo $ach_max;
   } else { 
     echo "something has gone very wrong";
   }

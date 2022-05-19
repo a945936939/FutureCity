@@ -96,8 +96,8 @@ include 'header.html';
                     icon: './images/home/buttons/button3.png'
                 }, ],
                 introductionsList: [{
-                    title: 'Future City',
-                    content: 'Melbourne, the key for Victoria in economics, society and culture, makes her the centre of the state’s transport network. By 2036, the daily population is estimated to grow to approximately 1.4 million. To become a green city, public transport, walking and cycling should be increased to 70 percent of all trips by 2030.',
+                    title: 'Future City in Melbourne',
+                    content: 'By 2036, the daily population in Melbourne is estimated to grow to approximately 1.4 million. To become a green city, public transport, walking and cycling should be increased to 70 percent of all trips by 2030.',
                     img: './images/home/introductions/introduction1.jpg'
                 }, {
                     title: 'Zero-emissions Transport',
@@ -105,7 +105,7 @@ include 'header.html';
                     img: './images/home/introductions/introduction2.jpg'
                 }, {
                     title: 'Build a Habit',
-                    content: 'As a citizen, we can build a habit to take public transport so that we can contribute to the plan of our future city. Using our carbon emission tracker, you can observe the difference in carbon emission between taking public transport and your own car while you are encouraged to choose the one which helps the environment.',
+                    content: 'As a citizen, we can build a habit to take public transport so that we can contribute to the plan of our future city. Using carbon emission tracker, you are encouraged to choose the one which helps the environment.',
                     img: './images/home/introductions/introduction3.jpg'
                 }, ]
             }

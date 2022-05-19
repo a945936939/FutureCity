@@ -66,10 +66,14 @@ include 'header.html';
         </div>
         <div class="banner">
             <div class="box reactive">
-                <div class="title" data-aos="fade-up">
-                    Achievements
+                <div class="title" data-aos="fade-down">
+                    Achievement
                 </div>
-
+                </br>
+                </br>
+                <div class="sub-title" data-aos="fade-up">
+                    Finish the Task!
+                </div>
             </div>
         </div>
 
@@ -107,7 +111,7 @@ $result1 = sqlsrv_query($conn, $query);
 <img src="./assets/img/cards/ach11.jpg">
   <div
       class="ldBar"
-      style="  width:100%"
+      style="width:100%"
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-path="M -40 10 L 140 10"
       data-stroke-width="20"
