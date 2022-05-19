@@ -2,13 +2,13 @@
 <html lang="en">
 <?php
 require_once 'connection.php';
-
+session_start();
 
 if(isset($_GET['login'])){
     echo "<script>alert('Please login');location.href='login.php';</script>";
 };
 
-session_start();
+
 
 $username = $_SESSION['username'];
 
@@ -95,7 +95,7 @@ if (0<$emissions && $emissions<166666){
 } elseif (166666<=$emissions){
   $trees = round($emissions/166666,1). " mature trees growing for a year";
 } else {
-  $trees = "0 or error";
+  $trees = "0";
 };
 
 $units = 'grams';
@@ -126,7 +126,7 @@ if($emissions > 1000){
 
 
       // // -- 6 counts for each type of transport
-      $query6 = "select t.transport_type, count(*) as 'number_of_trips'
+      $query6 = "select count(*) as 'number_of_trips'
       from user_trip u join transport t on u.transport_id = t.transport_id
       where user_id = ".$username." 
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
@@ -135,8 +135,19 @@ if($emissions > 1000){
 
       $result6 = sqlsrv_query($conn,$query6);
 
-      $pt_count = sqlsrv_fetch_array($result6)["number_of_trips"];
-      $car_count = sqlsrv_fetch_array($result6)["number_of_trips"];
+      $pt_count = sqlsrv_fetch_array($result6);
+      if(is_null($pt_count)){
+          $pt_count = 0;
+      }else{
+        $pt_count = $pt_count["number_of_trips"];
+      }
+
+      $car_count = sqlsrv_fetch_array($result6);
+      if(is_null($car_count)){
+        $car_count = 0;
+    }else{
+      $car_count = $car_count["number_of_trips"];
+    }
 
 
     //   how far you travelled
@@ -151,13 +162,28 @@ if($emissions > 1000){
 
     $result3 = sqlsrv_query($conn,$query3);
 
-    $pt_distance = sqlsrv_fetch_array($result3)["distance travelled"];
-    $car_distance = sqlsrv_fetch_array($result3)["distance travelled"];
+
+    $pt_distance = sqlsrv_fetch_array($result3);
+
+    if(is_null($pt_distance)){
+        $pt_distance = 0;
+    }else{
+      $pt_distance = $pt_distance["distance travelled"];
+    }
+    
+
+    $car_distance = sqlsrv_fetch_array($result3);
+
+    if(is_null($car_distance)){
+        $car_distance = 0;
+    }else{
+        $car_distance = $car_distance["distance travelled"];
+    }
 
 
      
     //    as a percentage
-      $pt_dist_percentage = $pt_distance/($pt_distance + $car_distance) * 100;
+      $pt_dist_percentage = $pt_distance/($pt_distance + $car_distance + 0.0001) * 100;
       $car_dist_percentage = 100 - $pt_dist_percentage;
 
       # determine which type of transport has the maximum number of trips
