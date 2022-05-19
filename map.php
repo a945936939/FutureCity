@@ -222,7 +222,7 @@ require_once("connection.php");
       }
 
       .commutes-destinations .active:after {
-        background-color: #4285f4;
+        /* background-color: #4285f4; */
         content: "";
         display: block;
         height: 4px;
