@@ -8,11 +8,11 @@ const finishButton = document.getElementById("finish-button");
 finishButton.addEventListener("click", () => {
   if (transportUserChoice == 2) {
     userDistance = tripDistanceList[0];
-    userDuration = tripDurationList[0];
+    userDuration = tripDurationList[1];
     total_emissions = tripEmissionList[0];
   } else if (transportUserChoice == 4) {
     userDistance = tripDistanceList[1];
-    userDuration = tripDurationList[1];
+    userDuration = tripDurationList[0];
     total_emissions = tripEmissionList[1];
   }
   // console.log(tripDistance[0]);

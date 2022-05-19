@@ -204,7 +204,7 @@ require_once("connection.php");
       }
 
       .commutes-destinations .destination {
-        border-radius: 4px;
+        border-radius: 0px;
         box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
           0 1px 3px 1px rgba(60, 64, 67, 0.15);
         color: #5f6368;
@@ -222,7 +222,7 @@ require_once("connection.php");
       }
 
       .commutes-destinations .active:after {
-        background-color: #4285f4;
+        /* background-color: #4285f4; */
         content: "";
         display: block;
         height: 4px;
@@ -807,7 +807,7 @@ require_once("connection.php");
       let tripDistanceList= new Array();
       let tripDurationList= new Array();
       let tripEmissionList= new Array();
-
+      let label;
       const commutesEl = {
         map: document.querySelector(".map-view"),
         initialStatePanel: document.querySelector(".commutes-initial-state"),
@@ -1311,8 +1311,7 @@ require_once("connection.php");
                   "</div>"
               );
               document.getElementById("type"+transportTypeOptionResult.toString()).addEventListener("click", ()=>{
-                transportUserChoice=transportTypeOptionResult;
-                console.log(transportUserChoice);
+                transportUserChoice=transportTypeOptionResult;                console.log(transportUserChoice);
               })
               const destinationEl = destinationPanelEl.list.lastElementChild;
               destinationEl.addEventListener("click", () => {
@@ -1837,25 +1836,32 @@ require_once("connection.php");
        * Generates new destination template based on destination info properties.
        */
       function generateDestinationTemplate(destination) {
-        const travelModeIconTemplate =
-          '<use href="#commutes-' +
-          destination.travelMode.toLowerCase() +
-          '-icon"/>';
-          
+
     
         // console.log(transportTypeOption);
         // console.log(tripDistanceList);
         let tripEmission;
+        let label;
         if (transportTypeOption==2){
           tripEmissionList.push(carbonEmissions(tripDistanceList[0],transportTypeOption));
           tripEmission=tripEmissionList[0];
-        console.log(tripEmissionList); 
+          label="TRANSIT";
+        console.log(destination.travelMode); 
+        console.log(typeof(destination.label));
         // console.log(tripEmissionList);
         }else if(transportTypeOption==4){
           tripEmissionList.push(carbonEmissions(tripDistanceList[1],transportTypeOption));
           tripEmission=tripEmissionList[1];
-        console.log(tripEmissionList); 
+          label="DRIVING";
+        console.log(destination.travelMode); 
+        console.log(typeof(destination.label));
         }
+        const travelModeIconTemplate =
+          '<use href="#commutes-' +
+          label.toLowerCase() +
+          '-icon"/>';
+          
+          
         
         return `
         <div class="destination-content">
@@ -1867,7 +1873,7 @@ require_once("connection.php");
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <use href="#commutes-arrow-icon"/>
             </svg>
-            <span class="location-marker">${destination.label}</span>
+            <span class="location-marker">"A"</span>
           </div>
           <div class="address">Carbon emissions :
             <abbr title="${destination.name}"><b>${tripEmission.toFixed(0)} </b>grams</abbr>
