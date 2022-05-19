@@ -66,10 +66,14 @@ include 'header.html';
         </div>
         <div class="banner">
             <div class="box reactive">
-                <div class="title" data-aos="fade-up">
-                    Achievements
+                <div class="title" data-aos="fade-down">
+                    Achievement
                 </div>
-
+                </br>
+                </br>
+                <div class="sub-title" data-aos="fade-up">
+                    Finish the Task!
+                </div>
             </div>
         </div>
 

@@ -1,6 +1,6 @@
 .banner {
     width: 100%;
-    background-image: url("../img/cards/oneroad.jpeg");
+    background-image: url("../img/cards/information.jpg");
     background-size: cover;
     height: 600px;
     position: relative;
@@ -39,12 +39,13 @@
 }
 
 .info .title {
-    font-size: 30px;
+    font-size: 45px;
     font-family: Source Han Sans CN;
     font-weight: 500;
     color: #151515;
     line-height: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
+    margin-top: -180px;
 }
 
 .info .context {
@@ -57,7 +58,7 @@
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    font-size: 36px;
+    font-size: 30px;
     font-family: YouSheBiaoTiHei;
     font-weight: 400;
     color: #096777;
@@ -68,6 +69,8 @@
     -ms-flex-align: center;
     align-items: center;
     margin: 0 10px;
+    margin-left: 20px;
+    margin-bottom: -200px;
 }
 
 .info1 {
@@ -79,7 +82,6 @@
 }
 
 .info2 .title {
-    text-align: right;
     font-family: YouSheBiaoTiHei;
 }
 

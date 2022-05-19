@@ -32,7 +32,7 @@ include "./header.html"
         <div class="banner">
             <div class="contain-box reactive">
                 <div class="title" data-aos="fade-down">
-                    Get the Fact
+                    Get the Facts
                 </div>
                 </br>
                 </br>
