@@ -105,7 +105,10 @@ include "header.html";
                     Goals
                 </div>
                 <div class="sub-title" data-aos="fade-up"style="font-family: YouSheBiaoTiHei;font-size:40px;">
-                    Take part in collaborative goals<br> All users contribute to a shared goal
+                    Take part in collaborative goals<br> All users contribute to a shared goal<br>
+                    Collaborative goals will be reset on <br>
+                    <?php
+                    echo explode(" ",$end_date)[0];?>
                 </div>
             </div>
         </div>
