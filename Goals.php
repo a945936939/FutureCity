@@ -63,6 +63,8 @@ $user_counts = $row['long_travel'];
     <link rel="stylesheet" href="./assets/css/goals.css">
     <link rel="stylesheet" href="./assets/css/goals.scss">
     <link rel="stylesheet" type="text/css" href="assets/css/loading-bar.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <script src="./js/echarts.min.js"></script>
 
     <title>Goals</title>
@@ -99,7 +101,7 @@ include "header.html";
           <div class="gradient-border" id="box" >
               <div class="ldBar"
                   style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
-                  data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
+                  data-stroke="data:ldbar/res,gradient(0,10,#9df,#9fd,#df9,#fd9)",
                   data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
                   data-value="
                   <?php 
@@ -125,7 +127,7 @@ include "header.html";
             <div class="gradient-border" id="box" >
                 <div class="ldBar"
                 style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
-                  data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",,
+                  data-stroke="data:ldbar/res,gradient(0,10,#9df,#9fd,#df9,#fd9)",,
                   data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
                   data-value="
                   <?php 
@@ -150,7 +152,7 @@ include "header.html";
 
         <div class="ldBar"
               style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
-              data-stroke="data:ldbar/res,gradient(0,1,#7he,#7ld,#7e5,#ed5)",
+              data-stroke="data:ldbar/res,gradient(0,10,#7he,#7ld,#7e5,#ed5)",
               data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
               data-value="
               <?php 
