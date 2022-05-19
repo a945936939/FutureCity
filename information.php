@@ -232,4 +232,6 @@ include "./header.html"
 
 </body>
 
+<?php include 'footer.html'; ?>
+
 </html>
