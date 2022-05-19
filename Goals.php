@@ -46,7 +46,7 @@ $user_total_emissions=$row["total_emissions"];
 $query="select count(*) as 'long_travel'
   from user_trip
   where user_trip_start_time between '{$start_date}' and '{$end_date}'
-  and user_trip_length > 7000
+  and user_trip_length > 7
   and user_id = {$username};";
 
 $result = sqlsrv_query($conn,$query);
