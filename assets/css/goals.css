@@ -16,7 +16,7 @@
 
 .banner {
     width: 100%;
-    background-image: url("../img/goals_banner.jpg");
+    background-image: url("../img/goal.jpg");
     background-size: cover;
     height: 600px;
     position: relative;
@@ -82,7 +82,7 @@
 }
 
 #block1 {
-    background-color: #f37055;
+    background-color: #c1dafe;
     height: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -91,7 +91,7 @@
 }
 
 #block2 {
-    background-color: #07b39b;
+    background-color: #a8caf9;
     height: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -100,7 +100,7 @@
 }
 
 #block3 {
-    background-color: #08648b;
+    background-color: #c1dafe;
     height: 100%;
     padding-top: 50px;
     padding-bottom: 100px;
