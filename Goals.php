@@ -63,6 +63,8 @@ $user_counts = $row['long_travel'];
     <link rel="stylesheet" href="./assets/css/goals.css">
     <link rel="stylesheet" href="./assets/css/goals.scss">
     <link rel="stylesheet" type="text/css" href="assets/css/loading-bar.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <script src="./js/echarts.min.js"></script>
 
     <title>Goals</title>
