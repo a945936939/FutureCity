@@ -51,7 +51,7 @@ include "./header.html"
                         <div id="pieChart1" style="width:600px; height: 400px"></div>
                     </div>
                     <div class="context-item" data-aos="fade-down">
-                        The pie chart shows the Greenhouse gas emission in Victoria, 2019.<br /> Transport is the third largest source of that (17% of total emission).
+                        Transport is the third largest source of that (17% of total emission).
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@ include "./header.html"
                 </div>
                 <div class="context">
                     <div class="context-item" data-aos="fade-down">
-                        The pie chart shows the mode of transport for people to travel to work. <br /> Most people (66%) are going to take a car to work while only 13% of people are taking public transport.
+                        Most people (66%) are going to take a car to work while only 13% of people are taking public transport.
                     </div>
                     <div class="context-item">
                         <div id="pieChart2" style="width:600px; height: 400px"></div>
@@ -82,7 +82,7 @@ include "./header.html"
                         <div id="lineChart" style="width:650px; height: 400px"></div>
                     </div>
                     <div class="context-item" data-aos="fade-down">
-                        The bar chart shows the CO2 emitted by different transports per person km travelled.<br /> For most public transport (Bus, Train, Tram), they are emitting less CO2 than the personal transport (Petrol Car, Electric Car and Motorcycle).
+                        For most public transport (Bus, Train, Tram), they are emitting less CO2 than the personal transport (Petrol Car, Electric Car and Motorcycle).
                     </div>
                 </div>
             </div>
