@@ -151,7 +151,7 @@ style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
   $query = "select count(*) as 'long_travel'
   from user_trip
   where user_trip_start_time between '{$start_date}' and '{$end_date}'
-  and user_trip_length > 7000;
+  and user_trip_length > 7;
   ";
 $result = sqlsrv_query($conn,$query);
 $row = sqlsrv_fetch_array($result);
