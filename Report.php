@@ -263,7 +263,7 @@ if($emissions > 1000){
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
                                 <div class="flip_card_front_left">
-                                    <div class="flip_card_2">
+                                    <div class="flip_card_1">
                                         <h>How much time did you spend on Public Transport?</h>
                                     </div>
                                 </div>
@@ -344,7 +344,7 @@ if($emissions > 1000){
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <div class="flip_card_2">
+                                    <div class="flip_card_1">
                                         <h>How does that compare to Melbourne in <?php echo date('M')." ".$year;?>?</h>
                                     </div>
                                 </div>
