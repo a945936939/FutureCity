@@ -55,4 +55,7 @@ echo $result;
 echo $query;
 }
 
+
+require_once("update_achievements.php");
+
 ?>

@@ -163,11 +163,12 @@ if($emissions > 1000){
         $pt_count = $pt_count;
       }
 
-      $car_count = sqlsrv_fetch_array($result6)["number_of_trips"];
-      if(is_null($car_count)){
+      $car_count = sqlsrv_fetch_array($result6);
+
+     if(is_null($car_count)){
         $car_count = 0;
     }else{
-      $car_count = $car_count;
+      $car_count = $car_count["distance travelled"];
     }
 
 
@@ -184,21 +185,21 @@ if($emissions > 1000){
     $result3 = sqlsrv_query($conn,$query3);
 
 
-    $pt_distance = sqlsrv_fetch_array($result3)["distance travelled"];
+    $pt_distance = sqlsrv_fetch_array($result3);
 
     if(is_null($pt_distance)){
         $pt_distance = 0;
     }else{
-      $pt_distance = $pt_distance;
+      $pt_distance = $pt_distance["distance travelled"];
     }
     
 
-    $car_distance = sqlsrv_fetch_array($result3)["distance travelled"];
+    $car_distance = sqlsrv_fetch_array($result3);
 
     if(is_null($car_distance)){
         $car_distance = 0;
     }else{
-        $car_distance = $car_distance;
+        $car_distance = $car_distance["distance travelled"];
     }
 
 

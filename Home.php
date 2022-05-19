@@ -45,11 +45,13 @@ include 'header.html';
             <img class="plane" src="./images/home/buttons/plane.png" alt="">
             <div class="contain-box">
                 <div class="button-item" v-for="(item,index) in buttons" :key="index">
+                <a :href="item.path" alt="">
                     <div class="item-area">
-                        <a :href="item.path" alt="">
+                       
                             <img :src="item.icon" alt="">
-                        </a>
+                       
                     </div>
+                    </a>
                     <div class="item-label">
                         {{ item.label }}
                     </div>
