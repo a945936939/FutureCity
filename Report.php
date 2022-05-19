@@ -196,14 +196,14 @@ if($emissions > 1000){
     
         <div class="nav">
             <header>
-            <header>
-            <?php
-require_once("connection.php");
+                <?php require_once("connection.php");
 
-include "./header.html"
+                        include "./header.html"
 
-?>            </header>
+                ?>
+            </header>
         </div>
+        
         <div class="banner">
             <div class="contain-box reactive">
                 <div class="title" data-aos="fade-down">
@@ -218,10 +218,11 @@ include "./header.html"
         
         
       
+        <div class="contain-box" id ="content">
+            <div class="blocks">
+            
+                <div class="block-item" id ="block1">
 
-        <div class="blocks">
-            <div class="contain-box">
-                <div class="block-item">
                     <div class="item-left" data-aos="fade-right">
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
@@ -254,7 +255,8 @@ include "./header.html"
                         </div>
                     </div>
                 </div>
-                <div class="block-item">
+
+                <div class="block-item" id ="block2">
                     <div class="item-left" data-aos="fade-right">
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
@@ -285,7 +287,7 @@ include "./header.html"
                         <!-- <img src="./images/report/tree.png" alt=""> -->
                     </div>
                 </div>
-                <div class="block-item">
+                <div class="block-item" id ="block3">
                     <div class="item-left" data-aos="fade-right">
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
@@ -293,7 +295,7 @@ include "./header.html"
                                     <h>How far did you travel this week?</h>
                                 </div>
                                 <div class="flip_card_back_left">
-                                    <h><?php echo "Public Transport: ".round($pt_distance,2)." Km \n Car: ".round($car_distance,2)." Km"; ?>
+                                    <h><?php echo "<b>Public Transport:</b><br> ".round($pt_distance,2)." Km \n<br> <b>Car:</b><br> ".round($car_distance,2)." Km"; ?>
                                        </h>
 
 
@@ -317,7 +319,7 @@ include "./header.html"
                         </div>
                     </div>
                 </div>
-                <div class="block-item">
+                <div class="block-item" id ="block4">
                     <div class="item-left" data-aos="fade-right">
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
@@ -344,16 +346,11 @@ include "./header.html"
                                 </div>
                             </div>
                         </div>
-                    
-         
-               
                     </div>
-                   
+                </div>
             </div>
         </div>
-    </div>
-    </div>
-    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script>
         var app = new Vue({

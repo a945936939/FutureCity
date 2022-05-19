@@ -22,7 +22,7 @@
     font-weight: 400;
     padding-top: 178px;
     color: #ffffff;
-    text-shadow: 0px 6px 0px #08648b;
+    text-shadow: 0px 6px 0px #343839;
     text-align: center;
 }
 
@@ -31,7 +31,7 @@
     font-family: YouSheBiaoTiHei;
     font-weight: 400;
     color: #ffffff;
-    text-shadow: 0px 6px 0px #08648b;
+    text-shadow: 0px 6px 0px #343839;
     text-align: center;
 }
 
@@ -113,24 +113,28 @@
 
 .flip_card_back {
     background-color: #2980b9;
-    color: white;
+    /* color: #441e1e; */
     transform: rotateY(180deg);
 }
 
 .blocks {
-    padding: 178px;
+    width: 100%;
 }
 
 .blocks .block-item {
     height: 300px;
-    margin-bottom: 73px;
+    width: 100%;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    padding-left: 178px;
+    padding-right: 178px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     font-size: 50px;
     font-family: Source Han Sans CN;
     font-weight: 400;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 .blocks .block-item .item-left {
@@ -147,11 +151,10 @@
     align-items: center;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 30px;
+    padding-left: 30px;
 }
 
 .blocks .block-item .item-right {
-    width: 450px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -161,20 +164,55 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    padding-right: 50px;
 }
 
 .blocks .block-item:nth-child(1) .item-right {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 
 .blocks .block-item:nth-child(2) .item-right {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 
 .blocks .block-item:nth-child(3) .item-right {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 
 .blocks .block-item:nth-child(4) .item-right {
-    background-color: #ffffff;
+    /* background-color: #441e1e; */
+}
+
+#content {
+    background-color: #441e1e;
+    height: 100%;
+    width: 100%;
+}
+
+.contain-box {
+    width: 100%;
+}
+
+#block1 {
+    background-color: #cdbcbc;
+    height: 100%;
+    width: 100%;
+}
+
+#block2 {
+    background-color: #691e1e;
+    height: 100%;
+    width: 100%;
+}
+
+#block3 {
+    background-color: #25482a;
+    height: 100%;
+    width: 100%;
+}
+
+#block4 {
+    background-color: #67335c;
+    height: 100%;
+    width: 100%;
 }

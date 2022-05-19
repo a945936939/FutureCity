@@ -95,7 +95,9 @@ $row = sqlsrv_fetch_array($result);
 
 
 $length = $row['trip_length']; // distanxce travelled on public transport
-$emissions = $row['total_emissions']/1000; // total emissions from public transport
+$pt_emissions = $row['total_emissions']/1000; // total emissions from public transport
+$car_emissions = $length * 243.8;         // emissions from car travel over the same distance
+$emissions = $car_emissions - $pt_emissions; // diff between car emissions and pt_emissions = emissions saved
 $total_time = $row['total_time']/60; // total time on public transport
 
 // check user progress
