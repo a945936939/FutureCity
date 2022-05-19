@@ -144,18 +144,18 @@
 }
 
 .introductions .introduction-list .list-item:nth-child(1) {
-  background-color: #ddb679;
-  color: #775c09;
+  background-color: #c1dafe;
+  color: #0c264b;
 }
 
 .introductions .introduction-list .list-item:nth-child(2) {
-  background-color: #7eb4eae3;
-  color: #062061;
+  background-color: #a8caf9;
+  color: #0c264b;
 }
 
 .introductions .introduction-list .list-item:nth-child(3) {
-  background-color: #ced9eb;
-  color: #01307c;
+  background-color: #c1dafe;
+  color: #0c264b;
 }
 
 .introductions .introduction-list .list-item {

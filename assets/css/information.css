@@ -42,7 +42,7 @@
     font-size: 45px;
     font-family: Source Han Sans CN;
     font-weight: 500;
-    color: #151515;
+    color: #0c264b;
     line-height: 18px;
     margin-bottom: 100px;
     margin-top: -180px;
@@ -61,7 +61,7 @@
     font-size: 30px;
     font-family: YouSheBiaoTiHei;
     font-weight: 400;
-    color: #096777;
+    color: #0c264b;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -74,7 +74,7 @@
 }
 
 .info1 {
-    background-color: #ebf390;
+    background-color: #c1dafe;
 }
 
 .info1 .title {
@@ -86,7 +86,7 @@
 }
 
 .info3 {
-    background-color: #dbf8ff;
+    background-color: #a8caf9;
 }
 
 .info3 .title {

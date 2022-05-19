@@ -227,12 +227,14 @@ if($emissions > 1000){
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
                                 <div class="flip_card_front_left">
-                                    <h>How much CO2 have you saved this week?</h>
+                                    <div class="flip_card_1">
+                                        <h>How much CO2 have you saved this week?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back_left">
-                                    <h><?php echo $emissions." ".$units;?></h>
-
-
+                                    <div class="flip_card_3">
+                                        <h><?php echo $emissions." ".$units;?></h>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -242,14 +244,14 @@ if($emissions > 1000){
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <h>
-                                        How many trees is that?
-                                    </h>
+                                    <div class="flip_card_3">
+                                        <h>How many trees is that?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back">
-                                    <h><?php echo $trees;?></h>
-
-
+                                    <div class="flip_card_1">
+                                        <h><?php echo $trees;?></h>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -261,12 +263,14 @@ if($emissions > 1000){
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
                                 <div class="flip_card_front_left">
-                                    <h>How much time did you spend on Public Transport?</h>
+                                    <div class="flip_card_2">
+                                        <h>How much time did you spend on Public Transport?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back_left">
-                                    <h><?php echo $hours." hours and ".$minutes." minutes"?></h>
-
-
+                                    <div class="flip_card_3">
+                                        <h><?php echo $hours." hours and ".$minutes." minutes"?></h>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -275,12 +279,12 @@ if($emissions > 1000){
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <h>Break it down:</h>
+                                    <div class="flip_card_3">
+                                        <h>Break it down:</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back">
                                     <div id = "pie1" style="width:100%; height: 100%"></div>
-
-
                                 </div>
                             </div>
                         </div>
@@ -292,13 +296,14 @@ if($emissions > 1000){
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
                                 <div class="flip_card_front_left">
-                                    <h>How far did you travel this week?</h>
+                                    <div class="flip_card_1">
+                                        <h>How far did you travel this week?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back_left">
-                                    <h><?php echo "<b>Public Transport:</b><br> ".round($pt_distance,2)." Km \n<br> <b>Car:</b><br> ".round($car_distance,2)." Km"; ?>
-                                       </h>
-
-
+                                    <div class="flip_card_1">
+                                        <h><?php echo "Public Transport: ".round($pt_distance,2)." Km \n Car: ".round($car_distance,2)." Km"; ?></h>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -307,13 +312,12 @@ if($emissions > 1000){
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <h>Let's take a closer look</h>
+                                    <div class="flip_card_3">
+                                        <h>Let's take a closer look</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back">
-                                    <div id = "pie2" style="width:100%; height: 100%"></div>
-                                    
-
-
+                                    <div id = "pie2" style="width:100%; height: 100%"></div>                              
                                 </div>
                             </div>
                         </div>
@@ -324,12 +328,14 @@ if($emissions > 1000){
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
                                 <div class="flip_card_front_left">
-                                    <h>What type of transport was your favourite?</h>
+                                    <div class="flip_card_1">
+                                        <h>What type of transport was your favourite?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back_left">
-                                    <h><?php echo $key;?></h>
-
-
+                                    <div class="flip_card_3">
+                                        <h><?php echo $key;?></h>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -338,7 +344,9 @@ if($emissions > 1000){
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <h>How does that compare to Melbourne in <?php echo date('M')." ".$year;?>?</h>
+                                    <div class="flip_card_2">
+                                        <h>How does that compare to Melbourne in <?php echo date('M')." ".$year;?>?</h>
+                                    </div>
                                 </div>
                                 <div class="flip_card_back">
                                     <div id="pie3" style="width:100%; height: 100%"></div>

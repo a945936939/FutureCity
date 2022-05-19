@@ -49,7 +49,7 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 23px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip_card_left:hover .flip_card_inner_left {
@@ -66,19 +66,19 @@
 }
 
 .flip_card_front_left {
-    background-color: rgb(255, 255, 255);
-    color: black;
+    background-color: #f4bab6;
+    color: rgb(6, 33, 71);
 }
 
 .flip_card_back_left {
-    background-color: #ffffff;
-    color: rgb(162, 26, 26);
+    background-color: rgb(174, 247, 247);
+    color: rgb(8, 41, 54);
     transform: rotateY(180deg);
 }
 
 .flip_card {
     background-color: transparent;
-    width: 300px;
+    width: 600px;
     height: 300px;
     perspective: 1000px;
 }
@@ -90,7 +90,7 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 23px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip_card:hover .flip_card_inner {
@@ -107,12 +107,13 @@
 }
 
 .flip_card_front {
-    background-color: #bbb;
-    color: black;
+    background-color: rgb(247, 229, 151);
+    color: rgb(75, 59, 10);
 }
 
 .flip_card_back {
-    background-color: #2980b9;
+    background-color: #ffffff;
+    color:#000000;
     /* color: #441e1e; */
     transform: rotateY(180deg);
 }
@@ -131,10 +132,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-family: YouSheBiaoTiHei;
     font-size: 50px;
-    font-family: Source Han Sans CN;
-    font-weight: 400;
-    /* color: #ffffff; */
+    color: #ffffff;  
 }
 
 .blocks .block-item .item-left {
@@ -167,22 +167,6 @@
     padding-right: 50px;
 }
 
-.blocks .block-item:nth-child(1) .item-right {
-    /* background-color: #ffffff; */
-}
-
-.blocks .block-item:nth-child(2) .item-right {
-    /* background-color: #ffffff; */
-}
-
-.blocks .block-item:nth-child(3) .item-right {
-    /* background-color: #ffffff; */
-}
-
-.blocks .block-item:nth-child(4) .item-right {
-    /* background-color: #441e1e; */
-}
-
 #content {
     background-color: #441e1e;
     height: 100%;
@@ -194,25 +178,37 @@
 }
 
 #block1 {
-    background-color: #cdbcbc;
+    background-color: #c1dafe;
     height: 100%;
     width: 100%;
 }
 
 #block2 {
-    background-color: #691e1e;
+    background-color: rgb(255, 255, 255);
     height: 100%;
     width: 100%;
 }
 
 #block3 {
-    background-color: #25482a;
+    background-color: #c1dafe;
     height: 100%;
     width: 100%;
 }
 
 #block4 {
-    background-color: #67335c;
+    background-color: #a8caf9;
     height: 100%;
     width: 100%;
+}
+
+.flip_card_1 {
+    padding-top: 70px;
+}
+
+.flip_card_2 {
+    padding-top: 30px;
+}
+
+.flip_card_3 {
+    padding-top: 100px;
 }
