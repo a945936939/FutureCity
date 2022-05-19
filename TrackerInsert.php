@@ -18,8 +18,8 @@ if (
 $user_id=$_SESSION['username'];
 $duration=intval($_GET['duration']);
 $transport_id=$_GET["transport_id"];
-$user_trip_length=round($_GET["user_trip_length"],4);
-$user_trip_emissions=round($_GET["user_trip_emissions"],4);
+$user_trip_length=round(floatval($_GET["user_trip_length"]),4);
+$user_trip_emissions=round(floatval($_GET["user_trip_emissions"]),4);
 echo $user_trip_emissions;
 
 

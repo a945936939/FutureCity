@@ -1,16 +1,22 @@
 let transportId = 0;
 let end_time;
 let start_time;
+let userDistance;
+let userDuration;
+let total_emissions;
 const finishButton = document.getElementById("finish-button");
 finishButton.addEventListener("click", () => {
-  if (transportId == 2) {
-    userDistance = tripDistance[0];
-    userDuration = tripDuration[0];
-  } else if (transportId == 4) {
-    userDistance = tripDistance[1];
-    userDuration = tripDuration[1];
+  if (transportUserChoice == 2) {
+    userDistance = tripDistanceList[0];
+    userDuration = tripDurationList[0];
+    total_emissions = tripEmissionList[0];
+  } else if (transportUserChoice == 4) {
+    userDistance = tripDistanceList[1];
+    userDuration = tripDurationList[1];
+    total_emissions = tripEmissionList[1];
   }
-  total_emissions = carbonEmissions(userDistance, transportId);
+  // console.log(tripDistance[0]);
+  // console.log(tripDuration[0]);
   // console.log(tripDistance[1]);
   // console.log(tripDuration[1]);
 
@@ -20,7 +26,7 @@ finishButton.addEventListener("click", () => {
     "?user_id=" +
     username +
     "&transport_id=" +
-    transportId +
+    transportUserChoice +
     "&user_trip_length=" +
     userDistance +
     "&duration=" +
@@ -48,24 +54,24 @@ finishButton.addEventListener("click", () => {
   xhttp.open("GET", "update_achievements.php", true);
   xhttp.send();
 });
-const personalTransport = document.getElementById("personal-transport");
-personalTransport.addEventListener("click", () => {
-  transportId = 4;
-  document.getElementById("public-transport-text").innerHTML =
-    "Public Transport";
-  document.getElementById("personal-transport-text").innerHTML =
-    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004";
-  // document.getElementById("personal-transport-text").setAttribute('style','font-size:50px;padding-left:30%;') = "&#10004";
-});
-const publicTransport = document.getElementById("public-transport");
-publicTransport.addEventListener("click", () => {
-  transportId = 2;
-  document.getElementById("personal-transport-text").innerHTML =
-    "Personal vehicle";
-  document.getElementById("public-transport-text").innerHTML =
-    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004";
-  // document.getElementById("public-transport-text").setAttribute('style','font-size:50px;padding-left:30%;') = "&#10004";
-});
+// const personalTransport = document.getElementById("personal-transport");
+// personalTransport.addEventListener("click", () => {
+//   transportId = 4;
+//   document.getElementById("public-transport-text").innerHTML =
+//     "Public Transport";
+//   document.getElementById("personal-transport-text").innerHTML =
+//     "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004";
+//   // document.getElementById("personal-transport-text").setAttribute('style','font-size:50px;padding-left:30%;') = "&#10004";
+// });
+// const publicTransport = document.getElementById("public-transport");
+// publicTransport.addEventListener("click", () => {
+//   transportId = 2;
+//   document.getElementById("personal-transport-text").innerHTML =
+//     "Personal vehicle";
+//   document.getElementById("public-transport-text").innerHTML =
+//     "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004";
+//   // document.getElementById("public-transport-text").setAttribute('style','font-size:50px;padding-left:30%;') = "&#10004";
+// });
 
 //insert into user_trip values (.....,CURRENT_TIMESTAMP, DATEADD(second,  {$seconds},CURRENT_TIMESTAMP),,.....)
 
@@ -145,16 +151,16 @@ anime
     translateX: ["0.55em", 0],
     translateZ: 0,
     rotateZ: [180, 0],
-    duration: 2050,
+    duration: 1050,
     easing: "easeOutExpo",
     delay: (el, i) => 50 * i,
   })
   .add({
     targets: ".ml7",
     opacity: 0,
-    duration: 2500,
+    duration: 1500,
     easing: "easeOutExpo",
-    delay: 3000,
+    delay: 30000,
   });
 
 // Wrap every letter in a span
@@ -172,14 +178,19 @@ anime
     translateX: ["0.55em", 0],
     translateZ: 0,
     rotateZ: [180, 0],
-    duration: 2050,
+    duration: 1050,
     easing: "easeOutExpo",
     delay: (el, i) => 50 * i,
   })
   .add({
     targets: ".ml8",
     opacity: 0,
-    duration: 2500,
+    duration: 1500,
     easing: "easeOutExpo",
-    delay: 3000,
+    delay: 30000,
   });
+
+document.getElementById("guide-1").addEventListener("click", () => {
+  console.log(document.getElementById("letters-1"));
+  document.getElementsByClassName("letters span").textContent("blah blah blah");
+});

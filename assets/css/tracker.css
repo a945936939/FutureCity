@@ -29,7 +29,7 @@
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
- 
+
 .buttons div.contain-box div.how-why div.how-why-item {
   width: 420px;
   height: 420px;
@@ -262,3 +262,4 @@
 #guide-2:hover {
   transform: scale(1.3);
 }
+

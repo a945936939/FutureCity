@@ -46,9 +46,10 @@ require_once("connection.php");
       }
 
       .commutes-info {
-        flex: 0 0 110px;
+        flex:0 0 110px;
         max-width: 100%;
         overflow: hidden;
+        margin: 0%;
       }
 
       .commutes-initial-state {
@@ -100,7 +101,7 @@ require_once("connection.php");
         padding-left: 8px;
       }
 
-      @media (max-width: 535px) {
+      @media (max-width: 900px) {
         .commutes-initial-state svg {
           display: none;
         }
@@ -662,8 +663,8 @@ require_once("connection.php");
             <use href="#commutes-initial-icon" />
           </svg>
           <div class="description">
-            <h1 class="heading">Estimate commute time</h1>
-            <p>See travel time and directions for places nearby</p>
+            <h1 class="heading">Compare Carbon Emissions</h1>
+            <!-- <p>See</p> -->
           </div>
           <button class="add-button" autofocus>
             <svg
@@ -802,8 +803,11 @@ require_once("connection.php");
       /**
        * Element selectors for commutes widget.
        */
-      let tripDistance=0;
-      let tripDuration=0;
+
+      let tripDistanceList= new Array();
+      let tripDurationList= new Array();
+      let tripEmissionList= new Array();
+
       const commutesEl = {
         map: document.querySelector(".map-view"),
         initialStatePanel: document.querySelector(".commutes-initial-state"),
@@ -865,6 +869,8 @@ require_once("connection.php");
        */
       const MIN_IN_SECONDS = 60;
 
+      let transportTypeOption=0;
+      let transportUserChoice=0;
       /**
        * Stroke colors for destination direction polylines for different states.
        */
@@ -1295,12 +1301,19 @@ require_once("connection.php");
           let editButtonEl;
           switch (destinationOperation) {
             case DestinationOperation.ADD:
+              transportTypeOption+=2;
+              let transportTypeOptionResult=transportTypeOption;
+        
               destinationPanelEl.list.insertAdjacentHTML(
                 "beforeend",
-                '<div class="destination" tabindex="0" role="button">' +
+                '<div class="destination" id="type'+transportTypeOptionResult+'" tabindex="0" role="button">' +
                   generateDestinationTemplate(destination) +
                   "</div>"
               );
+              document.getElementById("type"+transportTypeOptionResult.toString()).addEventListener("click", ()=>{
+                transportUserChoice=transportTypeOptionResult;
+                console.log(transportUserChoice);
+              })
               const destinationEl = destinationPanelEl.list.lastElementChild;
               destinationEl.addEventListener("click", () => {
                 handleRouteClick(destination, destinationIdx);
@@ -1317,6 +1330,8 @@ require_once("connection.php");
                 generateDestinationTemplate(destination);
               activeDestinationEl.addEventListener("click", () => {
                 handleRouteClick(destination, destinationIdx);
+
+;
               });
               editButtonEl = activeDestinationEl.querySelector(".edit-button");
               break;
@@ -1460,11 +1475,11 @@ require_once("connection.php");
           const duration = convertDurationValueAsString(
             directionLeg.duration.value
           )
-          tripDistance=(directionLeg.distance.value)/1000;
-          tripDuration=directionLeg.duration.value;
+          tripDistanceList.push((directionLeg.distance.value)/1000);
+          tripDurationList.push(directionLeg.duration.value);
           // console.log(directionLeg.distance.text.replace(' km',''));
-          // console.log(tripDistance);
-          // console.log(tripDuration);
+          // console.log(tripDistanceList[1]);
+          // console.log(tripDurationList[1]);
 
 
 
@@ -1727,6 +1742,7 @@ require_once("connection.php");
           const spacer = hoursString && minutesString ? " " : "";
           return hoursString + spacer + minutesString;
         }
+
       }
 
       /**
@@ -1783,6 +1799,40 @@ require_once("connection.php");
         }
       }
 
+
+
+
+
+//calculate carbon emissions
+      function carbonEmissions(dist, transportType) {
+  let emissions = 0;
+  switch (transportType) {
+    case 1:
+      // transport_id = 1;
+      // 1000x times larger dont forget to change it back (28.6)
+      emissions = dist * 28.6;
+      break;
+
+    case 2:
+      // transport_id = 2;
+      emissions = dist * 20.2;
+      break;
+
+    case 3:
+      // transport_id = 3;
+      emissions = dist * 17.7;
+      break;
+
+    case 4:
+      // transport_id = 4;
+      emissions = dist * 243.8;
+      break;
+  }
+  return emissions;
+}
+
+
+
       /**
        * Generates new destination template based on destination info properties.
        */
@@ -1791,6 +1841,22 @@ require_once("connection.php");
           '<use href="#commutes-' +
           destination.travelMode.toLowerCase() +
           '-icon"/>';
+          
+    
+        // console.log(transportTypeOption);
+        // console.log(tripDistanceList);
+        let tripEmission;
+        if (transportTypeOption==2){
+          tripEmissionList.push(carbonEmissions(tripDistanceList[0],transportTypeOption));
+          tripEmission=tripEmissionList[0];
+        console.log(tripEmissionList); 
+        // console.log(tripEmissionList);
+        }else if(transportTypeOption==4){
+          tripEmissionList.push(carbonEmissions(tripDistanceList[1],transportTypeOption));
+          tripEmission=tripEmissionList[1];
+        console.log(tripEmissionList); 
+        }
+        
         return `
         <div class="destination-content">
           <div class="metadata">
@@ -1803,8 +1869,8 @@ require_once("connection.php");
             </svg>
             <span class="location-marker">${destination.label}</span>
           </div>
-          <div class="address">To
-            <abbr title="${destination.name}">${destination.name}</abbr>
+          <div class="address">Carbon emissions :
+            <abbr title="${destination.name}"><b>${tripEmission.toFixed(0)} </b>grams</abbr>
           </div>
           <div class="destination-eta">${destination.duration}</div>
         </div>
@@ -1822,7 +1888,10 @@ require_once("connection.php");
             </svg>
             Edit
           </button>
-        </div>`;
+        </div>
+
+        `;
+
       }
     </script>
     <script>
@@ -1853,6 +1922,7 @@ require_once("connection.php");
           });
         }
       }
+
     </script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl8Tbwm2l2G-bhXMTSl71NhYtfzLrCs1M&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_commutes_v1_c"

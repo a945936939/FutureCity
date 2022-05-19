@@ -23,6 +23,7 @@ require_once("connection.php");
 
 <body>
 
+
     <div id="app">
         <div class="nav">
             <header>
@@ -34,7 +35,7 @@ include "./header.html";
         <div class="banner">
             <div class="contain-box reactive">
                 <div class="title">
-                   Welcome, 
+
                 </div>
             </div>
         </div>
@@ -43,13 +44,13 @@ include "./header.html";
               <div class="how-why">
                 <div class="how-why-item" id="guide-1" data-aos="fade-right">
 
-              
                 <h1 class="ml7">
   <span class="text-wrapper">
     <span class="letters">How to use</span>
   </span>
 </h1>
 </div>
+
                   
                 
                 <div class="how-why-item" id="guide-2"data-aos="fade-right">
@@ -68,6 +69,12 @@ include "./header.html";
                $(function(){
                 //  console.log("1234313");
                $("#includedContent").load("map.php"); 
+//                const publicTransport = document.getElementsByClassName("destination active");
+// publicTransport.addEventListener("click", () => {
+//   transportId = 2;
+// });
+
+
                });
                </script> 
                
@@ -103,6 +110,7 @@ include "./header.html";
 
             </div>
           </div>
+          <div class="overlay hidden"></div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
@@ -123,10 +131,8 @@ include "./header.html";
 
 
     </script>
-      <div id="bla"style="position:fixed; left: 50%;
-top: 50%;">
-  <p style="font-size:50px">blahsadhlsakdh</p>
-</div>
+
+    
 </body>
 
 </html>
