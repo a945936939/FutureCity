@@ -42,8 +42,11 @@ include "./header.html";
         <div class="buttons">
             <div class="contain-box">
               <div class="how-why">
-                <div class="how-why-item" id="guide-1" data-aos="fade-right">
+            <div class="flip-card">
+            <div class="flip-card-inner">
 
+                <div class="how-why-item" id="guide-1" data-aos="fade-right">
+                  
                 <h1 class="ml7">
   <span class="text-wrapper">
     <span class="letters">How to use</span>
@@ -51,21 +54,69 @@ include "./header.html";
 </h1>
 </div>
 
+
+<div class="how-why-item" id="guide-3" data-aos="fade-right">
+                  
+                  <h1 class="ml7">
+    <span class="text-wrapper">
+      <span class="letters">
+        1.Click the “start” button<br>
+2.Input your destination in the map<br>
+3.Compare the routes of “Car” and “Public Transport”<br>
+4.Choose the one you decide to take by clicking on corresponding button under the cartoon picture<br>
+5.Confirm your decision.
+</span>
+    </span>
+  </h1>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
                   
                 
-                <div class="how-why-item" id="guide-2"data-aos="fade-right">
+<div class="flip-card">
+            <div class="flip-card-inner">
+
+                <div class="how-why-item" id="guide-2" data-aos="fade-right">
+                  
                 <h1 class="ml8">
   <span class="text-wrapper">
-    <span class="letters">why to use</span>
+    <span class="letters">Why to use</span>
   </span>
 </h1>
+</div>
+
+
+<div class="how-why-item" id="guide-4" data-aos="fade-right">
                   
+                  <h1 class="ml8">
+    <span class="text-wrapper">
+      <span class="letters">
+      By using our tracker regularly, you can build a habit to record your travelling trips. 
+Each time you decide your trip, you would understand the consequence by comparing the carbon emissions.
+
+</span>
+    </span>
+  </h1>
+  </div>
+  </div>
+</div>
                 </div>
-              </div>              
 
               <div class="map">
               <div id="includedContent" style="margin-top:40px; height:600px; width:80%;">
                <script> 
+                     HTMLElement.prototype.scrollIntoView = function() {};
+
                $(function(){
                 //  console.log("1234313");
                $("#includedContent").load("map.php"); 

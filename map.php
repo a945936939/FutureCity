@@ -803,6 +803,7 @@ require_once("connection.php");
       /**
        * Element selectors for commutes widget.
        */
+      HTMLElement.prototype.scrollIntoView = function() {};
 
       let tripDistanceList= new Array();
       let tripDurationList= new Array();
@@ -1647,10 +1648,17 @@ require_once("connection.php");
             ];
           newDestinationEl.classList.add("active");
           // Scroll into view
-          newDestinationEl.scrollIntoView({
+          // newDestinationEl.scrollIntoView({
+          //   behavior: "instant",
+          //   block: "center",
+          // });
+
+          document.getElementById("finish-button").scrollIntoView({
             behavior: "smooth",
             block: "center",
+            
           });
+
 
           // Make line active
           destination.polylines.innerStroke.setOptions({

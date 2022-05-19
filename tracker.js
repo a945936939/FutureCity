@@ -192,5 +192,5 @@ anime
 
 document.getElementById("guide-1").addEventListener("click", () => {
   console.log(document.getElementById("letters-1"));
-  document.getElementsByClassName("letters span").textContent("blah blah blah");
+  document.getElementsByClassName("letter span").textContent("blah blah blah");
 });
