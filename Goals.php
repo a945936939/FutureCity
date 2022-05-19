@@ -99,7 +99,7 @@ include "header.html";
           <div class="gradient-border" id="box" >
               <div class="ldBar"
                   style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
-                  data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
+                  data-stroke="data:ldbar/res,gradient(0,10,#9df,#9fd,#df9,#fd9)",
                   data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
                   data-value="
                   <?php 
@@ -125,7 +125,7 @@ include "header.html";
             <div class="gradient-border" id="box" >
                 <div class="ldBar"
                 style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
-                  data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",,
+                  data-stroke="data:ldbar/res,gradient(0,10,#9df,#9fd,#df9,#fd9)",,
                   data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
                   data-value="
                   <?php 
@@ -150,7 +150,7 @@ include "header.html";
 
         <div class="ldBar"
               style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
-              data-stroke="data:ldbar/res,gradient(0,1,#7he,#7ld,#7e5,#ed5)",
+              data-stroke="data:ldbar/res,gradient(0,10,#7he,#7ld,#7e5,#ed5)",
               data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
               data-value="
               <?php 
