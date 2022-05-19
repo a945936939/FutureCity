@@ -35,8 +35,8 @@ include 'header.html';
                 <div class="sub_title" data-aos="fade-up">
                     Track your carbon emissions
                 </div>
-                <form method="get" action="tracker.php">
-                    <button class="T_button" action="tracker.php" style="vertical-align:middle"><span>Tracker</span></button>
+                <form method="get" action="Tracker.php">
+                    <button class="T_button" action="Tracker.php" style="vertical-align:middle"><span>Tracker</span></button>
                 </form>
             </div>
         </div>
@@ -92,7 +92,7 @@ include 'header.html';
                     icon: './images/home/buttons/button1.png'
                 }, {
                     label: "Tracker",
-                    path: './tracker.php',
+                    path: './Tracker.php',
                     icon: './images/home/buttons/button2.png'
                 }, {
                     label: "Goal",

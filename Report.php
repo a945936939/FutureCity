@@ -168,13 +168,13 @@ if($emissions > 1000){
      if(is_null($car_count)){
         $car_count = 0;
     }else{
-      $car_count = $car_count["distance_travelled"];
+      $car_count = $car_count["number_of_trips"];
     }
 
 
     //   how far you travelled
 
-    $query3 = "select sum(user_trip_length) as 'distance travelled'
+    $query3 = "select sum(user_trip_length) as 'distance_travelled'
     from user_trip 
     where user_id = ".$username." 
     and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE()
