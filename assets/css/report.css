@@ -37,7 +37,7 @@
 
 .flip_card_left {
   background-color: transparent;
-  width: 600px;
+  width: 500px;
   height: 300px;
   perspective: 1000px;
 }
@@ -133,7 +133,7 @@
   display: -ms-flexbox;
   display: flex;
   font-family: YouSheBiaoTiHei;
-  font-size: 50px;
+  font-size: 40px;
   color: #ffffff;
 }
 
