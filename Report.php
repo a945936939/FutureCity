@@ -51,12 +51,16 @@ $result1 = sqlsrv_query($conn,$query1);
 
 $time = sqlsrv_fetch_array($result1);
 
-
+if(is_null($time)){
+    $time = 0;
+} else {
+    $time = $time["trip_time"];
+}
 
 // time spent on public transport in minutes and hours
-$hours = floor($time["trip_time"]/60);
-$minutes = $time["trip_time"] % 60;
-$seconds = $time["trip_time"];
+$hours = floor($time/60);
+$minutes = $time % 60;
+$seconds = $time;
 
 
 // total time 
@@ -83,7 +87,13 @@ and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
 $result2 = sqlsrv_query($conn,$query2);
 
-$emissions = round(sqlsrv_fetch_array($result2)["emissions"],2);
+$emissions = sqlsrv_fetch_array($result2)["emissions"];
+
+if(is_null($emissions)){
+    $emissions = 0;
+}else{
+    $emissions = round($emissions,2);
+}
 
 
 
@@ -114,6 +124,13 @@ if($emissions > 1000){
 
       $pt_travel_time= sqlsrv_fetch_array(sqlsrv_query($conn,$query4))["pt_trip_time"];
 
+      $result4 = sqlsrv_query($conn,$query2);
+
+      $pt_travel_time= sqlsrv_fetch_array($result4)["pt_trip_time"];
+
+      if(is_null($pt_travel_time)){
+          $pt_travel_time = 0;
+      }
 
 //-- 4 car trip time
       $query42 = "select sum(datediff(minute,user_trip_start_time, user_trip_end_time)) as 'car_trip_time'
@@ -121,7 +138,13 @@ if($emissions > 1000){
       where user_id = ".$username."  and transport_id = 4
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
-      $car_travel_time= sqlsrv_fetch_array(sqlsrv_query($conn,$query42))["car_trip_time"];
+      $result42 = sqlsrv_query($conn,$query42);
+
+      $car_travel_time= sqlsrv_fetch_array($result42)["car_trip_time"];
+
+      if(is_null($car_travel_time)){
+          $car_travel_time = 0;
+      }
 
 
 
@@ -135,18 +158,18 @@ if($emissions > 1000){
 
       $result6 = sqlsrv_query($conn,$query6);
 
-      $pt_count = sqlsrv_fetch_array($result6);
+      $pt_count = sqlsrv_fetch_array($result6)["number_of_trips"];
       if(is_null($pt_count)){
           $pt_count = 0;
       }else{
-        $pt_count = $pt_count["number_of_trips"];
+        $pt_count = $pt_count;
       }
 
-      $car_count = sqlsrv_fetch_array($result6);
+      $car_count = sqlsrv_fetch_array($result6)["number_of_trips"];
       if(is_null($car_count)){
         $car_count = 0;
     }else{
-      $car_count = $car_count["number_of_trips"];
+      $car_count = $car_count;
     }
 
 
@@ -163,21 +186,21 @@ if($emissions > 1000){
     $result3 = sqlsrv_query($conn,$query3);
 
 
-    $pt_distance = sqlsrv_fetch_array($result3);
+    $pt_distance = sqlsrv_fetch_array($result3)["distance travelled"];
 
     if(is_null($pt_distance)){
         $pt_distance = 0;
     }else{
-      $pt_distance = $pt_distance["distance travelled"];
+      $pt_distance = $pt_distance;
     }
     
 
-    $car_distance = sqlsrv_fetch_array($result3);
+    $car_distance = sqlsrv_fetch_array($result3)["distance travelled"];
 
     if(is_null($car_distance)){
         $car_distance = 0;
     }else{
-        $car_distance = $car_distance["distance travelled"];
+        $car_distance = $car_distance;
     }
 
 

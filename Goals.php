@@ -29,8 +29,13 @@ where user_trip_start_time between '{$start_date}' and '{$end_date}'
 and user_id = {$username};";
 
 $result = sqlsrv_query($conn,$query);
-$row = sqlsrv_fetch_array($result);
-$user_travel_distance=$row["total_length"];
+$row = sqlsrv_fetch_array($result)["total_length"];
+
+if(is_null($row)){
+  $user_travel_distance = 0;
+} else {
+  $user_travel_distance=$row;
+}
 
 
   $query="select sum(user_trip_emissions) as 'total_emissions'
@@ -38,8 +43,13 @@ $user_travel_distance=$row["total_length"];
   where user_trip_start_time between '{$start_date}' and '{$end_date}'
   and user_id = {$username};";
   $result = sqlsrv_query($conn,$query);
-$row = sqlsrv_fetch_array($result);
-$user_total_emissions=$row["total_emissions"];
+  $row = sqlsrv_fetch_array($result)["total_emissions"];
+
+  if(is_null($row)){
+    $user_total_emissions = 0;
+  }else{
+    $user_total_emissions=$row;
+  }
 
   
 
@@ -48,10 +58,14 @@ $query="select count(*) as 'long_travel'
   where user_trip_start_time between '{$start_date}' and '{$end_date}'
   and user_trip_length > 7
   and user_id = {$username};";
+  $result = sqlsrv_query($conn,$query);
 
-$result = sqlsrv_query($conn,$query);
-$row = sqlsrv_fetch_array($result);
-$user_counts = $row['long_travel'];
+  $row = sqlsrv_fetch_array($result)['long_travel'];
+  if(is_null($row)){
+    $user_counts = 0;
+  }else{
+    $user_counts = $row;
+  }
 
 
 ?>
