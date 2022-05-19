@@ -60,7 +60,22 @@ require_once("./connection.php");
                     <?php 
 require_once("connection.php");
 include 'header.html';
+
+
+// check for trips
+      
+$query0 = "select count(*) as 'count' from user_trip where user_id = {$username};";
+
+$result0 = sqlsrv_query($conn,$query0);
+
+$count = sqlsrv_fetch_array($result0)['count'];
+
+// if there are no trips redirect the user to the tracker page
+if($count==0){
+   echo "<script>alert('You need to take a trip first');location.href='Tracker.php';</script>";
+}
 ?>
+
                         </header>
 
         </div>
