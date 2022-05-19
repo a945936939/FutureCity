@@ -7,6 +7,8 @@ require_once("connection.php");
 
 
 <head>
+<script src="https://kit.fontawesome.com/d6a56bb6df.js" crossorigin="anonymous"></script>
+
 <script src="jquery-2.1.1.min.js"></script> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,7 +37,10 @@ include "./header.html";
         <div class="banner">
             <div class="contain-box reactive">
                 <div class="title">
-
+                Tracker
+                </div>
+                <div class="sub-title" data-aos="fade-up">
+                    Try our Tracker Map 
                 </div>
             </div>
         </div>
@@ -56,15 +61,16 @@ include "./header.html";
 
 
 <div class="how-why-item" id="guide-3" data-aos="fade-right">
-                  
-                  <h1 class="ml7">
+
+                  <h1 class="ml7"> 
     <span class="text-wrapper">
-      <span class="letters">
-        1.Click the “start” button<br>
-2.Input your destination in the map<br>
-3.Compare the routes of “Car” and “Public Transport”<br>
-4.Choose the one you decide to take by clicking on corresponding button under the cartoon picture<br>
-5.Confirm your decision.
+    
+      <span class="back-letters">
+1. Click the “start” button<br>
+2. Input your destination in the map<br>
+3. Compare the routes of “Car” and “Public Transport”<br>
+4. Choose the one you decide to take by clicking on corresponding button under the cartoon picture<br>
+5. Confirm your decision.
 </span>
     </span>
   </h1>
@@ -100,7 +106,7 @@ include "./header.html";
                   
                   <h1 class="ml8">
     <span class="text-wrapper">
-      <span class="letters">
+      <span class="back-letters ">
       By using our tracker regularly, you can build a habit to record your travelling trips. 
 Each time you decide your trip, you would understand the consequence by comparing the carbon emissions.
 

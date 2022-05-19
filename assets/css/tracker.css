@@ -15,9 +15,16 @@
   color: #ffffff;
   text-shadow: 0px 6px 0px #08648b;
 }
+.banner .sub-title {
+  font-size: 35px;
+  font-family: YouSheBiaoTiHei;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 0px 3px 0px #08648b;
+}
 
 .buttons {
-  height: 1882px;
+  height: 2082px;
   background-image: url("../../images/tracker/buttons/bg.png");
   padding: 80px 0;
 }
@@ -51,6 +58,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-align: left;
 }
 
 .buttons div.contain-box div.start-stop {
@@ -231,6 +239,7 @@
   transform-origin: 0 100%;
   display: inline-block;
   line-height: 1.3em;
+  text-align: left;
 }
 
 .ml8 {
@@ -295,7 +304,7 @@
 #guide-2 {
   /* background-color: transparent; */
   color: black;
-  text-align: left;
+  text-align: center;
 }
 
 /* Style the back side */
@@ -304,4 +313,13 @@
   /* background-color: transparent; */
   color: black;
   transform: rotateY(180deg);
+  text-align: left;
+}
+
+.back-lettters {
+  text-align: left;
+  color: black;
+  font-weight: 900;
+  font-size: 0px;
+  font-family: YouSheBiaoTiHei;
 }

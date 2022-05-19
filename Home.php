@@ -28,8 +28,8 @@ include 'header.html';
         <div class="banner">
             <div class="contain-box reactive">
                 <div class="title" data-aos="fade-up">
-                    Transport
-                    <br> Go Public
+                    Emission Tracker
+                    <br> 
                 </div>
                 <!-- <img src="./images/home/banner/banner-element.png" alt=""> -->
                 <div class="sub_title" data-aos="fade-up">

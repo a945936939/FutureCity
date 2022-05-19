@@ -1,139 +1,138 @@
 .banner {
-    width: 100%;
-    background-image: url("../img/achievement.jpg");
-    background-size: cover;
-    height: 600px;
-    position: relative;
-    text-align: center;
+  width: 100%;
+  background-image: url("../img/achievement.jpg");
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  text-align: center;
 }
 
 .banner .title {
-    font-size: 80px;
-    font-family: YouSheBiaoTiHei;
-    font-weight: 400;
-    padding-top: 178px;
-    color: #ffffff;
-    text-shadow: 0px 6px 0px #08648b;
+  font-size: 80px;
+  font-family: YouSheBiaoTiHei;
+  font-weight: 400;
+  padding-top: 178px;
+  color: #ffffff;
+  text-shadow: 0px 6px 0px #08648b;
 }
 
 .banner .sub-title {
-    font-size: 35px;
-    font-family: YouSheBiaoTiHei;
-    font-weight: 400;
-    color: #ffffff;
-    text-shadow: 0px 6px 0px #08648b;
+  font-size: 35px;
+  font-family: YouSheBiaoTiHei;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 0px 3px 0px #08648b;
 }
 
 .contain-box {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .contain-box .list-item {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .contain-box .list-item .row {
-    height: 100%;
-    width: 100%;
-    background-color: #ffffff;
-    color: #0c264b;
-    z-index: 10;
-    padding-bottom: 1.5rem;
-    align-items: center;
-    /* padding-right: 10rem;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  color: #0c264b;
+  z-index: 10;
+  padding-bottom: 1.5rem;
+  align-items: center;
+  /* padding-right: 10rem;
     padding-left: 10rem; */
 }
 
 .contain-box .list-item .row .row-title {
-    font-family: YouSheBiaoTiHei;
-    font-weight: 300;
-    font-size: 50px;
-    z-index: 10;
+  font-family: YouSheBiaoTiHei;
+  font-weight: 300;
+  font-size: 50px;
+  z-index: 10;
 }
 
 .contain-box .list-item .item-bg1 {
-    position: absolute;
-    left: 175px;
+  position: absolute;
+  left: 175px;
 }
 
 .contain-box .list-item .item-bg2 {
-    position: absolute;
-    right: 175px;
+  position: absolute;
+  right: 175px;
 }
 
 .contain-box .list-item .item-bg3 {
-    position: absolute;
-    left: 175px;
+  position: absolute;
+  left: 175px;
 }
 
 .contain-box .list-item .item-bg4 {
-    position: absolute;
-    right: 175px;
+  position: absolute;
+  right: 175px;
 }
 
 .contain-box .list-item .item-bg5 {
-    position: absolute;
-    left: 175px;
+  position: absolute;
+  left: 175px;
 }
 
 .contain-box .list-item .row .card .ldBar {
-    height: 100%;
-    width: 100%;
-    /* margin-bottom: 1rem; */
-    justify-content: center;
+  height: 100%;
+  width: 100%;
+  /* margin-bottom: 1rem; */
+  justify-content: center;
 }
 
 .contain-box .list-item .row .card .ldBar-label {
-    font-family: YouSheBiaoTiHei;
-    font-size: 70%;
-    position: absolute;
-    top: 5rem;
-    right: 5.2rem
+  font-family: YouSheBiaoTiHei;
+  font-size: 70%;
+  position: absolute;
+  top: 5rem;
+  right: 5.2rem;
 }
 
 .contain-box .list-item .row .card {
-    width: 13rem;
-    height: 100%;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: flex;
+  width: 13rem;
+  height: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
 }
 
 .contain-box .list-item .row .card-body {
-    /* position: relative; */
+  /* position: relative; */
 }
 
 .contain-box .list-item .row .card .card-title {
-    font-family: YouSheBiaoTiHei;
+  font-family: YouSheBiaoTiHei;
 }
 
 .contain-box .list-item .row .card .card-text {
-    font-size: 0.9rem;
-    font-family: YouSheBiaoTiHei;
+  font-size: 0.9rem;
+  font-family: YouSheBiaoTiHei;
 }
 
 #row1 {
-    background-color: #c1dafe;
+  background-color: #c1dafe;
 }
 
 #row2 {
-    background-color: #a8caf9;
+  background-color: #a8caf9;
 }
 
 #row3 {
-    background-color: #c1dafe;
+  background-color: #c1dafe;
 }
 
 #row4 {
-    background-color: #a8caf9;
+  background-color: #a8caf9;
 }
 
 #row5 {
-    background-color: #c1dafe;
+  background-color: #c1dafe;
 }
-
 
 /* .contain-box .list-item:nth-child(2) {
     background-color: #a75a37;
@@ -144,6 +143,5 @@
     background-color: #ced9eb;
     color: #01307c;
 } */
-
 
 /*# sourceMappingURL=achievement.css.map */

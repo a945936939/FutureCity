@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.banner .title{
+.banner .title {
   width: 800px;
   font-size: 95px;
   font-family: YouSheBiaoTiHei;
@@ -18,17 +18,16 @@
 }
 
 .T_button {
-
   display: inline-block;
   border-radius: 30px;
   background-color: #3b70f5;
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   font-size: 28px;
   font-family: YouSheBiaoTiHei;
   padding: 20px;
-  
+
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
@@ -44,7 +43,7 @@
 }
 
 .T_button span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -61,8 +60,7 @@
   right: 0;
 }
 
-
-.banner .sub_title{
+.banner .sub_title {
   width: 1000px;
   font-size: 40px;
   font-family: YouSheBiaoTiHei;
@@ -70,7 +68,7 @@
   padding-top: 0px;
   padding-bottom: 50px;
   color: #ffffff;
-  text-shadow: 0px 6px 0px #08648b;
+  text-shadow: 0px 3px 0px #08648b;
   margin-left: -220px;
 }
 
@@ -106,8 +104,8 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 239px 0;
+  justify-content: space-around;
+  padding: 150px 0;
 }
 
 .buttons .contain-box .button-item {
@@ -115,9 +113,9 @@
   z-index: 10;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .buttons .contain-box .button-item .item-area {
@@ -128,11 +126,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .buttons .contain-box .button-item .item-label {
@@ -179,8 +177,6 @@
   display: flex;
 }
 
-
-
 .introductions .introduction-list .list-item .contain-box .item-text {
   margin-top: 40px;
   padding-right: 100px;
@@ -189,21 +185,30 @@
   z-index: 10;
 }
 
-
-.introductions .introduction-list .list-item .contain-box .item-text .text-title {
+.introductions
+  .introduction-list
+  .list-item
+  .contain-box
+  .item-text
+  .text-title {
   font-size: 56px;
   font-family: YouSheBiaoTiHei;
 }
 
-.introductions .introduction-list .list-item .contain-box .item-text .text-content {
+.introductions
+  .introduction-list
+  .list-item
+  .contain-box
+  .item-text
+  .text-content {
   font-size: 27px;
   font-family: YouSheBiaoTiHei;
 }
 
 .introductions .introduction-list .list-item .contain-box .item-img {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   margin-top: 60px;
   z-index: 10;
 }
@@ -217,12 +222,11 @@
   display: block;
 }
 
-.share_button{
-  
+.share_button {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 200px;
-  border: 3px solid green; 
+  border: 3px solid green;
 }
 /*# sourceMappingURL=home.css.map */
