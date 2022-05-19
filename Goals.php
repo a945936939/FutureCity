@@ -94,80 +94,87 @@ include "header.html";
             </div>
         </div>
         
-<div class="blocks">
 
+    <div class="block-item" id="block1">
+          <div class="gradient-border" id="box" >
+              <div class="ldBar"
+                  style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
+                  data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
+                  data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
+                  data-value="
+                  <?php 
+                  $query="select sum(user_trip_length) as 'total_length'
+                  from user_trip
+                  where user_trip_start_time between '{$start_date}' and '{$end_date}';";
+                $result = sqlsrv_query($conn,$query);
+                $row = sqlsrv_fetch_array($result);
+                $travel_distance=$row["total_length"];
+                echo round($travel_distance/10,2);
+                ?>">
 
+              <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Travel 1000km in total</p>
 
+              </div>
+              <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Your Contribution: <?php echo round($user_travel_distance,2)." Km"; ?></p>
 
-<div class="gradient-border" id="box" >
-<div class="ldBar"
-  style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
-  data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
-  data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
-  data-value="
-  <?php 
-   $query="select sum(user_trip_length) as 'total_length'
-   from user_trip
-   where user_trip_start_time between '{$start_date}' and '{$end_date}';";
-$result = sqlsrv_query($conn,$query);
-$row = sqlsrv_fetch_array($result);
-$travel_distance=$row["total_length"];
-echo round($travel_distance/10,2);
-?>
-"
-> <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Travel 1000km in total</p>
-
+          </div>
+    </div>
 </div>
-<p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Your Contribution: <?php echo round($user_travel_distance,2)." Km"; ?></p>
-
-</div>
-<div class="gradient-border" id="box" >
-      <div class="ldBar"
-      style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
-        data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
-        data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
-        data-value="
-        <?php 
-        $query="select sum(user_trip_emissions) as 'total_emissions'
-        from user_trip
-        where user_trip_start_time between '{$start_date}' and '{$end_date}';";
-        $result = sqlsrv_query($conn,$query);
-      $row = sqlsrv_fetch_array($result);
-      $total_emissions=$row["total_emissions"];
-      echo round($total_emissions/1000,2);
-        ?>"
-      >
-      <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Carbon emission reduction in total 25000 Kg </p>
+        <!-- goal 2 -->
+        <div class="block-item" id="block2">
+            <div class="gradient-border" id="box" >
+                <div class="ldBar"
+                style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
+                  data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",,
+                  data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
+                  data-value="
+                  <?php 
+                  $query="select sum(user_trip_emissions) as 'total_emissions'
+                  from user_trip
+                  where user_trip_start_time between '{$start_date}' and '{$end_date}';";
+                  $result = sqlsrv_query($conn,$query);
+                $row = sqlsrv_fetch_array($result);
+                $total_emissions=$row["total_emissions"];
+                echo round($total_emissions/1000,2);
+                  ?>">
+                <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Total Carbon emission reduction:<br> 25000 Kg </p>
+            </div>
+          <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Your Contribution: <?php echo round($user_total_emissions/1000,2)." Kg C02"; ?></p>
+        </div>
   </div>
-  <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Your Contribution: <?php echo round($user_total_emissions/1000,2)." Kg C02"; ?></p>
-</div>
-<div class="gradient-border" id="box">
-<div class="ldBar"
-style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
-  data-stroke="data:ldbar/res,gradient(0,1,#7he,#7ld,#7e5,#ed5)",
-  data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
-  data-value="
-  <?php 
-  $query = "select count(*) as 'long_travel'
-  from user_trip
-  where user_trip_start_time between '{$start_date}' and '{$end_date}'
-  and user_trip_length > 7;
-  ";
-$result = sqlsrv_query($conn,$query);
-$row = sqlsrv_fetch_array($result);
-$counts=$row["long_travel"];
-  echo $counts;
-  ?>
-  "
-> <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Long distance travel (more than 7 km) in public transport 20 times in total</p>
-</div>
-<p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Your Contribution: <?php echo $user_counts." Trips";?></p>
 
-</div>
+    <!-- goal 3 -->
+    <div class="block-item" id="block3">
 
+      <div class="gradient-border" id="box">
 
+        <div class="ldBar"
+              style="width:100%;height:200px;margin-top:0px;margin-bottom:120px",
+              data-stroke="data:ldbar/res,gradient(0,1,#7he,#7ld,#7e5,#ed5)",
+              data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
+              data-value="
+              <?php 
+              $query = "select count(*) as 'long_travel'
+              from user_trip
+              where user_trip_start_time between '{$start_date}' and '{$end_date}'
+              and user_trip_length > 7;
+              ";
+            $result = sqlsrv_query($conn,$query);
+            $row = sqlsrv_fetch_array($result);
+            $counts=$row["long_travel"];
+              echo $counts;
+          ?>"> 
+            <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Long distance travel (more than 7 km) in public transport 20 times in total</p>
+        </div>
+          <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Your Contribution: <?php echo $user_counts." Trips";?></p>
 
-</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <?php include 'footer.html'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script>

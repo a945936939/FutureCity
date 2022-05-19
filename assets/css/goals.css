@@ -1,126 +1,160 @@
 .glow {
-  font-size: 80px;
-  color: #fff;
-  text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #b3cfff, 0 0 20px #b3cfff,
-      0 0 25px #b3cfff, 0 0 30px #b3cfff, 0 0 35px #b3cfff;
-  }
-  to {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 25px #cfdff9,
-      0 0 30px #cfdff9, 0 0 35px #cfdff9, 0 0 40px #cfdff9, 0 0 45px #cfdff9;
-  }
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #b3cfff, 0 0 20px #b3cfff, 0 0 25px #b3cfff, 0 0 30px #b3cfff, 0 0 35px #b3cfff;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 25px #cfdff9, 0 0 30px #cfdff9, 0 0 35px #cfdff9, 0 0 40px #cfdff9, 0 0 45px #cfdff9;
+    }
 }
 
 .banner {
-  width: 100%;
-  background-image: url("../img/goals_banner.jpg");
-  background-size: cover;
-  height: 600px;
-  position: relative;
-  text-align: center;
+    width: 100%;
+    background-image: url("../img/goals_banner.jpg");
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    text-align: center;
 }
 
 .banner .title {
-  font-size: 77px;
-  font-family: YouSheBiaoTiHei;
-  font-weight: 400;
-  padding-top: 178px;
-  color: #ffffff;
-  text-shadow: 0px 6px 0px #08648b;
+    font-size: 77px;
+    font-family: YouSheBiaoTiHei;
+    font-weight: 400;
+    padding-top: 178px;
+    color: #ffffff;
+    text-shadow: 0px 6px 0px #08648b;
 }
 
 .banner .sub-title {
-  font-size: 60px;
-  font-family: YouSheBiaoTiHei;
-  font-weight: 400;
-  color: #ffffff;
-  text-shadow: 0px 6px 0px #08648b;
+    font-size: 60px;
+    font-family: YouSheBiaoTiHei;
+    font-weight: 400;
+    color: #ffffff;
+    text-shadow: 0px 6px 0px #08648b;
 }
 
 .banner img {
-  position: absolute;
-  width: 466px;
-  height: 611px;
-  right: 0;
-  bottom: -100px;
-  display: block;
+    position: absolute;
+    width: 466px;
+    height: 611px;
+    right: 0;
+    bottom: -100px;
+    display: block;
 }
 
 #goal-title {
-  text-align: center;
-  font-size: 30px;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    z-index: 2;
 }
+
 
 /*# sourceMappingURL=information.css.map */
 
+
+/* 
 .blocks {
-  position: relative;
-  height: 1882px;
-  width: 100%;
-  background-image: url("../images/tracker/buttons/bg.png");
-  padding: 80px;
-  padding-left: 200px;
-  align-items: center;
+    height: 100%
+    /* position: relative;
+    /* height: 1882px; 
+    width: 100%;
+    /* background-image: url("../images/tracker/buttons/bg.png"); 
+    padding: 80px;
+    padding-left: 200px;
+    align-items: center;
+    margin: 10px;
+    */
+
+.blocks .block-item {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    z-index: 0;
+    position: relative;
+}
+
+#block1 {
+    background-color: #f37055;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    z-index: -2;
+}
+
+#block2 {
+    background-color: #07b39b;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    z-index: -2;
+}
+
+#block3 {
+    background-color: #08648b;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: -2;
 }
 
 #box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 500px;
-  color: white;
-  font-family: "Raleway";
-  font-size: 2.5rem;
-  margin-top: 80px;
-  margin-left: 80px;
-  margin-right: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 500px;
+    color: white;
+    font-family: "Raleway";
+    font-size: 2.5rem;
+    /* z-index: ; */
+    position: relative;
 }
 
-.gradient-border {
-  --borderWidth: 10px;
-  background: #5693b2;
-  position: relative;
-  border-radius: var(--borderWidth);
+.block-item .gradient-border {
+    --borderWidth: 10px;
+    background-color: #5693b2;
+    position: relative;
+    border-radius: var(--borderWidth);
+}
+
+.block-item .gradient-border .ldBar {
+    z-index: 2;
+    position: relative;
 }
 
 .gradient-border:after {
-  content: "";
-  position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(
-    60deg,
-    #f79533,
-    #f37055,
-    #ef4e7b,
-    #a166ab,
-    #5073b8,
-    #1098ad,
-    #07b39b,
-    #6fba82
-  );
-  border-radius: calc(2 * var(--borderWidth));
-  z-index: -1;
-  animation: animatedgradient 3s ease alternate infinite;
-  background-size: 300% 300%;
+    content: "";
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient( 60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
 }
 
 @keyframes animatedgradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
