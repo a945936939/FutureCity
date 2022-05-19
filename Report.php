@@ -168,7 +168,7 @@ if($emissions > 1000){
      if(is_null($car_count)){
         $car_count = 0;
     }else{
-      $car_count = $car_count["distance travelled"];
+      $car_count = $car_count["distance_travelled"];
     }
 
 
@@ -190,7 +190,7 @@ if($emissions > 1000){
     if(is_null($pt_distance)){
         $pt_distance = 0;
     }else{
-      $pt_distance = $pt_distance["distance travelled"];
+      $pt_distance = $pt_distance["distance_travelled"];
     }
     
 
@@ -199,7 +199,7 @@ if($emissions > 1000){
     if(is_null($car_distance)){
         $car_distance = 0;
     }else{
-        $car_distance = $car_distance["distance travelled"];
+        $car_distance = $car_distance["distance_travelled"];
     }
 
 
