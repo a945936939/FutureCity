@@ -495,4 +495,21 @@ if($emissions > 1000){
 
 </body>
 
+    <?php include 'footer.html'; ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+
+            },
+            mounted(){
+                AOS.init()
+            },
+        })
+    </script>
+
+<script src="./assets/js/loading-bar.min.js"></script>
+
 </html>
