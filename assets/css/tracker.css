@@ -1,6 +1,6 @@
 .banner {
   width: 100%;
-  background-image: url("../../images/tracker/banner/banner.png");
+  background-image: url("../../images/tracker/banner/tracker.jpg");
   background-size: cover;
   height: 600px;
   position: relative;
@@ -44,7 +44,7 @@
   -ms-flex-align: center;
   align-items: center;
   font-size: 60px;
-  font-family: Source Han Sans CN;
+  font-family: YouSheBiaoTiHei;
   font-weight: 500;
   color: #ffffff;
   -webkit-user-select: none;
@@ -79,7 +79,7 @@
   -ms-flex-align: center;
   align-items: center;
   font-size: 60px;
-  font-family: Source Han Sans CN;
+  font-family: YouSheBiaoTiHei;
   font-weight: 500;
   width: 333px;
   height: 121px;
@@ -112,7 +112,7 @@
 .buttons div.contain-box div.map .map-circle {
   font-size: 60px;
   background-image: url("../../images/tracker/buttons/map.png");
-  font-family: Source Han Sans CN;
+  font-family: YouSheBiaoTiHei;
   font-weight: 500;
   color: #ffffff;
   width: 210px;
@@ -172,7 +172,7 @@
   bottom: 24px;
   left: 20px;
   font-size: 30px;
-  font-family: Source Han Sans CN;
+  font-family: YouSheBiaoTiHei;
   font-weight: 500;
   color: #357f44;
 }

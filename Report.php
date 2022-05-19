@@ -244,7 +244,7 @@ if($emissions > 1000){
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <div class="flip_card_1">
+                                    <div class="flip_card_2">
                                         How many trees is that?
                                     </div>
                                 </div>
@@ -268,7 +268,7 @@ if($emissions > 1000){
                                     </div>
                                 </div>
                                 <div class="flip_card_back_left">
-                                    <div class="flip_card_1">
+                                    <div class="flip_card_2">
                                         <?php echo $hours." hours and ".$minutes." minutes"?>
                                     </div>
                                 </div>
@@ -301,7 +301,7 @@ if($emissions > 1000){
                                     </div>
                                 </div>
                                 <div class="flip_card_back_left">
-                                    <div class="flip_card_2">
+                                    <div class="flip_card_3">
                                         <?php echo "Public Transport: ".round($pt_distance,2)." Km \n Car: ".round($car_distance,2)." Km"; ?>
                                     </div>
                                 </div>
@@ -312,7 +312,7 @@ if($emissions > 1000){
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <div class="flip_card_1">
+                                    <div class="flip_card_2">
                                         Let's take a closer look
                                     </div>
                                 </div>
@@ -328,7 +328,7 @@ if($emissions > 1000){
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
                                 <div class="flip_card_front_left">
-                                    <div class="flip_card_2">
+                                    <div class="flip_card_3">
                                         What type of transport was your favourite?
                                     </div>
                                 </div>
@@ -344,7 +344,7 @@ if($emissions > 1000){
                         <div class="flip_card">
                             <div class="flip_card_inner">
                                 <div class="flip_card_front">
-                                    <div class="flip_card_2">
+                                    <div class="flip_card_3">
                                         How does that compare to Melbourne in <?php echo date('M')." ".$year;?>?
                                     </div>
                                 </div>
@@ -494,5 +494,7 @@ if($emissions > 1000){
     </script>
 
 </body>
+
+<?php include 'footer.html'; ?>
 
 </html>

@@ -46,7 +46,9 @@ include 'header.html';
             <div class="contain-box">
                 <div class="button-item" v-for="(item,index) in buttons" :key="index">
                     <div class="item-area">
-                        <img :src="item.icon" alt="">
+                        <a :href="item.path" alt="">
+                            <img :src="item.icon" alt="">
+                        </a>
                     </div>
                     <div class="item-label">
                         {{ item.label }}
@@ -84,15 +86,15 @@ include 'header.html';
             data: {
                 buttons: [{
                     label: "Report",
-                    path: '/report',
+                    path: './Report.php',
                     icon: './images/home/buttons/button1.png'
                 }, {
                     label: "Tracker",
-                    path: '/tracker',
+                    path: './tracker.php',
                     icon: './images/home/buttons/button2.png'
                 }, {
                     label: "Goal",
-                    path: '/goal',
+                    path: './Goals.php',
                     icon: './images/home/buttons/button3.png'
                 }, ],
                 introductionsList: [{
@@ -115,5 +117,7 @@ include 'header.html';
 
 
 </body>
+
+<?php include 'footer.html'; ?>
 
 </html>

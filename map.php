@@ -666,7 +666,7 @@ require_once("connection.php");
             <h1 class="heading">Compare Carbon Emissions</h1>
             <!-- <p>See</p> -->
           </div>
-          <button class="add-button" autofocus>
+          <button class="add-button" >
             <svg
               aria-label="Add Icon"
               width="24px"
@@ -1108,7 +1108,7 @@ require_once("connection.php");
               return;
             } else {
               destinationToAdd = place;
-              destinationModalEl.getTravelModeInput().focus();
+              destinationModalEl.getTravelModeInput().focus({preventScroll:true});
             }
             destinationModalEl.destinationInput.classList.remove("error");
             destinationModalEl.errorMessage.innerHTML = "";
@@ -1757,7 +1757,7 @@ require_once("connection.php");
        */
       function hideElement(el, focusEl) {
         el.style.display = "none";
-        if (focusEl) focusEl.focus();
+        if (focusEl) focusEl.focus({preventScroll:true});
       }
 
       /**
@@ -1765,7 +1765,7 @@ require_once("connection.php");
        */
       function showElement(el, focusEl) {
         el.style.display = "flex";
-        if (focusEl) focusEl.focus();
+        if (focusEl) focusEl.focus({preventScroll:true});
       }
 
       /**

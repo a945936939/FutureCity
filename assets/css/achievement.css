@@ -38,6 +38,7 @@
     height: 100%;
     width: 100%;
     background-color: #ffffff;
+    color: #0c264b;
     z-index: 10;
     padding-bottom: 1.5rem;
     align-items: center;
@@ -114,23 +115,23 @@
 }
 
 #row1 {
-    background-color: #ffffff;
+    background-color: #c1dafe;
 }
 
 #row2 {
-    background-color: #70d0df;
+    background-color: #a8caf9;
 }
 
 #row3 {
-    background-color: #a75a37;
+    background-color: #c1dafe;
 }
 
 #row4 {
-    background-color: #ced9eb;
+    background-color: #a8caf9;
 }
 
 #row5 {
-    background-color: #ffffff;
+    background-color: #c1dafe;
 }
 
 
