@@ -122,9 +122,7 @@ if($emissions > 1000){
       where user_id = ".$username."  and transport_id = 2
       and user_trip_start_time between DATEADD(day, -7, GETDATE()) AND GETDATE();";
 
-      $pt_travel_time= sqlsrv_fetch_array(sqlsrv_query($conn,$query4))["pt_trip_time"];
-
-      $result4 = sqlsrv_query($conn,$query2);
+      $result4 = sqlsrv_query($conn,$query4);
 
       $pt_travel_time= sqlsrv_fetch_array($result4)["pt_trip_time"];
 
@@ -351,7 +349,7 @@ if($emissions > 1000){
                                 </div>
                                 <div class="flip_card_back_left">
                                     <div class="flip_card_3">
-                                        <?php echo "Public Transport: ".round($pt_distance,2)." Km \n Car: ".round($car_distance,2)." Km"; ?>
+                                        <?php echo "Public Transport: ".round($pt_distance,2)." Km \n<br>Car: ".round($car_distance,2)." Km"; ?>
                                     </div>
                                 </div>
                             </div>
