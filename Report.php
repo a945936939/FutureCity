@@ -263,7 +263,7 @@ if($emissions > 1000){
                         <div class="flip_card_left">
                             <div class="flip_card_inner_left">
                                 <div class="flip_card_front_left">
-                                    <div class="flip_card_3">
+                                    <div class="flip_card_2">
                                         <h>How much time did you spend on Public Transport?</h>
                                     </div>
                                 </div>
