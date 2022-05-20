@@ -51,7 +51,7 @@ include "./header.html"
                         <div id="pieChart1" style="width:600px; height: 400px"></div>
                     </div>
                     <div class="context-item" data-aos="fade-down">
-                        Transport is the third largest source of carbon emission).
+                        Transport is the third largest source of carbon emission.
                     </div>
                 </div>
             </div>
