@@ -1884,7 +1884,7 @@ require_once("connection.php");
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <use href="#commutes-arrow-icon"/>
             </svg>
-            <span class="location-marker">"A"</span>
+            <span class="location-marker">${destination.label}</span>
           </div>
           <div class="address">Carbon emissions :
             <abbr title="${destination.name}"><b>${tripEmission.toFixed(0)} </b>grams</abbr>
