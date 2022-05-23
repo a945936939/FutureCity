@@ -63,7 +63,7 @@ include "./header.html"
                 </div>
                 <div class="context">
                     <div class="context-item" data-aos="fade-down">
-                        Most people (66%) are going to take a car to work while only 13% of people are taking public transport.
+                        Most people (66%) are going to take a car to work while only 13% of people were taking public transport.
                     </div>
                     <div class="context-item">
                         <div id="pieChart2" style="width:600px; height: 400px"></div>

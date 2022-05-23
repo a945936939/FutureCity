@@ -181,7 +181,7 @@ include "header.html";
             $result = sqlsrv_query($conn,$query);
             $row = sqlsrv_fetch_array($result);
             $counts=$row["long_travel"];
-              echo $counts;
+              echo $counts*5;
           ?>"> 
             <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Long distance travel (more than 7 km) in public transport 20 times in total</p>
         </div>
