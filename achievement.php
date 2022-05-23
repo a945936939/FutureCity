@@ -82,7 +82,7 @@ if($count==0){
         <div class="banner">
             <div class="box reactive">
                 <div class="title" data-aos="fade-down">
-                    Achievement
+                    Achievements
                 </div>
                 </br>
                 </br>
