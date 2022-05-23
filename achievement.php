@@ -131,7 +131,7 @@ $result1 = sqlsrv_query($conn, $query);
       data-path="M -40 10 L 140 10"
       data-stroke-width="20"
       data-duration="0.1s"
-      data-transition-in="100000"
+      data-transition-in="10s"
 
       data-value="  <?php echo  $ach_info['record_progress'];?>"
     ></div>
