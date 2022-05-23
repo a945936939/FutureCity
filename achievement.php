@@ -130,7 +130,9 @@ $result1 = sqlsrv_query($conn, $query);
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-path="M -40 10 L 140 10"
       data-stroke-width="20"
-      
+      data-duration="0.1s"
+      data-transition-in="100000"
+
       data-value="  <?php echo  $ach_info['record_progress'];?>"
     ></div>
 
@@ -179,7 +181,7 @@ $result1 = sqlsrv_query($conn, $query);
       data-stroke="data:ldbar/res,stripe(#ff9,#fc9,1)"
       data-stroke-width="20"
       data-path="M -40 10 L 140 10"
-      
+      data-duration="3"
       data-value="  <?php echo  $ach_info['record_progress'];?>"
     ></div>
                 <div class="card-body">

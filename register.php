@@ -29,7 +29,7 @@ $link = $conn;
 <div id="wrapper" class="register-page">
 
     <div id="reg_form" class="form">
-        <button id="Register" name="submit">Register</button>
+        <button id="Register" name="submit">Click to Register</button>
 
         <p id= "uname">Your username:</p>
         

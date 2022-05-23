@@ -73,11 +73,12 @@ $query="select count(*) as 'long_travel'
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/goals.css">
     <link rel="stylesheet" href="./assets/css/goals.scss">
     <link rel="stylesheet" type="text/css" href="assets/css/loading-bar.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script src="./js/echarts.min.js"></script>
 
@@ -134,7 +135,7 @@ include "header.html";
               <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Travel 1000km in total</p>
 
               </div>
-              <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Your Contribution: <?php echo round($user_travel_distance,2)." Km"; ?></p>
+              <p id = "goal-title" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Your Contribution: <?php echo round($user_travel_distance,2)." Km"; ?></p>
 
           </div>
     </div>
@@ -158,7 +159,7 @@ include "header.html";
                   ?>">
                 <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Total Carbon emission reduction:<br> 25000 Kg </p>
             </div>
-          <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Your Contribution: <?php echo round($user_total_emissions/1000,2)." Kg C02"; ?></p>
+          <p id = "goal-title" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Your Contribution: <?php echo round($user_total_emissions/1000,2)." Kg C02"; ?></p>
         </div>
   </div>
 
@@ -183,9 +184,9 @@ include "header.html";
             $counts=$row["long_travel"];
               echo $counts*5;
           ?>"> 
-            <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Long distance travel (more than 7 km) in public transport 20 times in total</p>
+            <p id = "goal-title" style="font-family:YouSheBiaoTiHei;">Long distance travel (more than 7 km) in public transport 20 times in total</p>
         </div>
-          <p id = "goal-title" style="font-family: YouSheBiaoTiHei;">Your Contribution: <?php echo $user_counts." Trips";?></p>
+          <p id = "goal-title" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Your Contribution: <?php echo $user_counts." Trips";?></p>
 
       </div>
 

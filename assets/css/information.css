@@ -1,96 +1,96 @@
 .banner {
-    width: 100%;
-    background-image: url("../img/cards/information.jpg");
-    background-size: cover;
-    height: 600px;
-    position: relative;
-    text-align: center;
+  width: 100%;
+  background-image: url("../img/cards/information.jpg");
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  text-align: center;
 }
 
 .banner .title {
-    font-size: 80px;
-    font-family: YouSheBiaoTiHei;
-    font-weight: 400;
-    padding-top: 178px;
-    color: #ffffff;
-    text-shadow: 0px 6px 0px #08648b;
+  font-size: 80px;
+  font-family: YouSheBiaoTiHei;
+  font-weight: 400;
+  padding-top: 178px;
+  color: #ffffff;
+  text-shadow: 0px 6px 0px #08648b;
 }
 
 .banner .sub-title {
-    font-size: 35px;
-    font-family: YouSheBiaoTiHei;
-    font-weight: 400;
-    color: #ffffff;
-    text-shadow: 0px 3px 0px #08648b;
+  font-size: 35px;
+  font-family: YouSheBiaoTiHei;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 0px 3px 0px #08648b;
 }
 
 .banner img {
-    position: absolute;
-    width: 466px;
-    height: 611px;
-    right: 0;
-    bottom: -100px;
-    display: block;
+  position: absolute;
+  width: 466px;
+  height: 611px;
+  right: 0;
+  bottom: -100px;
+  display: block;
 }
 
 .info {
-    background-repeat: no-repeat;
-    padding: 260px 40px;
+  background-repeat: no-repeat;
+  padding: 260px 40px;
 }
 
 .info .title {
-    font-size: 45px;
-    font-family: Source Han Sans CN;
-    font-weight: 500;
-    color: #0c264b;
-    line-height: 18px;
-    margin-bottom: 100px;
-    margin-top: -180px;
+  font-size: 45px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #0c264b;
+  line-height: 18px;
+  margin-bottom: 100px;
+  margin-top: -180px;
 }
 
 .info .context {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .info .context .context-item {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    font-size: 30px;
-    font-family: YouSheBiaoTiHei;
-    font-weight: 400;
-    color: #0c264b;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: 0 10px;
-    margin-left: 20px;
-    margin-bottom: -200px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  color: #0c264b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 10px;
+  margin-left: 20px;
+  margin-bottom: -200px;
 }
 
 .info1 {
-    background-color: #c1dafe;
+  background-color: #c1dafe;
 }
 
 .info1 .title {
-    font-family: YouSheBiaoTiHei;
+  font-family: YouSheBiaoTiHei;
 }
 
 .info2 .title {
-    font-family: YouSheBiaoTiHei;
+  font-family: YouSheBiaoTiHei;
 }
 
 .info3 {
-    background-color: #a8caf9;
+  background-color: #a8caf9;
 }
 
 .info3 .title {
-    font-family: YouSheBiaoTiHei;
+  font-family: YouSheBiaoTiHei;
 }
 
 /*# sourceMappingURL=information.css.map */
