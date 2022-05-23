@@ -87,7 +87,7 @@ if($count==0){
                 </br>
                 </br>
                 <div class="sub-title" data-aos="fade-up">
-                    Finish the Tasks!
+                    Finish the Tasks
                 </div>
             </div>
         </div>
